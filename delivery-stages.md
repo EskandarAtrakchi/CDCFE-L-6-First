@@ -16,70 +16,44 @@ Subsequent Delivery Stages come after Controlling a Stage (CS). CS counsels the 
 
 The PID papers (Project Board) revealed above are used to make the decision to proceed with the project. If they agree to proceed with the project, the project manager will begin by completing the Controlling a Stage Process. He or she is required to write the following documents:
 
-\-          The Highlight Report is published every two weeks.
-
-\-          Issue Report.
-
-\-          Exceptions Report.
-
-&#x20;****&#x20;
+* The Highlight Report is published every two weeks.
+* Issue Report.
+* Exceptions Report.&#x20;
 
 The following paperwork need updating:
 
-\-          Risk Register.
-
-\-          Issue Register.
-
-\-          Lessons Log.
-
-\-          Daily Log.
-
-\-          Configuration item Record.
-
-\-          Quality Register.
-
-&#x20;****&#x20;
+* Risk Register.
+* Issue Register.
+* Lessons Log.
+* Daily Log.
+* Configuration item Record.
+* Quality Register.
 
 The Project Manager must ultimately produce a set of Work Packages for the Project Team to carry out.
-
-&#x20;
 
 **2.    The Team Manager Layer consists of:**
 
 The following documents must be created:
 
-\-          Reports on checkpoints (these will be given to the PM).
-
-\-          The team plan.
-
-&#x20;
+* Reports on checkpoints (these will be given to the PM).
+* The team plan.
 
 (KnowledgeHut, 2022)
 
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption><p>The image shows the documentation of each phase in detail. We see the stage boundary is within the diagram.</p></figcaption></figure>
 
-&#x20;
-
-&#x20;
+****
 
 **Stage Boundary documents**
 
-&#x20;
-
 The next documents were produced by the project manager.
 
-·         Report on the End of Stage
-
-·         Exception Plan or Next Stage Plan
-
-·         Product Status Account
-
-&#x20;
+* Report on the End of Stage
+* Exception Plan or Next Stage Plan
+* Product Status Account
 
 The following papers also need to be updated
 
-·         Analyze the business case
-
-·         Project Plan
-
-·         Benefits Management Approach
+* Analyze the business case
+* Project Plan
+* Benefits Management Approach

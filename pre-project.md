@@ -26,20 +26,12 @@ This document should be written by one of the Project Board members. More specif
 
 that all other documents are the responsibility of project managers, we will find the following documents here
 
-1\.       Project Product Description (PPD)
-
-2\.       Approach
-
-3\.       Project Management Team document (PMT)
-
-4\.       Project Brief (contains all of the above)
-
-5\.       Initiation Stage Plan
-
-6\.       Lessons Log
-
-7\.       Daily Log
-
-&#x20;
+* Project Product Description (PPD)
+* Approach
+* Project Management Team document (PMT)
+* Project Brief (contains all of the above)
+* Initiation Stage Plan
+* Lessons Log
+* Daily Log
 
 During the Pre-Project Stage, we will only produce these documents. The next is the initial phase in the process, which will be discussed next.

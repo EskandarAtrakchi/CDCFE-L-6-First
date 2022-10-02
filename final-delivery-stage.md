@@ -14,10 +14,7 @@ During this last stage of the project, the Final Delivery Stage completes tasks 
 
 The following documents be created by the project manager
 
-\-          Report on the project's completion.
-
-\-          Follow up on actions.
-
-\-          A lesson report.
-
-\-          Draft Closure Notification.
+* Report on the project's completion.
+* Follow up on actions.
+* A lesson report.
+* Draft Closure Notification.
