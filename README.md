@@ -1,27 +1,15 @@
-# TABLE OF CONTENT
+# Introduction
 
+A process-based approach called PRINCE2 is meant to guide, manage, and complete a project according to schedule. PRINCE2 stands for PRojects IN Controlled Environments, it is maintained by [AXELOS](https://www.axelos.com/) and is built upon 7 Principles, 7 themes, and 7 processes.
 
+In simple words, PRINCE2 is a project management method wildly adopted around the world and used by people and organizations in many different industries and sectors, very flexible method that guides you through the essentials for managing a successful project
 
-1. **REAL ESTATE AND HOUSING COSTS**&#x20;
+The project team undertakes numerous tasks to meet the goals of the business case across seven distinct process areas. Following a stage-gate lifecycle paradigm, PRINCE2's seven processes integrate with one another. This establishes a rhythm for project management activities, guiding outcomes toward achievement of predetermined goals.&#x20;
 
-* **Soaring in Prices**
-* **Interest Rates**
-* **Costs**
-* **The Bubble!**
+(Tucker, 2015)
 
-**2.  MIGRANTS, REFUGEES, AND ASYLUM SEEKERS**
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-* **Some statistics**&#x20;
+&#x20;
 
-**3. WHY AVANZO IS STUDYING THIS?**
-
-* **Avanzo**
-* **Important FAQ**
-
-**4. BIBLIOGRAPHY**&#x20;
-
-* **BIBLIOGRAPHY**
-
-**5. DISCLAIMER**
-
-* **Good to know**
+The following is to detail the phases of the figure above.

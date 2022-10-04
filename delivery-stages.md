@@ -40,7 +40,7 @@ The following documents must be created:
 
 (KnowledgeHut, 2022)
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption><p>The image shows the documentation of each phase in detail. We see the stage boundary is within the diagram.</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption><p>The image shows the documentation of each phase in detail. We see the stage boundary is within the diagram.</p></figcaption></figure>
 
 ****
 
