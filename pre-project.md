@@ -4,7 +4,7 @@ description: (Lucidchart, 2022)
 
 # Pre – Project
 
-During the Pre-project Stage, the investment's business objectives are identified by carrying out the actions in the Starting up a Project (SU) process. The business justifications for the investment are developed, the scope is specified, and alternatives are assessed. The business case is created through the SU process, preparing the project team to acquire approval to proceed with the investment.
+The investment's business objectives are identified by carrying out the actions in Starting up Project (SU) process. The business justifications for the investment are developed, the scope is specified, and alternatives are assessed. The business case is created through the SU process, preparing the project team to acquire approval to proceed with the investment.
 
 The project is assessed and authorized by an executive review board before being placed in the IT portfolio as part of the Directing a Project (DP) procedure. DP procedures manage the business case throughout the project lifecycle by providing senior-level monitoring of the investment's development.
 
@@ -33,5 +33,3 @@ that all other documents are the responsibility of project managers, we will fin
 * Initiation Stage Plan
 * Lessons Log
 * Daily Log
-
-During the Pre-Project Stage, we will only produce these documents. The next is the initial phase in the process, which will be discussed next.
