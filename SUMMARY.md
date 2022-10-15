@@ -6,3 +6,4 @@
 * [Cost per Task](cost-per-task.md)
 * [Cost per Resource](cost-per-resource.md)
 * [Conclusion](conclusion.md)
+* [Bibliography](bibliography.md)
