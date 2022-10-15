@@ -16,7 +16,6 @@ In a financial model, the cost per task is the average cost of completing a task
 | Testing\_Alpha\&beta\_testing            | 7    | 56         | 20                | 1,120    |                               |                                  |
 | Implement\_(FUT+wider\_deployment)       | 21   | 80         | 20                | 1,600    |                               |                                  |
 | Release                                  | 1    | 1          | 20                | 20       |                               |                                  |
-| Team\_management                         | 31   |            |                   |          |                               |                                  |
 | Total:                                   |      |            |                   | 242,370  |                               |                                  |
 |                                          |      |            |                   |          | <p>Contingency%20</p><p> </p> | <p>GRAND_TOTAL</p><p>290,844</p> |
 
