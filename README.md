@@ -4,7 +4,7 @@ HLD
 
 The database is gonna track the vehicles of a municipality that has over 200 vehicles and record all the cut distances and the amount of fuel that has been spent weekly on each vehicle.
 
-&#x20;
+
 
 LLD
 
@@ -30,14 +30,9 @@ LLD
 
 
 
-&#x20;
-
 Who is gonna use the database?
 
-Admin
-
-Anyone with an account (Can view the database only)
-
-
+* Admin
+* Anyone with an account (Can view the database only)
 
 The first three LLDs requirements:
