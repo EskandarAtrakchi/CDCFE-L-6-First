@@ -1,5 +1,7 @@
 # Top-Down
 
+Start with the overall picture and then break it down into smaller sections, using Top-Down as a technique can be useful in financial modeling since it allows us to see how different factors will affect our outcomes. It can also help us find risk variables we may not have considered otherwise.
+
 A small group of individuals (typically under the oversight of top-level management) assess the company, industry, and environment/economy.
 
 * **Broad-based assumptions** for things like market growth, industry growth, inflation, etc.

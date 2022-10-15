@@ -1,8 +1,6 @@
 # Cost per Resource
 
-Cost per resource is a metric that can be used to evaluate the effectiveness of a project. This metric is calculated by dividing the total cost of the project by the number of resources used. This metric can be used to compare the cost-effectiveness of different projects.&#x20;
 
-it is bottom up&#x20;
 
 
 
@@ -19,4 +17,14 @@ it is bottom up&#x20;
 | Customer\_Relationship\_Management\_(4) | 400                      | 50                  | 20,000                  |                               |                                  |
 | Total:                                  |                          |                     | 392,140                 |                               |                                  |
 |                                         |                          |                     |                         | <p>Contingency%20</p><p> </p> | <p>GRAND_TOTAL</p><p>470,568</p> |
+
+
+
+We can see the difference in this table by evaluating the effectiveness of a project, listing the team members and their roles is a metric! it is true that the table above is about building a website but what I find interesting is that this metric can be used to compare the cost-effectiveness of different projects also, simply by dividing the project’s total cost by the number of resources used.
+
+It’s nice to mention that this is bottom-up since we are building from the ground up, trying to get as many details as possible, and down below image explains why this is bottom-up.
+
+
+
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption><p>(Kimberlee Meier, 2020)</p></figcaption></figure>
 

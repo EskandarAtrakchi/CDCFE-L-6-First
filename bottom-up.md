@@ -1,5 +1,7 @@
 # Bottom-up
 
+The model is designed to anticipate future financial performance over three to five years. Bottom-up built from the ground up. It’s built utilizing information from the company's financial statements and other information about its activities. Investors and analysts generally employ the bottom-up technique to gain a better grasp of a company's financials.
+
 Employees and management across the business assess details of the business (products, customers, new products, costs, etc.) to inform the future.
 
 * **Assumptions:** inputs from the sales team, customers, industry intelligence, procurement, and more!
