@@ -2,6 +2,8 @@
 
 
 
+
+
 | Task                                     | Days | Est\_Hours | €/Hr              | Subtotal |                               |                                  |
 | ---------------------------------------- | ---- | ---------- | ----------------- | -------- | ----------------------------- | -------------------------------- |
 | Gather\_Customer\_Requirements           | 21   | 50         | <p>50</p><p> </p> | 2500     |                               |                                  |
@@ -17,5 +19,5 @@
 
 
 
-From the table above we can see that in a financial model, the cost per task is the average cost of completing a task. This cost can be used to compare different tasks or different ways of completing a task. The cost per task can be affected by the number of people working on the task, the amount of time it takes to complete the task, and I would like to add the equipments been used, and other factors that might be predictable or unpredictable justifying the 20% contingency.
+From the table above we can see that in a financial model, the cost per task is the average cost of completing a task. This cost can be used to compare different tasks or different ways of completing a task. The cost per task can be affected by the number of people working on the task, the amount of time it takes to complete the task, and I would like to add the equipments been used, regardless of other factors that might be predictable or unpredictable justifying the 20% contingency.
 
