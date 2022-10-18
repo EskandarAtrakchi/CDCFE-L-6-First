@@ -8,31 +8,115 @@ The database is gonna track the vehicles of a municipality that has over 200 veh
 
 LLD
 
-1\.      input all the data of the vehicles.
-
-2\.      Print the data of the vehicles.
-
-3\.      View the data of the vehicles.
-
-4\.      Modifying data of the vehicles
-
-5\.      Search for the vehicles
-
-6\.      Create new vehicles if vehicles have been added to the municipality.
-
-7\.      Report, make reports about the vehicles
-
-8\.      Delete vehicles from the database
-
-9\.      Categorise vehicles accordingly
-
-10\.   Storing each account that been created.
-
-
+1. Print the data of the vehicles/workers
+2. Modifying data of the vehicles/workers
+3. Search for the vehicles/workers
+4. Create new vehicles/workers/accounts if vehicles or workers been added to the municipality.
+5. Report, make reports about the vehicles/workers
+6. Delete vehicles/workers from the database
+7. Workers are able to create records that the vehicles need repair
+8. Admin can input fuel used per week and KM completed per week&#x20;
+9. workers can book time on the vehicles &#x20;
+10. account users can view fuel and mileage for each vehicle&#x20;
 
 Who is gonna use the database?
 
 * Admin
 * Anyone with an account (Can view the database only)
 
-The first three LLDs requirements:
+LLDs fields:
+
+Print the data of the vehicles/workers
+
+* vehicleName&#x20;
+* vehicleColor&#x20;
+* vehicleIdNumber
+* workerName
+* workerShift
+* vehicleFeulCapacity
+* vehiclDictanceCut
+* vehicleFuelSpent
+
+Modifying data of the vehicles/workers
+
+* vehicleColor
+* workerShift
+* workerName
+* vehicleId
+* vehcleName
+* vehicleFeulCapacity
+* vehiclDictanceCut
+* vehicleFuelSpent
+
+Search for the vehicles/workers
+
+* vehicleColor
+* workerShift
+* workerName
+* vehicleId
+* vehcleName
+* vehicleFeulCapacity
+* vehiclDictanceCut
+* vehicleFuelSpent
+
+Create new vehicles/workers/accounts if vehicles or workers been added to the municipality.
+
+* vehicleColor
+* workerShift
+* workerName
+* vehicleId
+* vehcleName
+* vehicleFeulCapacity
+* vehiclDictanceCut
+* vehicleFuelSpent
+
+Report, make reports about the vehicles/workers
+
+* vehicleColor
+* workerShift
+* workerName
+* vehicleId
+* vehcleName
+* vehicleFeulCapacity
+* vehiclDictanceCut
+* vehicleFuelSpent
+
+Delete vehicles/workers from the database
+
+* vehicleColor
+* workerShift
+* workerName
+* vehicleId
+* vehcleName
+* vehicleFeulCapacity
+* vehiclDictanceCut
+* vehicleFuelSpent
+
+Workers are able to create records that the vehicles need repair
+
+* vehicleColor
+* workerShift
+* workerName
+* vehicleId
+* vehcleName
+* vehicleFeulCapacity
+* vehiclDictanceCut
+* vehicleFuelSpent
+
+Admin can input fuel used per week and KM completed per week
+
+* vehicleFuelSpent
+
+workers can book time on the vehicles &#x20;
+
+* saturdayAv
+* sundayAv
+* mondayAv
+* tuesdayAv
+* wednesdayAv
+* thursdayAv
+* fridayAv
+
+account users can view fuel and mileage for each vehicle&#x20;
+
+* vehicleId
