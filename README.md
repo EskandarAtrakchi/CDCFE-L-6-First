@@ -26,7 +26,7 @@ Who is gonna use the database?
 
 LLDs fields:
 
-Print the data of the vehicles/workers
+1\) Print the data of the vehicles/workers
 
 * vehicleName&#x20;
 * vehicleColor&#x20;
@@ -36,8 +36,16 @@ Print the data of the vehicles/workers
 * vehicleFeulCapacity
 * vehiclemileage
 * vehicleFuelSpent
+* weekNumber
+* saturdayAv
+* sundayAv
+* mondayAv
+* tuesdayAv
+* wednesdayAv
+* thursdayAv
+* fridayAv
 
-Modifying data of the vehicles/workers
+2\) Modifying data of the vehicles/workers
 
 * vehicleColor
 * workerShift
@@ -48,7 +56,7 @@ Modifying data of the vehicles/workers
 * vehiclemileage
 * vehicleFuelSpent
 
-Search for the vehicles/workers
+3\) Search for the vehicles/workers
 
 * vehicleColor
 * workerShift
@@ -66,7 +74,7 @@ Search for the vehicles/workers
 * thursdayAv
 * fridayAv
 
-Create new vehicles/workers/accounts if vehicles or workers been added to the municipality.
+4\) Create new vehicles/workers/accounts if vehicles or workers been added to the municipality.
 
 * vehicleColor
 * workerShift
@@ -84,7 +92,7 @@ Create new vehicles/workers/accounts if vehicles or workers been added to the mu
 * thursdayAv
 * fridayAv
 
-Report, make reports about the vehicles/workers
+5\) Report, make reports about the vehicles/workers
 
 * vehicleColor
 * workerShift
@@ -94,8 +102,16 @@ Report, make reports about the vehicles/workers
 * vehicleFeulCapacity
 * vehiclemileage
 * vehicleFuelSpent
+* saturdayAv
+* sundayAv
+* mondayAv
+* tuesdayAv
+* wednesdayAv
+* thursdayAv
+* fridayAv
+* weekNumber
 
-Delete vehicles/workers from the database
+6\) Delete vehicles/workers from the database
 
 * vehicleColor
 * workerShift
@@ -113,19 +129,21 @@ Delete vehicles/workers from the database
 * thursdayAv
 * fridayAv
 
-Workers are able to create records that the vehicles need repair
+7\) Workers are able to create records that the vehicles need repair
 
 * vehicleColor
 * workerShift
 * workerName
 * vehicleId
 * vehicleName
+* weekNumber
 
-Admin can input fuel used per week and KM completed per week
+8\) Admin can input fuel used per week and KM completed per week
 
 * vehicleFuelSpent
+* weekNumber
 
-workers can book time on the vehicles &#x20;
+9\) workers can book time on the vehicles &#x20;
 
 * saturdayAv
 * sundayAv
@@ -136,6 +154,7 @@ workers can book time on the vehicles &#x20;
 * fridayAv
 * weekNumber
 
-account users can view fuel and mileage for each vehicle&#x20;
+10\) account users can view fuel and mileage for each vehicle&#x20;
 
 * vehicleId
+* weekNumber
