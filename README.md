@@ -34,7 +34,7 @@ Print the data of the vehicles/workers
 * workerName
 * workerShift
 * vehicleFeulCapacity
-* vehiclDictanceCut
+* vehiclemileage
 * vehicleFuelSpent
 
 Modifying data of the vehicles/workers
@@ -44,8 +44,8 @@ Modifying data of the vehicles/workers
 * workerName
 * vehicleId
 * vehcleName
-* vehicleFeulCapacity
-* vehiclDictanceCut
+* vehicleFuelCapacity
+* vehiclemileage
 * vehicleFuelSpent
 
 Search for the vehicles/workers
@@ -58,6 +58,13 @@ Search for the vehicles/workers
 * vehicleFeulCapacity
 * vehiclDictanceCut
 * vehicleFuelSpent
+* saturdayAv
+* sundayAv
+* mondayAv
+* tuesdayAv
+* wednesdayAv
+* thursdayAv
+* fridayAv
 
 Create new vehicles/workers/accounts if vehicles or workers been added to the municipality.
 
@@ -67,8 +74,15 @@ Create new vehicles/workers/accounts if vehicles or workers been added to the mu
 * vehicleId
 * vehcleName
 * vehicleFeulCapacity
-* vehiclDictanceCut
+* vehiclemileage
 * vehicleFuelSpent
+* saturdayAv
+* sundayAv
+* mondayAv
+* tuesdayAv
+* wednesdayAv
+* thursdayAv
+* fridayAv
 
 Report, make reports about the vehicles/workers
 
@@ -78,7 +92,7 @@ Report, make reports about the vehicles/workers
 * vehicleId
 * vehcleName
 * vehicleFeulCapacity
-* vehiclDictanceCut
+* vehiclemileage
 * vehicleFuelSpent
 
 Delete vehicles/workers from the database
@@ -88,9 +102,16 @@ Delete vehicles/workers from the database
 * workerName
 * vehicleId
 * vehcleName
-* vehicleFeulCapacity
-* vehiclDictanceCut
+* vehicleFuelCapacity
+* vehiclemileage
 * vehicleFuelSpent
+* saturdayAv
+* sundayAv
+* mondayAv
+* tuesdayAv
+* wednesdayAv
+* thursdayAv
+* fridayAv
 
 Workers are able to create records that the vehicles need repair
 
@@ -98,10 +119,7 @@ Workers are able to create records that the vehicles need repair
 * workerShift
 * workerName
 * vehicleId
-* vehcleName
-* vehicleFeulCapacity
-* vehiclDictanceCut
-* vehicleFuelSpent
+* vehicleName
 
 Admin can input fuel used per week and KM completed per week
 
@@ -116,6 +134,7 @@ workers can book time on the vehicles &#x20;
 * wednesdayAv
 * thursdayAv
 * fridayAv
+* weekNumber
 
 account users can view fuel and mileage for each vehicle&#x20;
 
