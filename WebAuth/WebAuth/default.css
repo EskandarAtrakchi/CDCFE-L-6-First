@@ -1,0 +1,151 @@
+header, nav,main,footer,figure,section,aside{ display: block;}
+/********************************************************************************/		
+/*  styles for all pages*/
+/********************************************************************************/
+
+body{ 
+	background-color: #ffffff;
+	color: #777777;
+	font: normal 15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	width: 900px;
+	margin-right: auto;
+    margin-left: auto;
+}
+header{
+	height: 190px;
+}
+
+header nav{ 
+	background-color: #ffffff;
+	border-bottom: 2px solid #f2f2f2;
+	border-radius:10px;
+	float: left;
+	width: 100%;
+	
+}
+
+header nav ul li{
+	float: left;
+	display: inline-block;
+	margin-top: 15px;
+	padding-bottom: 10px;
+}
+
+header nav ul li a {	/*  main navigation link on top right of page */
+	color:  #336699;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-right: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: #444;
+}
+
+a:hover {
+	color: #aaaaaa;
+}
+ 
+section{ 
+	background-color: #ffffff;
+	width: 850px;
+	margin-right: auto;
+    margin-left: auto;
+	
+	margin:20px;
+	padding-bottom:20px;
+	padding-top:20px;
+}
+
+ 
+article{ 
+	background-color: #ffffff;
+}
+
+h3 {
+	display: block;
+	margin: 0 auto 10px auto;
+	width: 800px;
+	border-bottom: 1px solid #02b8dd;
+	padding: 0 0 20px 0;
+}
+h4 {
+	display: block;
+	margin: 0 auto 10px auto;
+	width: 800px;
+	padding: 0 0 5px 0;
+}
+
+p {
+	line-height: 20px;
+	margin-bottom: 20px;
+	text-align:left;
+}
+
+footer{ 
+	background-color: #4d4d4d;
+	text-align: center;
+	border: 2px solid #02b8dd;
+}
+footer p {
+	padding: 10px;
+	Color: #ffffff;
+}
+footer a {
+	color: #ffffff;
+}
+
+img{
+	float: right;
+	width:150px
+}
+
+
+
+/********************************************************************************/		
+/*  styles for HOME page*/
+/********************************************************************************/
+#banner-image {
+	background:  url('../img/banner.jpg') no-repeat center;
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	
+}
+#banner-image h3 {
+	font-weight: 200;
+	color: #ffffff;
+	font-size: 35px;
+	text-align: center;
+	margin-bottom: 20px;
+	padding-left: 5px;
+	
+	
+}
+
+#banner-image h4 {
+	font-weight: 300;
+	color: #ffffff;
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 20px;
+	padding-left: 5px;
+	
+	
+}
+.box {
+	background-color:#336699;
+	color: #ffffff;
+	display: inline-block;	
+	width: 45%;
+	border: 2px solid #02b8dd;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-bottom: 30px;
+	Padding:10px;
+	float: left;
+	text-align: left;
+}
+	
