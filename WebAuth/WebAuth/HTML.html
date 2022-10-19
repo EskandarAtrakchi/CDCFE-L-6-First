@@ -1,0 +1,75 @@
+<html>
+    <head>
+	<title> JavaScript 1,3b,11,12</title>
+		<link id="swap" rel="stylesheet" type="text/css" href="css/default.css" >
+		<script src = "js/main.js"> </script>
+		<script>
+			function start(){
+				browserDetection();
+				scrollBox();
+				timeDigtal();
+			}
+
+			function swapStylesheet(sheet) {
+            document.getElementById('swap').setAttribute('href', sheet)
+			}
+			function MouseRollover(MyImage) {
+			MyImage.src = "img/toerr.jpg";
+			}
+			function MouseOut(MyImage) {
+			MyImage.src = "img/paul.jpg";
+			}
+			
+			
+		</script>
+	</head>
+	<body onload= "start()">
+		<!-- Script 1:Browser Detection-->
+		<div id= "browser" ></div>
+		<form name="msg">
+			<input type="text" size=30 name="message">
+		</form>
+		<div id ="digtime"></div>
+	
+		<div id="buttons">
+		Change the page style to <em>default</em> or <em>easy read</em>
+	
+                <button onClick="swapStylesheet('css/default.css')">Default</button>
+                <button onClick="swapStylesheet('css/access.css')">Adapted text</button>
+                  
+        </div>
+
+<header><!-- This is the Header bar-->
+			
+			
+			<h1><span class="color">Research Project: Computer Science Profile</span><img style="width:100px;" src="img/logo.png" ></h1>
+				<nav><!-- This is the Navigation bar-->
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="tech.html">Technical Skills</a></li>
+						<li><a href="com.html">Team Communications </a></li>
+						<li><a href="contact.html">Contact Us</a></li							
+					</ul>
+				</nav>
+		</header>
+		
+			<div id="banner-image"><!-- This contains the banner image-->
+					<h3><strong></strong><br/> Computer Science</h3>
+					<h3 id="digitime"></h3>
+					<h4><strong></strong><br/> A short Introduction</h4>
+			</div>
+			<section>
+				<article> 
+						
+				        <h2>What is most interesting about Computer Science</h2>
+						<p><img src="img/blank.jpg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam faucibus odio at purus iaculis, at eleifend enim ullamcorper. Nunc posuere augue non eros aliquet, eget pharetra dolor varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam tempor, est id blandit volutpat, urna ante accumsan arcu, nec blandit nisl leo imperdiet tortor.</p>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam faucibus odio at purus iaculis, at eleifend enim ullamcorper. Nunc posuere augue non eros aliquet, eget pharetra dolor varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam tempor, est id blandit volutpat, urna ante accumsan arcu, nec blandit nisl leo imperdiet tortor.</p>
+						
+				</article>
+		</section>
+
+	</body>
+
+
+</html>
