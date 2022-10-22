@@ -1,26 +1,34 @@
 package ATM;
 
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Balance {
+	DateTimeFormatter date = DateTimeFormatter.ofPattern
+		("yyyy/MM/dd HH:mm:ss");//set format for date and time that been imported from the device 
+	LocalDateTime now = LocalDateTime.now();
     private double balance;
-    private Date date;
-    private long accountNum;
+    private long accountNum = MyRandom();
     Scanner sc = new Scanner(System.in);
+    
+    static int MyRandom() {
+    	Random X = new Random();
+    	int Y = X.nextInt(999)+1;
+    	return Y;
+    }
 
-    public Balance(long aNo, double money, Date aDate) {
+    public Balance(long aNo, double money) {
         accountNum = aNo;
         balance = money;
-        date = (Date) aDate.clone();
-        System.out.println("New account created with account number: " + accountNum);
-        System.out.println("Opening balance " + balance+"$");
-        System.out.println("Account created on " + date.toString());
+        System.out.println("New account created with account ID: " + accountNum);
+        System.out.println("Opening balance is " + balance + "$");
+        
     }
 
     public Balance(Balance b) {
         balance = b.balance;
-        date = b.date;
         accountNum = b.accountNum;
     }
 
@@ -38,17 +46,9 @@ public class Balance {
         this.balance = balance;
     }
 
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
     public String toString() {
-        return "Established ID Number is: " + accountNum + "\nCurrent balance: " + balance+"$"
-                + "\nLast date of update was on: " + date;
+        return "Your ID Number is: " + accountNum + "\nCurrent balance: " + balance + "$"
+                + "\nLast date of update was on: " + date.format(now) + "\n";
 
     }
 
