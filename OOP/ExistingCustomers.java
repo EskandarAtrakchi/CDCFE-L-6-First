@@ -42,7 +42,7 @@ final public class ExisitingCustomers {
 			toInt = X.next();
 			inputValidation();
 			tostring = Integer.parseInt(toInt);
-			for (int i = 0; i < names.length; i++) {
+			for ( int i = 0; i < names.length; i ++ ) {
 				if (tostring == Pin[i]) {
 					index = i;
 					SelectionMenu();
