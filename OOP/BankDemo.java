@@ -8,40 +8,6 @@ public class BankDemo {
     	TheMainMethodIsHere();
     	
     }
-    public static void NamesSearch() {
-	    
-    	int ID [] = { 01, 02, 03, 04, 05, 06 };
-    	int Pin [] = { 1111, 2222, 3333, 4444, 5555, 6666 };
-    	double Balance[] = { 111, 222, 333, 444, 555, 666 };
-    	String names [] = { "Joshua", "Alex", "Younis", "Eskand", "Ann", "Appul" };
-    	System.out.println("Please enter the ID number");
-       int key = X.nextInt();
-
-       int i = 0;
-       boolean found = false;
-
-      for ( i = 0; i < ID.length; i ++ )
-      {
-             if ( ID [ i ]  == key )
-            {
-                     found = true;     
-                     break;
-             }
-       }
-
-      if (found)   //When found is true, index of location of key is printed.
-      {
-    	  System.out.println("This is the information for the requested ID at " + key);
-    	  System.out.println("------------------------------------------------------------------------------");
-            System.out.println("Name\t\tBalance\t\tID\t\tPIN\t\tIndexPosition");
-            System.out.println(names [ i ] + "\t\t" + Balance [ i ] + "$" + "\t\t" + ID [ i ] + "\t\t" + Pin [ i ] + "\t\t   " + i );
-            System.out.println("------------------------------------------------------------------------------");
-      }
-      else
-      {
-            System.out.println(key + "is not in this array.");
-      }
-    }
     
     public static void TheMainMethodIsHere() {
     	String choice, ch, operation;
@@ -104,7 +70,7 @@ public class BankDemo {
             
             
             case "6":
-            	NamesSearch(); break;
+            	ExisitingCustomers.NamesSearch(); break;
 			
             default:
                 System.out.println("Wrong choice!!"); 
