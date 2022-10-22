@@ -18,9 +18,9 @@ public class Transaction {
         b = new Bank();
     }
 
-    public void transaction(long accountNum, String transactionType, double amount) {
+    public void transaction(long accountNum, String Type, double amount) {
         this.accountNum = accountNum;
-        this.Type = transactionType;
+        this.Type = Type;
         this.amount = amount;
         date = new Date();
         operation();
