@@ -104,7 +104,8 @@ final public class ExisitingCustomers {
 			CustomerWithdaw = Integer.parseInt(toInt);
 			if(Balance[index] >= Q) {
 				Balance[index] = Balance[index] - CustomerWithdaw;
-				System.out.println("Your new Balance is: "+Balance[index]+"$");
+				double reminde = Balance[index] - (0.5/100);
+				System.out.println("Your new Balance is: " + reminde + "$");
 				SelectionMenu();
 			}
 			else {
