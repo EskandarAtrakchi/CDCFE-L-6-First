@@ -8,7 +8,7 @@ import java.util.Scanner;
 final public class ExisitingCustomers {
 	
 		static Scanner X = new Scanner (System.in);
-		private static double Balance[] = {111, 222, 333, 444, 555, 666};
+		private static double Balance [] = {111, 222, 333, 444, 555, 666};
 		final private static int ID [] = {01, 02, 03, 04, 05, 06};
 		private static String names [] = {"Joshua", "Alex", "Younis", "Eskand", "Ann", "Appul"};
 		private static int Pin [] = {1111, 2222, 3333, 4444, 5555, 6666};
@@ -20,7 +20,7 @@ final public class ExisitingCustomers {
 		private static int CustomerDeposite;
 		private static int ChangePIN;
 		
-		final public static void main(String [] args) {
+		final public static void main(String [ ] args) {
 			PrintCustomers();
 			LogInMethod ();
 		}
@@ -31,7 +31,7 @@ final public class ExisitingCustomers {
 			System.out.println("Names\t\tBalances\tIDs\t\tPINs");
 			System.out.println("--------------------------------------------------------");
 			for(int i = 0; i < 6; i++) {
-				System.out.println(names[i] + "\t\t" + Balance[i]+"$" + "\t\t" + ID[i] + "\t\t" + Pin[i]);
+				System.out.println(names [ i ] + "\t\t" + Balance [ i ] + "$" + "\t\t" + ID [ i ] + "\t\t" + Pin [ i ]);
 				
 			}
 			System.out.println("--------------------------------------------------------");
@@ -80,9 +80,9 @@ final public class ExisitingCustomers {
 				inputValidation();
 				CustomerDeposite = Integer.parseInt(toInt);
 				//update user account balance after depositing
-				Balance[index]= Balance[index]+ CustomerDeposite;
+				Balance [ index ] = Balance [ index ] + CustomerDeposite;
 				//print the updating balance for the customer so they know 
-				System.out.println("Your new balance is now: "+ Balance[index]+"$");
+				System.out.println("Your new balance is now: "+ Balance [ index ] + "$");
 				SelectionMenu();
 			}//end method
 		
@@ -91,7 +91,7 @@ final public class ExisitingCustomers {
 			
 			System.out.println("\t\tName\t\tPin\t\tBalance\t\tID"
 					+ "\n\t\t---------------------------------------------------");
-			System.out.println("\t\t" + names[index] + "\t\t" + Pin[index] + "\t\t" + Balance[index]+"$" + "\t\t" + ID[index]);
+			System.out.println("\t\t" + names [ index ] + "\t\t" + Pin [ index ] + "\t\t" + Balance[ index ] + "$" + "\t\t" + ID [ index ]);
 			SelectionMenu();
 		}
 
@@ -141,11 +141,9 @@ final public class ExisitingCustomers {
 			//reset the PIN to zero and taking user input PIN instead and store it in the array 
 					Pin[index]= Pin[index] + ChangePIN - Pin[index];//update pin index
 						 DateTimeFormatter dtf = DateTimeFormatter.ofPattern
-								 ("yyyy/MM/dd HH:mm:ss");//set format for date and time that been imported from the device 
+								 ("yyyy/MM/dd HH:mm:ss");//set format for date and time that been imported from the machine
 				    	   LocalDateTime now = LocalDateTime.now();//get the time and the date from the machine  
-					 System.out.println("Your new PIN is now: "+ Pin[index] + 
-							 " This PIN been changed on "
-							 +dtf.format(now));
+					 System.out.println("Your new PIN is now: "+ Pin [ index ] + " This PIN been changed on " + dtf.format(now));
 					 SelectionMenu();//get the customer to selection Menu in-case for any other process
 		}//end method changePin
 		
