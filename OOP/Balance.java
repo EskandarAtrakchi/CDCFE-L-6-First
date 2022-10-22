@@ -11,7 +11,7 @@ public class Balance {
 	LocalDateTime now = LocalDateTime.now();
     private double balance;
     private long accountNum = MyRandom();
-    Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner( System.in );
     
     static int MyRandom() {
     	Random X = new Random();
@@ -48,7 +48,7 @@ public class Balance {
 
     public String toString() {
         return "Your ID Number is: " + accountNum + "\nCurrent balance: " + balance + "$"
-                + "\nLast date of update was on: " + date.format(now) + "\n";
+                + "\nLast date of update was on: " + date.format ( now ) + "\n";
 
     }
 
