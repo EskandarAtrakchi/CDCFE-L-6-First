@@ -51,7 +51,7 @@ public class Transaction {
                 return;
             }
             balance.setBalance(balance.getBalance() - amount);
-            System.out.println(balance.toString()+"$");
+            System.out.println(balance.toString() + "$");
         }
 
         else if (Type.equalsIgnoreCase("deposit")) {
@@ -61,7 +61,7 @@ public class Transaction {
                 return;
             }
             balance.setBalance(balance.getBalance() + amount);
-            System.out.println(balance.toString()+"$");
+            System.out.println(balance.toString() + "$");
         }
 
         else if (Type.equalsIgnoreCase("showInfo")) {
