@@ -126,9 +126,9 @@ final public class ExisitingCustomers {
 			System.out.println("Number 1 to deposit with interest\nNumber 2 to return to the main menu");
 			toInt = X.next();
 			switch(toInt) {
+			
 			case "1" : 
-
-				System.out.println("How much you want to deposit");
+				System.out.println("How much you want to deposit?");
 				toInt = X.next();
 				inputValidation();
 				CustomerDeposite = Integer.parseInt(toInt);
@@ -139,11 +139,15 @@ final public class ExisitingCustomers {
 				System.out.println("Your annual interest is 0.05%, you savings: " + InterestInTheSavingAccount + "$");
 				SelectionMenu();
 				
-			break;
+				break;
+				
 			case "2" : BankDemo.TheMainMethodIsHere(); 
+			
 			break;
+			
 			default:
                 System.out.println("Wrong choice!!"); 
+            
                 break;
 			}
 		}
