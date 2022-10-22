@@ -6,22 +6,22 @@ import java.util.Iterator;
 
 public class Bank {
 
-    private ArrayList <Balance> List;
-    Iterator <Balance> itr;
-
+    private ArrayList < Balance > List;
+    Iterator < Balance > itr;
+    
     public Bank() {
-        List = new ArrayList <Balance> ();
+        List = new ArrayList < Balance > ();
     }
 
-    public void newAccount (Balance e) {
+    public void newAccount ( Balance e ) {
        List.add(e);
     }
 
-   public Balance searchAccount(long accountNum) {
+   public Balance searchAccount( long accountNum ) {
         itr = List.iterator();
-        while (itr.hasNext()) {
-            Balance b = new Balance(itr.next());
-            if (b.getAccountNum() == accountNum)
+        while ( itr.hasNext () ) {
+            Balance b = new Balance( itr.next() );
+            if ( b.getAccountNum() == accountNum )
                 return b;
         }
         return null;
