@@ -1,8 +1,6 @@
-package ATM;
-
 import java.util.*;
 
-public class BankDemo {
+public class BankOptions {
 	static Scanner X = new Scanner (System.in);
     public static void main(String args [ ]) {
     	TheMainMethodIsHere();
@@ -10,6 +8,7 @@ public class BankDemo {
     }
     
     public static void TheMainMethodIsHere() {
+    	
     	String choice, ch, operation;
         Transaction pullingInfoFromTransactionClass = new Transaction();
         Scanner sc = new Scanner(System.in);
@@ -60,8 +59,8 @@ public class BankDemo {
                 break;
                 
             case "4":
-            	ExisitingCustomers.PrintCustomers();
-            	ExisitingCustomers.LogInMethod (); 
+            	ExistingCustomers.PrintCustomers();
+            	ExistingCustomers.LogInMethod (); 
             	break;
 
             case "5":
@@ -70,7 +69,7 @@ public class BankDemo {
             
             
             case "6":
-            	ExisitingCustomers.NamesSearch(); break;
+            	ExistingCustomers.NamesSearch(); break;
 			
             default:
                 System.out.println("Wrong choice!!"); 
