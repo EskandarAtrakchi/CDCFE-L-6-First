@@ -1,5 +1,3 @@
-package ATM;
-
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
@@ -10,7 +8,7 @@ public class Transaction {
 	LocalDateTime now = LocalDateTime.now();
     private String Type;
     private double amount;
-    private long accountNum = Balance.MyRandom();
+    private long accountNum;
     private Bank b;
     private Balance balance = new Balance();
 
