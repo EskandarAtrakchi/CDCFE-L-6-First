@@ -1,5 +1,3 @@
-package ATM;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 //import java.util.Scanner;
@@ -46,7 +44,6 @@ public class Bank {
     	Scanner X = new Scanner(System.in);
     	
     	   ArrayList<Balance> X = new ArrayList<Balance>();
-
     	   return List; 
     	} 
     	*/

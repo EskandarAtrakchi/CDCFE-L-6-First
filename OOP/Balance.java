@@ -1,8 +1,5 @@
-package ATM;
-
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Balance {
@@ -10,14 +7,8 @@ public class Balance {
 		("yyyy/MM/dd HH:mm:ss");//set format for date and time that been imported from the device 
 	LocalDateTime now = LocalDateTime.now();
     private double balance;
-    private long accountNum = MyRandom();
+    private long accountNum;
     Scanner sc = new Scanner( System.in );
-    
-    static int MyRandom() {
-    	Random X = new Random();
-    	int Y = X.nextInt(999)+1;
-    	return Y;
-    }
 
     public Balance(long aNo, double money) {
         accountNum = aNo;
