@@ -1,3 +1,5 @@
+package ATM;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
@@ -26,8 +28,8 @@ abstract public class AbstractFromExistingCustomers {
        int i = 0;
        boolean found = false;
 
-      for ( i = 0; i < IDs.length; i ++ )
-      {
+      for ( i = 0; i < IDs.length; i ++ ) {
+    	  
              if ( IDs [ i ]  == key )
             {
                      found = true;     
@@ -45,7 +47,7 @@ abstract public class AbstractFromExistingCustomers {
       }
       else
       {
-            System.out.println(key + "is not in this array.");
+            System.out.println(key + " Customer doesn't exist, check in new customers ArrayList instead.");
       }
     }
 	
