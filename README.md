@@ -30,7 +30,7 @@ LLDs fields:
 
 * vehicleName&#x20;
 * vehicleColor&#x20;
-* vehicleIdNumber
+* vehicleId
 * workerName
 * workerShift
 * vehicleFeulCapacity
@@ -158,3 +158,170 @@ LLDs fields:
 
 * vehicleId
 * weekNumber
+
+
+
+\----------------------------------------------------------------------------------
+
+
+
+
+
+* vehicleName&#x20;
+* vehicleColor&#x20;
+* vehicleId
+* workerName
+* workerShift
+* vehicleFeulCapacity
+* vehiclemileage
+* vehicleFuelSpent
+* weekNumber
+* saturdayAv
+* sundayAv
+* mondayAv
+* tuesdayAv
+* wednesdayAv
+* thursdayAv
+* fridayAv
+* vehicleColor
+* workerShift
+* workerName
+* vehicleId
+* vehcleName
+* vehicleFuelCapacity
+* vehiclemileage
+* vehicleFuelSpent
+* vehicleColor
+* workerShift
+* workerName
+* vehicleId
+* vehcleName
+* vehicleFeulCapacity
+* vehiclDictanceCut
+* vehicleFuelSpent
+* saturdayAv
+* sundayAv
+* mondayAv
+* tuesdayAv
+* wednesdayAv
+* thursdayAv
+* fridayAv
+* vehicleColor
+* workerShift
+* workerName
+* vehicleId
+* vehcleName
+* vehicleFeulCapacity
+* vehiclemileage
+* vehicleFuelSpent
+* saturdayAv
+* sundayAv
+* mondayAv
+* tuesdayAv
+* wednesdayAv
+* thursdayAv
+* fridayAv
+* vehicleColor
+* workerShift
+* workerName
+* vehicleId
+* vehcleName
+* vehicleFeulCapacity
+* vehiclemileage
+* vehicleFuelSpent
+* saturdayAv
+* sundayAv
+* mondayAv
+* tuesdayAv
+* wednesdayAv
+* thursdayAv
+* fridayAv
+* weekNumber
+* vehicleColor
+* workerShift
+* workerName
+* vehicleId
+* vehcleName
+* vehicleFuelCapacity
+* vehiclemileage
+* vehicleFuelSpent
+* saturdayAv
+* sundayAv
+* mondayAv
+* tuesdayAv
+* wednesdayAv
+* thursdayAv
+* fridayAv
+* vehicleColor
+* workerShift
+* workerName
+* vehicleId
+* vehicleName
+* weekNumber
+* vehicleFuelSpent
+* weekNumber
+* saturdayAv
+* sundayAv
+* mondayAv
+* tuesdayAv
+* wednesdayAv
+* thursdayAv
+* fridayAv
+* weekNumber
+* vehicleId
+* weekNumber
+
+\-------------------------------------------------------------------------------------
+
+Normalisation&#x20;
+
+1. st Normal Form – Removal of Duplicates
+
+* vehicleName&#x20;
+* vehicleColor&#x20;
+* workerName&#x20;
+* workerShift&#x20;
+* vehicleFeulCapacity&#x20;
+* vehiclemileage&#x20;
+* vehicleFuelSpent&#x20;
+* weekNumber&#x20;
+* saturdayAv&#x20;
+* sundayAv&#x20;
+* mondayAv&#x20;
+* tuesdayAv&#x20;
+* wednesdayAv&#x20;
+* thursdayAv&#x20;
+* fridayAv&#x20;
+* vehicleId
+* vehiclDictanceCut
+
+2\. Removal of Partial Dependencies
+
+Vehicles:
+
+* [ ] vehiclDictanceCut&#x20;
+* [ ] vehicleColor&#x20;
+* [ ] vehicleFeulCapacity&#x20;
+* [ ] vehicleFuelSpent&#x20;
+* [x] vehicleId&#x20;
+* [ ] vehiclemileage&#x20;
+* [ ] vehicleName
+
+
+
+Workers:
+
+* [x] WorkerID
+* [ ] workerName&#x20;
+* [ ] workerShift
+
+DaysOfTheWeek:
+
+* [x] WeekNumber
+* [ ] fridayAv&#x20;
+* [ ] mondayAv&#x20;
+* [ ] saturdayAv&#x20;
+* [ ] sundayAv&#x20;
+* [ ] thursdayAv&#x20;
+* [ ] tuesdayAv&#x20;
+* [ ] wednesdayAv
