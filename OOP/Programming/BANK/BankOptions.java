@@ -78,6 +78,11 @@ public class BankOptions {//start public class
             }//end switch 
         }//end do 
          while (choice != "5");//when the choice does not equal 5 the loop it again 
+
         sc.close();//clase the source of Scanner here 
+
+         static {//static block to know what is this file about 
+		System.out.println("Welcome to Eskandar's Bank");
+	}
     }//end class 
 }
