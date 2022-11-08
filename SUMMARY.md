@@ -1,3 +1,8 @@
 # Table of contents
 
-* [Page 1](README.md)
+* [Introduction](README.md)
+* [Pre-Mitigation](pre-mitigation.md)
+* [Post-Mitigation](post-mitigation.md)
+* [Risk appetite](risk-appetite.md)
+* [Risk Averse](risk-averse.md)
+* [conclusion](conclusion.md)
