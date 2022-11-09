@@ -64,7 +64,6 @@ LLDs fields:
 * vehicleId
 * vehcleName
 * vehicleFeulCapacity
-* vehiclDictanceCut
 * vehicleFuelSpent
 * saturdayAv
 * sundayAv
@@ -197,7 +196,6 @@ LLDs fields:
 * vehicleId
 * vehcleName
 * vehicleFeulCapacity
-* vehiclDictanceCut
 * vehicleFuelSpent
 * saturdayAv
 * sundayAv
@@ -293,13 +291,14 @@ Normalisation&#x20;
 * thursdayAv&#x20;
 * fridayAv&#x20;
 * vehicleId
-* vehiclDictanceCut
+* WorkerID
+
+
 
 2\. Removal of Partial Dependencies
 
 Vehicles:
 
-* [ ] vehiclDictanceCut&#x20;
 * [ ] vehicleColor&#x20;
 * [ ] vehicleFeulCapacity&#x20;
 * [ ] vehicleFuelSpent&#x20;
@@ -325,3 +324,40 @@ DaysOfTheWeek:
 * [ ] thursdayAv&#x20;
 * [ ] tuesdayAv&#x20;
 * [ ] wednesdayAv
+
+3\. Third normal form: removal of transitive dependencies&#x20;
+
+| WeekNumber (PK) |  WorkerID (PK)  |     vehicleId (PK)    |
+| :-------------: | :-------------: | :-------------------: |
+|    fridayAv     |   workerShift   |      vehicleName      |
+|    mondayAv     | workerName (FK) |    vehiclemileage     |
+|    sundayAv     |                 | vehicleFuelSpent (FK) |
+|   thursdayAv    |                 |  vehicleFeulCapacity  |
+|    tuesdayAv    |                 |     vehicleColor      |
+|   wednesdayAv   |                 |     WorkerID (FK)     |
+|   saturdayAv    |                 |                       |
+
+* vehicleName&#x20;
+* vehicleColor&#x20;
+* workerName (FK)
+* workerShift&#x20;
+* vehicleFeulCapacity&#x20;
+* vehiclemileage&#x20;
+* vehicleFuelSpent (FK)
+* weekNumber (PK)
+* saturdayAv&#x20;
+* sundayAv&#x20;
+* mondayAv&#x20;
+* tuesdayAv&#x20;
+* wednesdayAv&#x20;
+* thursdayAv&#x20;
+* fridayAv&#x20;
+* vehicleId (PK)
+* WorkerID (PK)
+
+|   |   |   |
+| - | - | - |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+
