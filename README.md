@@ -355,9 +355,5 @@ DaysOfTheWeek:
 * vehicleId (PK)
 * WorkerID (PK)
 
-|   |   |   |
-| - | - | - |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+<figure><img src=".gitbook/assets/Screenshot (19).png" alt=""><figcaption></figcaption></figure>
 
