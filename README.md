@@ -399,10 +399,6 @@ My database is a shop selling vehicles to municipalities in cities, the database
 
 \-          WorkerName
 
-\-          WorkerID
-
-&#x20;
-
 &#x20;
 
 \----------------------------------------------------------------------------------
@@ -706,7 +702,17 @@ VehicleID(FK)](file:///C:/Users/ESKAND\~1/AppData/Local/Temp/msohtmlclip1/01/cli
 \
 
 
-<figure><img src="file:///C:/Users/ESKAND~1/AppData/Local/Temp/msohtmlclip1/01/clip_image016.gif" alt=""><figcaption></figcaption></figure>
+![Text Box: VehicleID(PK)
+VehicleName
+VehicleCpacity
+VehicleColor
+VehiclePrice
+VehicleCondition
+VehicleSize
+VehicleYearModel](file:///C:/Users/ESKAND\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image015.gif)![Text Box:  UserCardNumber(PK)
+UserCCVNumber
+UserCardExpirationDate
+UserName(FK)](file:///C:/Users/ESKAND\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image016.gif)
 
 &#x20;
 
@@ -758,7 +764,21 @@ VehicleID(FK)](file:///C:/Users/ESKAND\~1/AppData/Local/Temp/msohtmlclip1/01/cli
 
 &#x20;
 
-1. Table number one for VehicleID(PK)
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+1. \
+
+2. Table number one for VehicleID(PK)
 
 &#x20;
 
@@ -766,9 +786,9 @@ VehicleID(FK)](file:///C:/Users/ESKAND\~1/AppData/Local/Temp/msohtmlclip1/01/cli
 | --------------------------------------- | ---------- | ---------- |
 | <p> </p><p>VehcileID(PK)</p><p> </p>    | int        |            |
 | <p> </p><p>VehicleName</p><p> </p>      | Varchar    | 255        |
-| <p> </p><p>VehicleCpacity</p><p> </p>   | int        | 255        |
+| <p> </p><p>VehicleCpacity</p><p> </p>   | int        |            |
 | <p> </p><p>VehicleColor</p><p> </p>     | Varchar    | 255        |
-| <p> </p><p>VehiclePrice</p><p> </p>     | int        | 255        |
+| <p> </p><p>VehiclePrice</p><p> </p>     | int        |            |
 | <p> </p><p>VehicleCondition</p><p> </p> | Varchar    | 255        |
 | <p> </p><p>VehicleSize</p><p> </p>      | Varchar    | 255        |
 | <p> </p><p>VehicleYearModel</p><p> </p> | int        |            |
@@ -806,8 +826,8 @@ VehicleID(FK)](file:///C:/Users/ESKAND\~1/AppData/Local/Temp/msohtmlclip1/01/cli
 | <p> </p><p>UserCardNumber(FK)</p><p> </p> | int        |            |
 | <p> </p><p>UserAddress</p><p> </p>        | Varchar    | 255        |
 | <p> </p><p>UserEirCode</p><p> </p>        | Varchar    | 255        |
-| <p> </p><p>WorkerID</p><p> </p>           |            |            |
-| <p> </p><p>WorkerName</p><p> </p>         |            |            |
+| <p> </p><p>WorkerID</p><p> </p>           | int        |            |
+| <p> </p><p>WorkerName</p><p> </p>         | Varchar    | 255        |
 
 &#x20;
 
