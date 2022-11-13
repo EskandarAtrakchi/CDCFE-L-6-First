@@ -1,359 +1,941 @@
 # HLD\&LLD
 
-HLD
+**Vehicles Database**
 
-The database is gonna track the vehicles of a municipality that has over 200 vehicles and record all the cut distances and the amount of fuel that has been spent weekly on each vehicle.
+&#x20;
 
+&#x20;
 
+**HLD**
 
-LLD
+&#x20;
 
-1. Print the data of the vehicles/workers
-2. Modifying data of the vehicles/workers
-3. Search for the vehicles/workers
-4. Create new vehicles/workers/accounts if vehicles or workers been added to the municipality.
-5. Report, make reports about the vehicles/workers
-6. Delete vehicles/workers from the database
-7. Workers are able to create records that the vehicles need repair
-8. Admin can input fuel used per week and KM completed per week&#x20;
-9. workers can book time on the vehicles &#x20;
-10. account users can view fuel and mileage for each vehicle&#x20;
+My database is a shop selling vehicles to municipalities in cities, the database will be able to track, search, add and view all the available vehicles that are ready to be sold to the municipalities.
 
-Who is gonna use the database?
+&#x20;
 
-* Admin
-* Anyone with an account (Can view the database only)
+**LLD**
 
-LLDs fields:
+&#x20;
 
-1\) Print the data of the vehicles/workers
+1\.      Users can delete the account & Workers can delete vehicles from the database
 
-* vehicleName&#x20;
-* vehicleColor&#x20;
-* vehicleId
-* workerName
-* workerShift
-* vehicleFeulCapacity
-* vehiclemileage
-* vehicleFuelSpent
-* weekNumber
-* saturdayAv
-* sundayAv
-* mondayAv
-* tuesdayAv
-* wednesdayAv
-* thursdayAv
-* fridayAv
+2\.      Users should be able to update the account
 
-2\) Modifying data of the vehicles/workers
+3\.      Users can login to the account
 
-* vehicleColor
-* workerShift
-* workerName
-* vehicleId
-* vehcleName
-* vehicleFuelCapacity
-* vehiclemileage
-* vehicleFuelSpent
+4\.      Users can create an account & Workers can create invoices to the municipalities (Users)
 
-3\) Search for the vehicles/workers
+5\.      Credit cards can be added by buyers (Users) & Workers can add more than one Vehicle
 
-* vehicleColor
-* workerShift
-* workerName
-* vehicleId
-* vehcleName
-* vehicleFeulCapacity
-* vehicleFuelSpent
-* saturdayAv
-* sundayAv
-* mondayAv
-* tuesdayAv
-* wednesdayAv
-* thursdayAv
-* fridayAv
+6\.      Users can search vehicles according to specifications
 
-4\) Create new vehicles/workers/accounts if vehicles or workers been added to the municipality.
+7\.      Workers can make reports about the vehicles
 
-* vehicleColor
-* workerShift
-* workerName
-* vehicleId
-* vehcleName
-* vehicleFeulCapacity
-* vehiclemileage
-* vehicleFuelSpent
-* saturdayAv
-* sundayAv
-* mondayAv
-* tuesdayAv
-* wednesdayAv
-* thursdayAv
-* fridayAv
+8\.      Users can book vehicles
 
-5\) Report, make reports about the vehicles/workers
+9\.      Users & Workers can view vehicles and their specifications
 
-* vehicleColor
-* workerShift
-* workerName
-* vehicleId
-* vehcleName
-* vehicleFeulCapacity
-* vehiclemileage
-* vehicleFuelSpent
-* saturdayAv
-* sundayAv
-* mondayAv
-* tuesdayAv
-* wednesdayAv
-* thursdayAv
-* fridayAv
-* weekNumber
+10\.  Workers can input the vehicles IDs
 
-6\) Delete vehicles/workers from the database
+&#x20;
 
-* vehicleColor
-* workerShift
-* workerName
-* vehicleId
-* vehcleName
-* vehicleFuelCapacity
-* vehiclemileage
-* vehicleFuelSpent
-* saturdayAv
-* sundayAv
-* mondayAv
-* tuesdayAv
-* wednesdayAv
-* thursdayAv
-* fridayAv
+&#x20;
 
-7\) Workers are able to create records that the vehicles need repair
+**Who is going to use the database?**
 
-* vehicleColor
-* workerShift
-* workerName
-* vehicleId
-* vehicleName
-* weekNumber
+&#x20;
 
-8\) Admin can input fuel used per week and KM completed per week
+* Workers
+* Anyone who creates an account can:
 
-* vehicleFuelSpent
-* weekNumber
+1\.      Delete their Account
 
-9\) workers can book time on the vehicles &#x20;
+2\.      Update their account
 
-* saturdayAv
-* sundayAv
-* mondayAv
-* tuesdayAv
-* wednesdayAv
-* thursdayAv
-* fridayAv
-* weekNumber
+3\.      Log in to their account
 
-10\) account users can view fuel and mileage for each vehicle&#x20;
+4\.      Add credit cards
 
-* vehicleId
-* weekNumber
+5\.      Search vehicles according to specifications
 
+6\.      Book vehicles
 
+7\.      Can view vehicles
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+**Data Modelling**
+
+**Fields needed to satisfy each LLD**
+
+&#x20;
+
+1. Users can delete the account & Workers can delete vehicles from the database
+
+&#x20;
+
+\-          ![](file:///C:/Users/ESKAND\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image001.gif)UserName
+
+\-          ![Text Box: Users](file:///C:/Users/ESKAND\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image002.gif)UserPassWord
+
+\-          UserDOB
+
+\-          UserPhoneNumber
+
+\-          ![](file:///C:/Users/ESKAND\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image003.gif)VehicleID
+
+\-          VehicleName
+
+\-          VehicleCpacity
+
+\-          VehicleColor
+
+\-          ![Text Box: Workers](file:///C:/Users/ESKAND\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image004.gif)WorkerID
+
+\-          WorkerName
+
+\-          VehiclePrice
+
+\-          VehicleCondition
+
+\-          VehicleSize
+
+\-          VehicleYearModel
+
+&#x20;
+
+1. Users should be able to update the account
+
+&#x20;
+
+\-          UserName
+
+\-          UserPassWord
+
+\-          UserPhoneNumber
+
+\-          UserDOB
+
+\-          UserAddress
+
+\-          UserEriCode
+
+&#x20;
+
+1. Users can login to the account
+
+&#x20;
+
+\-          UserName
+
+\-          UserPassWord
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+1. Users can create an account & Workers can create invoices to the municipalities (Users)
+
+&#x20;
+
+\-          ![](file:///C:/Users/ESKAND\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image005.gif)UserName
+
+\-          UserPassWord
+
+\-          ![Text Box: Users](file:///C:/Users/ESKAND\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image006.gif)UserAddress
+
+\-          UserEirCode
+
+\-          UserPhoneNumber
+
+\-          UserDOB
+
+\-          ![](file:///C:/Users/ESKAND\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image007.gif)InvoiceID
+
+\-          VehicleColor
+
+\-          VehicleID
+
+\-          VehicleCapacity
+
+\-          VehicleName
+
+\-          ![Text Box: Workers](file:///C:/Users/ESKAND\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image008.gif)UserEirCode
+
+\-          UserAddress
+
+\-          UserName
+
+\-          UserPhoneNumber
+
+\-          UserDOB
+
+\-          WorkerName
+
+\-          WorkerID
+
+&#x20;
+
+1. Credit cards can be added by buyers (Users) & Workers can add Vehicles to the database
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+\-          ![](file:///C:/Users/ESKAND\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image009.gif)UserName
+
+\-          UserPassWord
+
+\-          ![Text Box: Users](file:///C:/Users/ESKAND\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image002.gif)UserDOB
+
+\-          UserPhoneNumber
+
+\-          UserCCVNumber
+
+\-          UserCardNumber
+
+\-          UserCardExpirationDate
+
+\-          ![](file:///C:/Users/ESKAND\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image010.gif)VehicleID
+
+\-          VehicleName
+
+\-          VehicleColor
+
+\-          VehicleCapacity
+
+\-          ![Text Box: Workers](file:///C:/Users/ESKAND\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image011.gif)WorkerID
+
+\-          WorkerName
+
+\-          VehiclePrice
+
+\-          VehicleCondition
+
+\-          VehicleSize
+
+\-          VehicleYearModel
+
+&#x20;
+
+1. Users can search vehicles according to specifications
+
+&#x20;
+
+\-          VehicleID
+
+\-          VehicleName
+
+\-          VehicleColor
+
+\-          VehicleCapacity
+
+\-          VehiclePrice
+
+\-          VehicleCondition
+
+\-          VehicleSize
+
+\-          VehicleYearModel
+
+&#x20;
+
+1. Workers can make reports about the vehicles
+
+&#x20;
+
+\-          VehicleID
+
+\-          VehicleName
+
+\-          VehicleColor
+
+\-          VehicleCapacity
+
+\-          WorkerName
+
+\-          WorkerID
+
+\-          VehiclePrice
+
+\-          VehicleCondition
+
+\-          VehicleSize
+
+\-          VehicleYearModel
+
+&#x20;
+
+1. Users can book vehicles
+
+&#x20;
+
+\-          VehicleID
+
+\-          VehicleName
+
+\-          VehicleColor
+
+\-          VehicleCapacity
+
+\-          UserName
+
+\-          UserPassWord
+
+\-          UserDOB
+
+\-          UserPhoneNumber
+
+\-          VehiclePrice
+
+\-          VehicleCondition
+
+\-          VehicleSize
+
+\-          VehicleYearModel
+
+&#x20;
+
+&#x20;
+
+1. Users & Workers can view vehicles and their specifications
+
+&#x20;
+
+&#x20;
+
+\-          VehicleID
+
+\-          VehicleName
+
+\-          VehicleColor
+
+\-          VehicleCapacity
+
+\-          VehiclePrice
+
+\-          VehicleCondition
+
+\-          VehicleSize
+
+\-          VehicleYearModel
+
+&#x20;
+
+1. Workers can input the vehicles IDs
+
+&#x20;
+
+\-          VehicleName
+
+\-          VehicleColor
+
+\-          VehicleCapacity
+
+\-          VehiclePrice
+
+\-          VehicleCondition
+
+\-          VehicleSize
+
+\-          VehicleYearModel
+
+\-          WorkerID
+
+\-          WorkerName
+
+\-          WorkerID
+
+&#x20;
+
+&#x20;
 
 \----------------------------------------------------------------------------------
 
+&#x20;
 
+**We need to normalize the following:**
 
+&#x20;****&#x20;
 
+\-          UserName
 
-* vehicleName&#x20;
-* vehicleColor&#x20;
-* vehicleId
-* workerName
-* workerShift
-* vehicleFeulCapacity
-* vehiclemileage
-* vehicleFuelSpent
-* weekNumber
-* saturdayAv
-* sundayAv
-* mondayAv
-* tuesdayAv
-* wednesdayAv
-* thursdayAv
-* fridayAv
-* vehicleColor
-* workerShift
-* workerName
-* vehicleId
-* vehcleName
-* vehicleFuelCapacity
-* vehiclemileage
-* vehicleFuelSpent
-* vehicleColor
-* workerShift
-* workerName
-* vehicleId
-* vehcleName
-* vehicleFeulCapacity
-* vehicleFuelSpent
-* saturdayAv
-* sundayAv
-* mondayAv
-* tuesdayAv
-* wednesdayAv
-* thursdayAv
-* fridayAv
-* vehicleColor
-* workerShift
-* workerName
-* vehicleId
-* vehcleName
-* vehicleFeulCapacity
-* vehiclemileage
-* vehicleFuelSpent
-* saturdayAv
-* sundayAv
-* mondayAv
-* tuesdayAv
-* wednesdayAv
-* thursdayAv
-* fridayAv
-* vehicleColor
-* workerShift
-* workerName
-* vehicleId
-* vehcleName
-* vehicleFeulCapacity
-* vehiclemileage
-* vehicleFuelSpent
-* saturdayAv
-* sundayAv
-* mondayAv
-* tuesdayAv
-* wednesdayAv
-* thursdayAv
-* fridayAv
-* weekNumber
-* vehicleColor
-* workerShift
-* workerName
-* vehicleId
-* vehcleName
-* vehicleFuelCapacity
-* vehiclemileage
-* vehicleFuelSpent
-* saturdayAv
-* sundayAv
-* mondayAv
-* tuesdayAv
-* wednesdayAv
-* thursdayAv
-* fridayAv
-* vehicleColor
-* workerShift
-* workerName
-* vehicleId
-* vehicleName
-* weekNumber
-* vehicleFuelSpent
-* weekNumber
-* saturdayAv
-* sundayAv
-* mondayAv
-* tuesdayAv
-* wednesdayAv
-* thursdayAv
-* fridayAv
-* weekNumber
-* vehicleId
-* weekNumber
+\-          VehiclePrice
+
+\-          VehicleCondition
+
+\-          VehicleSize
+
+\-          VehicleYearModel
+
+\-          UserPassWord
+
+\-          UserDOB
+
+\-          UserPhoneNumber
+
+\-          VehicleID
+
+\-          VehicleName
+
+\-          VehicleCpacity
+
+\-          VehicleColor
+
+\-          UserName
+
+\-          UserPassWord
+
+\-          UserPhoneNumber
+
+\-          UserDOB
+
+\-          UserAddress
+
+\-          UserEriCode
+
+\-          UserName
+
+\-          UserPassWord
+
+\-          UserName
+
+\-          UserPassWord
+
+\-          UserAddress
+
+\-          UserEirCode
+
+\-          UserPhoneNumber
+
+\-          UserDOB
+
+\-          InvoiceID
+
+\-          VehicleColor
+
+\-          VehicleID
+
+\-          VehicleCapacity
+
+\-          VehicleName
+
+\-          UserEirCode
+
+\-          UserAddress
+
+\-          UserName
+
+\-          UserPhoneNumber
+
+\-          UserDOB
+
+\-          UserName
+
+\-          UserPassWord
+
+\-          UserDOB
+
+\-          UserPhoneNumber
+
+\-          UserCCVNumber
+
+\-          UserCardNumber
+
+\-          UserCardExpirationDate
+
+\-          VehicleID
+
+\-          VehicleName
+
+\-          VehicleColor
+
+\-          VehicleCapacity
+
+\-          VehicleID
+
+\-          VehicleName
+
+\-          VehicleColor
+
+\-          VehicleCapacity
+
+\-          VehicleID
+
+\-          VehicleName
+
+\-          VehicleColor
+
+\-          VehicleCapacity
+
+\-          VehicleID
+
+\-          VehicleName
+
+\-          VehicleColor
+
+\-          VehicleCapacity
+
+\-          UserName
+
+\-          UserPassWord
+
+\-          UserDOB
+
+\-          UserPhoneNumber
+
+\-          VehicleID
+
+\-          VehicleName
+
+\-          VehicleColor
+
+\-          VehicleCapacity
+
+\-          VehicleName
+
+\-          VehicleColor
+
+\-          VehicleCapacity
+
+\-          WorkerID
+
+\-          WorkerName
+
+&#x20;
+
+&#x20;
+
+&#x20;
 
 \-------------------------------------------------------------------------------------
 
-Normalisation&#x20;
+**Normalization**
 
-1. st Normal Form – Removal of Duplicates
+&#x20;
 
-* vehicleName&#x20;
-* vehicleColor&#x20;
-* workerName&#x20;
-* workerShift&#x20;
-* vehicleFeulCapacity&#x20;
-* vehiclemileage&#x20;
-* vehicleFuelSpent&#x20;
-* weekNumber&#x20;
-* saturdayAv&#x20;
-* sundayAv&#x20;
-* mondayAv&#x20;
-* tuesdayAv&#x20;
-* wednesdayAv&#x20;
-* thursdayAv&#x20;
-* fridayAv&#x20;
-* vehicleId
-* WorkerID
+1. **Normal Form – Removal of Duplicates**
 
+&#x20;
 
+\-          UserName
 
-2\. Removal of Partial Dependencies
+\-          UserPassWord
 
-Vehicles:
+\-          UserDOB
 
-* [ ] vehicleColor&#x20;
-* [ ] vehicleFeulCapacity&#x20;
-* [ ] vehicleFuelSpent&#x20;
-* [x] vehicleId&#x20;
-* [ ] vehiclemileage&#x20;
-* [ ] vehicleName
+\-          UserPhoneNumber
 
+\-          UserAddress
 
+\-          UserEriCode
+
+\-          InvoiceID
+
+\-          UserCCVNumber
+
+\-          UserCardNumber
+
+\-          UserCardExpirationDate
+
+\-          WorkerID
+
+\-          WorkerName
+
+\-          VehicleID
+
+\-          VehicleName
+
+\-          VehicleCpacity
+
+\-          VehicleColor
+
+\-          VehiclePrice
+
+\-          VehicleCondition
+
+\-          VehicleSize
+
+\-          VehicleYearModel
+
+&#x20;
+
+1. &#x20;**Removal of Partial Dependencies.**
+
+**Separate out the fields into their groups.**
+
+**Only allow groups that have a dependency on the Primary Key**
+
+&#x20;
 
 Workers:
 
-* [x] WorkerID
-* [ ] workerName&#x20;
-* [ ] workerShift
+\-          WorkerID
 
-DaysOfTheWeek:
+\-          WorkerName
 
-* [x] WeekNumber
-* [ ] fridayAv&#x20;
-* [ ] mondayAv&#x20;
-* [ ] saturdayAv&#x20;
-* [ ] sundayAv&#x20;
-* [ ] thursdayAv&#x20;
-* [ ] tuesdayAv&#x20;
-* [ ] wednesdayAv
+\-          InvoiceID(PK)
 
-3\. Third normal form: removal of transitive dependencies&#x20;
+&#x20;
 
-| WeekNumber (PK) |  WorkerID (PK)  |     vehicleId (PK)    |
-| :-------------: | :-------------: | :-------------------: |
-|    fridayAv     |   workerShift   |      vehicleName      |
-|    mondayAv     | workerName (FK) |    vehiclemileage     |
-|    sundayAv     |                 | vehicleFuelSpent (FK) |
-|   thursdayAv    |                 |  vehicleFeulCapacity  |
-|    tuesdayAv    |                 |     vehicleColor      |
-|   wednesdayAv   |                 |     WorkerID (FK)     |
-|   saturdayAv    |                 |                       |
+Vehicles:
 
-* vehicleName&#x20;
-* vehicleColor&#x20;
-* workerName (FK)
-* workerShift&#x20;
-* vehicleFeulCapacity&#x20;
-* vehiclemileage&#x20;
-* vehicleFuelSpent (FK)
-* weekNumber (PK)
-* saturdayAv&#x20;
-* sundayAv&#x20;
-* mondayAv&#x20;
-* tuesdayAv&#x20;
-* wednesdayAv&#x20;
-* thursdayAv&#x20;
-* fridayAv&#x20;
-* vehicleId (PK)
-* WorkerID (PK)
+\-          VehicleID(PK)
 
-<figure><img src=".gitbook/assets/Screenshot (19).png" alt=""><figcaption></figcaption></figure>
+\-          VehicleName
 
+\-          VehicleCpacity
+
+\-          VehicleColor
+
+\-          VehiclePrice
+
+\-          VehicleCondition
+
+\-          VehicleSize
+
+\-          VehicleYearModel
+
+&#x20;
+
+Users:
+
+\-          UserName(PK)
+
+\-          UserPassWord
+
+\-          UserDOB
+
+\-          UserPhoneNumber
+
+\-          UserAddress
+
+\-          UserEriCode
+
+&#x20;
+
+Card:
+
+\-          UserCCVNumber
+
+\-          UserCardNumber(PK)
+
+\-          UserCardExpirationDate
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+1. **Normal Form – Remove Transitive Dependencies.**
+
+![](file:///C:/Users/ESKAND\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image012.gif)![Text Box: InvoiceID(PK)
+UserName(FK)
+VehicleID(FK)
+VehiclePrice
+UserCardNumber(FK)
+UserAddress
+UserEirCode
+WorkerID
+WorkerName](file:///C:/Users/ESKAND\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image013.gif)![Text Box: UserName(PK)
+UserPassWord
+UserDOB
+UserPhoneNumber
+UserAddress
+UserEriCode
+VehicleID(FK)](file:///C:/Users/ESKAND\~1/AppData/Local/Temp/msohtmlclip1/01/clip\_image014.gif)
+
+&#x20;
+
+\
+
+
+<figure><img src="file:///C:/Users/ESKAND~1/AppData/Local/Temp/msohtmlclip1/01/clip_image016.gif" alt=""><figcaption></figcaption></figure>
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+1. Table number one for VehicleID(PK)
+
+&#x20;
+
+| <p> </p><p>Field Name</p><p> </p>       | Field Type | Field Size |
+| --------------------------------------- | ---------- | ---------- |
+| <p> </p><p>VehcileID(PK)</p><p> </p>    | int        |            |
+| <p> </p><p>VehicleName</p><p> </p>      | Varchar    | 255        |
+| <p> </p><p>VehicleCpacity</p><p> </p>   | int        | 255        |
+| <p> </p><p>VehicleColor</p><p> </p>     | Varchar    | 255        |
+| <p> </p><p>VehiclePrice</p><p> </p>     | int        | 255        |
+| <p> </p><p>VehicleCondition</p><p> </p> | Varchar    | 255        |
+| <p> </p><p>VehicleSize</p><p> </p>      | Varchar    | 255        |
+| <p> </p><p>VehicleYearModel</p><p> </p> | int        |            |
+
+&#x20;
+
+1. Table number two for UserName(PK)
+
+&#x20;
+
+| <p> </p><p>Field Name</p><p> </p>      | Field Type | Field Size |
+| -------------------------------------- | ---------- | ---------- |
+| <p> </p><p>UserName(PK)</p><p> </p>    | Varchar    | 255        |
+| <p> </p><p>UserPassWord</p><p> </p>    | Varchar    | 255        |
+| <p> </p><p>UserDOB</p><p> </p>         | Date       |            |
+| <p> </p><p>UserPhoneNumber</p><p> </p> | int        |            |
+| <p> </p><p>UserAddress</p><p> </p>     | Varchar    | 255        |
+| <p> </p><p>UserEriCode</p><p> </p>     | Varchar    | 255        |
+| <p> </p><p>VehicleID(FK)</p><p> </p>   | int        |            |
+
+&#x20;
+
+&#x20;
+
+1. Table number three for InvoiceID(PK)
+
+&#x20;
+
+| <p> </p><p>Field Name</p><p> </p>         | Field Type | Field Size |
+| ----------------------------------------- | ---------- | ---------- |
+| <p> </p><p>InvoiceID(PK)</p><p> </p>      | int        |            |
+| <p> </p><p>UserName(FK)</p><p> </p>       | Varchar    | 255        |
+| <p> </p><p>VehicleID(FK)</p><p> </p>      | int        |            |
+| <p> </p><p>VehiclePrice</p><p> </p>       | int        |            |
+| <p> </p><p>UserCardNumber(FK)</p><p> </p> | int        |            |
+| <p> </p><p>UserAddress</p><p> </p>        | Varchar    | 255        |
+| <p> </p><p>UserEirCode</p><p> </p>        | Varchar    | 255        |
+| <p> </p><p>WorkerID</p><p> </p>           |            |            |
+| <p> </p><p>WorkerName</p><p> </p>         |            |            |
+
+&#x20;
+
+&#x20;
+
+1. Table number four for UserCardNumber(PK)
+
+&#x20;
+
+| <p> </p><p>Field Name</p><p> </p>             | Field Type | Field Size |
+| --------------------------------------------- | ---------- | ---------- |
+| <p> </p><p> UserCardNumber(PK)</p><p> </p>    | int        |            |
+| <p> </p><p>UserCCVNumber</p><p> </p>          | int        |            |
+| <p> </p><p>UserCardExpirationDate</p><p> </p> | Date       |            |
+| <p> </p><p>UserName(FK)</p><p> </p>           | Varchar    | 255        |
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
+
+&#x20;
