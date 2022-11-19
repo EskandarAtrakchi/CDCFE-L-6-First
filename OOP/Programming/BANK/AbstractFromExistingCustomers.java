@@ -5,6 +5,11 @@ package ATM;//Declaring a packing location
 	import java.util.Scanner;// importing Scanner from java library 
 
 	 public class AbstractFromExistingCustomers {//start class 
+		 
+		 DateTimeFormatter date = DateTimeFormatter.ofPattern
+					("yyyy/MM/dd HH:mm:ss");//set format for date and time that been imported from the device 
+				LocalDateTime now = LocalDateTime.now();//special method here for local time and date
+		 
 		  Scanner X = new Scanner (System.in);//X is the user input streamed as System.in     
 	    
 		    private int AccountID;//declare int variable 
@@ -98,6 +103,7 @@ package ATM;//Declaring a packing location
 
 		public void SelectionMenu () {//start method 
 	        
+			System.out.println("You logged in at " + date.format ( now ) +"\n");
 	    	while(true) {//start while loop 
 				System.out.println("Select one of the following:\n"
 						+ "1.Bank Statement\n"
@@ -166,7 +172,8 @@ package ATM;//Declaring a packing location
 				inputValidation();//calling the method 
 				int CustomerDeposite = Integer.parseInt(toInt);//parsing int to String 
 				AccountBalance = AccountBalance + CustomerDeposite;//updating balance 
-				System.out.println("Your new balance is now: " + getAccountBalance() + "$");//output the balance 
+				System.out.println("Your new balance is now: " + getAccountBalance() + 
+						"$ on " + date.format ( now ) );//output the balance 
 				SelectionMenu();//calling the method 
 			}//end method
 		
@@ -186,7 +193,7 @@ package ATM;//Declaring a packing location
 					AccountBalance = (int) (AccountBalance + CustomerDepositeWithInterest 
 							+ ((0.5/10) * CustomerDepositeWithInterest));
 					System.out.println("Your annual interest is 0.05%, your savings: " 
-							+ getAccountBalance () + "$");//output the value 
+							+ getAccountBalance () + "$ on " + date.format ( now ) );//output the value 
 					SelectionMenu();//calling the method 
 					break;
 				
@@ -213,7 +220,7 @@ package ATM;//Declaring a packing location
 			if(Q <= AccountBalance ) {//start if 
 				//updating the balance 
 				AccountBalance = (int) (AccountBalance - CustomerWithdawWithFees - ((0.5/100) * CustomerWithdawWithFees));
-				System.out.println("Your new Balance is: " + getAccountBalance() + "$");//output the value 
+				System.out.println("Your new Balance is: " + getAccountBalance() + "$ on " + date.format ( now ) );//output the value 
 				System.out.println("Fees been taken " + (0.5/100) * CustomerWithdawWithFees + "$\n");//output the fee 
 				SelectionMenu();//calling the method 
 			}//end if 
@@ -301,6 +308,7 @@ package ATM;//Declaring a packing location
         	System.out.println("This is the information for the requested ID at " + key);
     	  	
             System.out.println( AccountsOfExistingCustomers [ i ].toString() );//output the specific account in the array 
+            System.out.println("You requested the information on " + date.format ( now ) );
         }//end if 
         else
         {//start else 
