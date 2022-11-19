@@ -104,7 +104,8 @@ package ATM;
 	            int LOOP = Integer.parseInt(toInt);
 	            
 				switch(LOOP) {
-				case 1 : System.out.println(toString()); 
+				case 1 : 
+				System.out.println(toString()); 
 				break;
 
 				case 2 : 
@@ -148,56 +149,59 @@ package ATM;
 	    }
 		
 		private void DepositeMethod() {
+
 				System.out.println("How much you want to deposit");
 				toInt = X.next();
 				inputValidation();
 				int CustomerDeposite = Integer.parseInt(toInt);
-				//update Account account balance after depositing
 				AccountBalance = AccountBalance + CustomerDeposite;
-				//print the updating balance for the customer so they know 
 				System.out.println("Your new balance is now: " + getAccountBalance() + "$");
 				SelectionMenu();
 			}//end method
 		
 		  void InterestRateMethod () {
+
 			System.out.println("Number 1 to deposit with interest\nNumber 2 to return to the main menu");
 			toInt = X.next();
 			inputValidation();
 			switch(toInt) {
 			
 			case "1" : 
-				System.out.println("How much you want to deposit?");
-				toInt = X.next();
-				inputValidation();
-				int CustomerDepositeWithInterest = Integer.parseInt(toInt);
-				//update Account account balance after depositing
-				AccountBalance = (int) (AccountBalance + CustomerDepositeWithInterest 
-						+ ((0.5/10) * CustomerDepositeWithInterest));
+					System.out.println("How much you want to deposit?");
+					toInt = X.next();
+					inputValidation();
+					int CustomerDepositeWithInterest = Integer.parseInt(toInt);
+					//update Account account balance after depositing
+					AccountBalance = (int) (AccountBalance + CustomerDepositeWithInterest 
+							+ ((0.5/10) * CustomerDepositeWithInterest));
+					
+					//print the updating balance for the customer so they know 
+					System.out.println("Your annual interest is 0.05%, your savings: " + getAccountBalance () + "$");
+					SelectionMenu();
+					break;
 				
-				//print the updating balance for the customer so they know 
-				System.out.println("Your annual interest is 0.05%, your savings: " + getAccountBalance () + "$");
-				SelectionMenu();
-				break;
+				case "2" : 
+					BankOptions.TheMainMethodOfBankOption(); 
+					break;
 				
-			case "2" : BankOptions.TheMainMethodOfBankOption(); 
-			break;
-			
-			default:
-	            System.out.println("Wrong choice!!"); inputValidation();
-	            break;
+				default:
+					System.out.println("Wrong choice!!"); 
+					inputValidation();
+					break;
 			}
 		}
 
-		private   void WithdrawMethod() {
+		private void WithdrawMethod() {
+
 			int Q = 0;
 			
 			System.out.println("How much do you want to withdraw?");
 			toInt = X.next();
 			inputValidation();
 			int CustomerWithdawWithFees = Integer.parseInt(toInt);
+
 			if(Q <= AccountBalance ) {
 				AccountBalance = (int) (AccountBalance - CustomerWithdawWithFees - ((0.5/100) * CustomerWithdawWithFees));
-				
 				System.out.println("Your new Balance is: " + getAccountBalance() + "$");
 				System.out.println("Fees been taken " + (0.5/100) * CustomerWithdawWithFees + "$\n");
 				SelectionMenu();
@@ -219,6 +223,7 @@ package ATM;
 		}
 		
 		public void inputValidation() {
+
 			while (!toInt.matches("\\d+")) {
 				System.out.println("Not Allowed, numbers only!");
 				toInt = X.next();
@@ -241,6 +246,7 @@ package ATM;
 		                break;
 		            }
 	        }
+
 	        for ( i =0; i < AccountsOfExistingCustomers.length; i ++ ) {
 	        	
 	        	if (index != AccountsOfExistingCustomers[ i ].getAccountPin()) {
@@ -268,7 +274,6 @@ package ATM;
              if (AccountsOfExistingCustomers[ i ].getAccountID() == key) {
             	 
                      found = true;  
-                     
                      break;
              }
        }
