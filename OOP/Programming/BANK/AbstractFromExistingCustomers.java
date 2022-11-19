@@ -11,8 +11,8 @@ package ATM;
 		    private String AccountName;
 		    private int AccountPin;
 		    private int AccountBalance;
-		    public static String toInt;
-		    public static int counter = 3;
+		    public String toInt;
+		    public static int Attempts = 3;
 		    protected int index;
 		    Scanner input = new Scanner(System.in);
 
@@ -82,11 +82,9 @@ package ATM;
 				if (tostring == AccountsOfExistingCustomers[ i ].getAccountPin()) {
 					//StartExistedCustomers CorrectPin = new StartExistedCustomers();
 					AccountsOfExistingCustomers[ i ].SelectionMenu();
-					AttemptMethod();
-					SelectionMenu();
 				}
 			}
-			
+
 			for (int i = 0; i < AccountsOfExistingCustomers.length; i ++) {
 				if(tostring != AccountsOfExistingCustomers[ i ].getAccountPin()) {
 					System.out.println("Invalid PIN");
@@ -95,8 +93,6 @@ package ATM;
 				}
 			}
 		}
-		
-		
 
 		public void SelectionMenu () {
 	        
@@ -122,7 +118,6 @@ package ATM;
 	                break;
 				}
 			}
-	    	
 	    }
 		
 		private void DepositeMethod() {
@@ -136,7 +131,6 @@ package ATM;
 				System.out.println("Your new balance is now: " + getAccountBalance() + "$");
 				SelectionMenu();
 			}//end method
-		
 		
 		  void InterestRateMethod () {
 			System.out.println("Number 1 to deposit with interest\nNumber 2 to return to the main menu");
@@ -174,7 +168,7 @@ package ATM;
 			toInt = X.next();
 			inputValidation();
 			int CustomerWithdawWithFees = Integer.parseInt(toInt);
-			if(Q < AccountBalance ) {
+			if(Q <= AccountBalance ) {
 				AccountBalance = (int) (AccountBalance - CustomerWithdawWithFees - ((0.5/100) * CustomerWithdawWithFees));
 				
 				System.out.println("Your new Balance is: " + getAccountBalance() + "$");
@@ -188,18 +182,16 @@ package ATM;
 		}
 
 		public void AttemptMethod() {
-			counter--;
-			System.out.println("\nYou have " + counter + " attempts left\n");
-			if(counter == 0) {
+			
+			Attempts--;
+			System.out.println("\nYou have " + Attempts + " attempts left\n");
+			if(Attempts == 0) {
 				System.out.println("Attention your card is blocked");
 				System.exit(0);
 			}
-			else {
-				LogInMethod();
-			}
 		}
 		
-		public   void inputValidation() {
+		public void inputValidation() {
 			while (!toInt.matches("\\d+")) {
 				System.out.println("Not Allowed, numbers only!");
 				toInt = X.next();
@@ -207,7 +199,8 @@ package ATM;
 		}
 		
 		
-	    public void ChangePin(){
+	    public void ChangePin() {
+	    	
 	        System.out.println("Enter your Pin: ");
 	        toInt = X.next();
 	        inputValidation();
@@ -231,11 +224,7 @@ package ATM;
 	                SelectionMenu();
 	                break;
 	            }
-	        	
 	        }
-	            
-	            
-	        
 	    }
 		
 	    public void SearchCustomers() {
@@ -262,10 +251,10 @@ package ATM;
         	System.out.println("This is the information for the requested ID at " + key);
     	  	
             System.out.println(AccountsOfExistingCustomers[ i ].toString());
-      }
-      else
-      {
+        }
+        else
+        {
             System.out.println(key + " is not registered in the Bank");
-      }
+        }
     }
 }
