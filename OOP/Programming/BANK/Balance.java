@@ -1,6 +1,6 @@
 package ATM;//Declaring a packing location 
 
-import java.time.LocalDateTime;//importing locatal time from the machine 
+import java.time.LocalDateTime;//importing local time from the machine 
 import java.time.format.DateTimeFormatter;//importing the format
 import java.util.Scanner;//importing the Scanner from utility
 
@@ -20,7 +20,7 @@ public class Balance {//start class
         
     }//end constructor 
 
-    public Balance(Balance b) {////constructor with two variable to connect it to the other class 
+    public Balance(Balance b) {//constructor with two variable to connect it to the other class 
         balance = b.balance;//assigning value
         accountNum = b.accountNum;//assigning value
     }//end constructor 
