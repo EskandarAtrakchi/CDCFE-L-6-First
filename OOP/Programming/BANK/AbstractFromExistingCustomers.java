@@ -113,45 +113,45 @@ package ATM;
 	            
 				switch(LOOP) {
 				case 1 : 
-				System.out.println(toString()); 
-				break;
+					System.out.println(toString()); 
+					break;
 
 				case 2 : 
-				WithdrawMethod();
-				break;
+					WithdrawMethod();
+					break;
 
 				case 3 : 
-				DepositeMethod();
-				break;
+					DepositeMethod();
+					break;
 
 				case 4 : 
-				BankOptions.TheMainMethodOfBankOption();
-				break;
+					BankOptions.TheMainMethodOfBankOption();
+					break;
 
 				case 5 : 
-				System.out.println("Thank you, Bye!"); 
-				System.exit(0);
-				break;
+					System.out.println("Thank you, Bye!"); 
+					System.exit(0);
+					break;
 
 				case 6 : 
-				ChangePin(); 
-				break;
+					ChangePin(); 
+					break;
 
 				case 7 : 
-				InterestRateMethod();
-				break;
+					InterestRateMethod();
+					break;
 
 				case 8 : 
-				SearchCustomers();
-				break;
+					SearchCustomers();
+					break;
 
 				case 9 : 
-				BankOptions.TheMainMenu ();
-				break;
+					BankOptions.TheMainMenu ();
+					break;
 
 				default:
-	            System.out.println("Wrong choice!!"); 
-	            break;
+					System.out.println("Wrong choice!!"); 
+					break;
 				}
 			}
 	    }
@@ -182,8 +182,6 @@ package ATM;
 					//update Account account balance after depositing
 					AccountBalance = (int) (AccountBalance + CustomerDepositeWithInterest 
 							+ ((0.5/10) * CustomerDepositeWithInterest));
-					
-					//print the updating balance for the customer so they know 
 					System.out.println("Your annual interest is 0.05%, your savings: " + getAccountBalance () + "$");
 					SelectionMenu();
 					break;
