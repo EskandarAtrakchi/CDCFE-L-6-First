@@ -1,3 +1,5 @@
+package ATM;//Declaring a packing location 
+
 import java.time.LocalDateTime;//importing locatal time from the machine 
 import java.time.format.DateTimeFormatter;//importing the format
 import java.util.Scanner;//importing the Scanner from utility
@@ -5,7 +7,7 @@ import java.util.Scanner;//importing the Scanner from utility
 public class Balance {//start class 
 	DateTimeFormatter date = DateTimeFormatter.ofPattern
 		("yyyy/MM/dd HH:mm:ss");//set format for date and time that been imported from the device 
-	LocalDateTime now = LocalDateTime.now();//special method here 
+	LocalDateTime now = LocalDateTime.now();//special method here for local time and date 
     private double balance;//private variable 
     private long accountNum;//private variable 
     Scanner sc = new Scanner( System.in );//Scanner holds by sc variable 
