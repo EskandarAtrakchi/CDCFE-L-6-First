@@ -174,7 +174,7 @@ package ATM;
 			toInt = X.next();
 			inputValidation();
 			int CustomerWithdawWithFees = Integer.parseInt(toInt);
-			if(Q <= AccountBalance ) {
+			if(Q < AccountBalance ) {
 				AccountBalance = (int) (AccountBalance - CustomerWithdawWithFees - ((0.5/100) * CustomerWithdawWithFees));
 				
 				System.out.println("Your new Balance is: " + getAccountBalance() + "$");
