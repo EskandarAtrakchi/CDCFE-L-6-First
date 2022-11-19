@@ -97,8 +97,16 @@ package ATM;
 		public void SelectionMenu () {
 	        
 	    	while(true) {
-				System.out.println("Select one of the following:\n1.Bank Statement\n2.Withdraw\n3.Deposite\n4.Back to the main menu\n5.Exit\n6.Change your PIN?\n7.Save money with interest\n8.Search for IDs");
-				System.out.println("9.Click here if you are the owner");
+				System.out.println("Select one of the following:"
+						+ "\n1.Bank Statement\n"
+						+ "2.Withdraw\n"
+						+ "3.Deposite\n"
+						+ "4.Back to the main menu\n"
+						+ "5.Exit\n"
+						+ "6.Change your PIN?\n"
+						+ "7.Save money with interest\n"
+						+ "8.Search for IDs\n"
+						+ "9.Click here if you are the owner");
 				toInt = X.next();
 				inputValidation();
 	            int LOOP = Integer.parseInt(toInt);
