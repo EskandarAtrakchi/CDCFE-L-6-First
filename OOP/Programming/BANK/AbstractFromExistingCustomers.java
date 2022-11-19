@@ -1,226 +1,271 @@
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Scanner;
+package ATM;
 
-abstract public class AbstractFromExistingCustomers {
+	import java.time.LocalDateTime;
+	import java.time.format.DateTimeFormatter;
+	import java.util.Scanner;
 
-	static Scanner X = new Scanner (System.in);
-	private static double Balance [] = {111, 222, 333, 444, 555, 666};
-	private static double Savings [] = {0, 0, 0, 0, 0, 0};
-	final private static int IDs [] = {101, 102, 103, 104, 105, 106};
-	private static String names [] = {"Joshua", "Alex", "Younis", "Eskand", "Ann", "Appul"};
-	private static int Pin [] = {1111, 2222, 3333, 4444, 5555, 6666};
-	private static int Counter = 3;
-	private static String toInt;
-	private static int tostring;
-	private static int index;
-	private static int CustomerWithdaw;
-	private static int CustomerDeposite;
-	private static int ChangePIN;
-	
-	
-	
-	public static void NamesSearch() {
+	 public class AbstractFromExistingCustomers {
+		  Scanner X = new Scanner (System.in);    
+	    
+		    private int AccountID;
+		    private String AccountName;
+		    private int AccountPin;
+		    private int AccountBalance;
+		    public static String toInt;
+		    public static int counter = 3;
+		    protected int index;
+		    Scanner input = new Scanner(System.in);
 
+		    static DB [ ] AccountsOfExistingCustomers = new DB [ 6 ];
+
+		    public AbstractFromExistingCustomers
+		    (int AccountID, String AccountName, int AccountPin, int AccountBalance) {
+		        this.AccountID = AccountID;
+		        this.AccountName = AccountName;
+		        this.AccountPin = AccountPin;
+		        this.AccountBalance = AccountBalance;
+		    }
+
+		    public AbstractFromExistingCustomers() {}
+
+		    public int getAccountID() {
+		        return AccountID;
+		    }
+
+		    public void setAccountID(int AccountID) {
+		        this.AccountID = AccountID;
+		    }
+
+		    public String getAccountName() {
+		        return AccountName;
+		    }
+
+		    public void setAccountName(String AccountName) {
+		        this.AccountName = AccountName;
+		    }
+
+		    public int getAccountPin() {
+		        return AccountPin;
+		    }
+
+		    public void setAccountPin(int AccountPin) {
+		        this.AccountPin = AccountPin;
+		    }
+
+		    public int getAccountBalance() {
+		        return AccountBalance;
+		    }
+
+		    public void setAccountBalance(int AccountBalance) {
+		    	this.AccountBalance = AccountBalance;
+		    }
+
+		    @Override
+		    public String toString() {
+		        return "ID: "+ AccountID + "  \nName: " + AccountName + " \nPIN: " + AccountPin + " \nBalance: " + AccountBalance+"$\n\n";
+		    }
+		
+		public void LogInMethod () {
+			
+			AccountsOfExistingCustomers [ 0 ] = new DB(101,"Eska",1111, 111);
+			AccountsOfExistingCustomers [ 1 ] = new DB(102,"Alex",2222, 222);
+			AccountsOfExistingCustomers [ 2 ] = new DB(103,"Annm",3333, 333);
+			AccountsOfExistingCustomers [ 3 ] = new DB(104,"Apul",4444, 444);
+			AccountsOfExistingCustomers [ 4 ] = new DB(105,"Faby",5555, 555);
+			AccountsOfExistingCustomers [ 5 ] = new DB(106,"Jeny",6666, 666);
+	        
+			System.out.println("Please enter your PIN");
+			toInt = X.next();
+			inputValidation();
+			int tostring = Integer.parseInt(toInt);
+			for ( int i = 0; i <= AccountsOfExistingCustomers.length; i ++ ) {
+				if (tostring == AccountsOfExistingCustomers[ i ].getAccountPin()) {
+					//StartExistedCustomers CorrectPin = new StartExistedCustomers();
+					AccountsOfExistingCustomers[ i ].SelectionMenu();
+					AttemptMethod();
+					SelectionMenu();
+				}
+			}
+			
+			for (int i = 0; i <= AccountsOfExistingCustomers.length; i ++) {
+				if(tostring != AccountsOfExistingCustomers[ i ].getAccountPin()) {
+					System.out.println("Invalid PIN");
+					AttemptMethod();
+					LogInMethod();
+				}
+			}
+		}
+		
+		
+
+		public void SelectionMenu () {
+	        
+	    	while(true) {
+				System.out.println("Select one of the following:\n1.Bank Statement\n2.Withdraw\n3.Deposite\n4.Back to the main menu\n5.Exit\n6.Change your PIN?\n7.Save money with interest\n8.Search for IDs");
+				System.out.println("9.Click here if you are the owner");
+				toInt = X.next();
+				inputValidation();
+	            int LOOP = Integer.parseInt(toInt);
+	            
+				switch(LOOP) {
+				case 1 : System.out.println(toString()); break;
+				case 2 : WithdrawMethod();break;
+				case 3 : DepositeMethod();break;
+				case 4 : BankOptions.TheMainMethodOfBankOption();break;
+				case 5 : System.out.println("Thank you, Bye!"); System.exit(0);break;
+				case 6 : ChangePin(); break;
+				case 7 : InterestRateMethod();break;
+				case 8 : SearchCustomers();break;
+				case 9 : BankOptions.TheMainMenu ();
+				default:
+	                System.out.println("Wrong choice!!"); 
+	                break;
+				}
+			}
+	    	
+	    }
+		
+		private void DepositeMethod() {
+				System.out.println("How much you want to deposit");
+				toInt = X.next();
+				inputValidation();
+				int CustomerDeposite = Integer.parseInt(toInt);
+				//update Account account balance after depositing
+				AccountBalance = AccountBalance + CustomerDeposite;
+				//print the updating balance for the customer so they know 
+				System.out.println("Your new balance is now: " + getAccountBalance() + "$");
+				SelectionMenu();
+			}//end method
+		
+		
+		  void InterestRateMethod () {
+			System.out.println("Number 1 to deposit with interest\nNumber 2 to return to the main menu");
+			toInt = X.next();
+			inputValidation();
+			switch(toInt) {
+			
+			case "1" : 
+				System.out.println("How much you want to deposit?");
+				toInt = X.next();
+				inputValidation();
+				int CustomerDepositeWithInterest = Integer.parseInt(toInt);
+				//update Account account balance after depositing
+				AccountBalance = (int) (AccountBalance + CustomerDepositeWithInterest 
+						+ ((0.5/10) * CustomerDepositeWithInterest));
+				
+				//print the updating balance for the customer so they know 
+				System.out.println("Your annual interest is 0.05%, your savings: " + getAccountBalance () + "$");
+				SelectionMenu();
+				break;
+				
+			case "2" : BankOptions.TheMainMethodOfBankOption(); 
+			break;
+			
+			default:
+	            System.out.println("Wrong choice!!"); inputValidation();
+	            break;
+			}
+		}
+
+		private   void WithdrawMethod() {
+			int Q = 0;
+			
+			System.out.println("How much do you want to withdraw?");
+			toInt = X.next();
+			inputValidation();
+			int CustomerWithdawWithFees = Integer.parseInt(toInt);
+			if(Q <= AccountBalance ) {
+				AccountBalance = (int) (AccountBalance - CustomerWithdawWithFees - ((0.5/100) * CustomerWithdawWithFees));
+				
+				System.out.println("Your new Balance is: " + getAccountBalance() + "$");
+				System.out.println("Fees been taken " + (0.5/100) * CustomerWithdawWithFees + "$\n");
+				SelectionMenu();
+			}
+			else {
+				System.out.println("Not enough funds");
+				SelectionMenu();
+			}
+		}
+
+		public void AttemptMethod() {
+			counter--;
+			System.out.println("\nYou have " + counter + " attempts left\n");
+			if(counter == 0) {
+				System.out.println("Attention your card is blocked");
+				System.exit(0);
+			}
+			else {
+				LogInMethod();
+			}
+		}
+		
+		public   void inputValidation() {
+			while (!toInt.matches("\\d+")) {
+				System.out.println("Not Allowed, numbers only!");
+				toInt = X.next();
+			}
+		}
+		
+		
+	    public void ChangePin(){
+	        System.out.println("Enter your Pin: ");
+	        toInt = X.next();
+	        inputValidation();
+	        int index = Integer.parseInt(toInt);
+	        int i;
+	        for ( i =0; i < AccountsOfExistingCustomers.length; i ++ ) {
+	        	
+	        	 if (index == AccountsOfExistingCustomers[ i ].getAccountPin() ) {
+		                System.out.println("The PIN is exist in the Database, please try again");
+		                AccountsOfExistingCustomers [ i ].ChangePin();
+		                break;
+		            }
+	        }
+	        for ( i =0; i < AccountsOfExistingCustomers.length; i ++ ) {
+	        	
+	        	if (index != AccountsOfExistingCustomers[ i ].getAccountPin()) {
+	                AccountPin = AccountPin + index - AccountPin;
+	                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+	                LocalDateTime now = LocalDateTime.now();
+	                System.out.println("Your new PIN is: " + getAccountPin() +" This PIN been changed on " + dtf.format(now)+"\n");
+	                SelectionMenu();
+	                break;
+	            }
+	        	
+	        }
+	            
+	            
+	        
+	    }
+		
+	    public void SearchCustomers() {
+	    	
     	System.out.println("Please enter the ID number");
-       int key = X.nextInt();
-
-       int i = 0;
-       boolean found = false;
-
-      for ( i = 0; i < IDs.length; i ++ )
-      {
-             if ( IDs [ i ]  == key )
-            {
-                     found = true;     
+    	toInt = X.next();
+		inputValidation();
+        int key = Integer.parseInt(toInt);
+        int i;
+        boolean found = false;
+       
+        for ( i = 0; i < AccountsOfExistingCustomers.length; i ++ )
+        {
+             if (AccountsOfExistingCustomers[ i ].getAccountID() == key) {
+            	 
+                     found = true;  
+                     
                      break;
              }
        }
 
-      if (found)   //When found is true, index of location of key is printed.
-      {
-    	  System.out.println("This is the information for the requested ID at " + key);
-    	  System.out.println("---------------------------------------------------------------------------------------");
-            System.out.println("Name\t\tBalance\t\tID\t\tPIN\t\tIndexPosition\tSavings");
-            System.out.println(names [ i ] + "\t\t" + Balance [ i ] + "$" + "\t\t" + IDs [ i ] + "\t\t" + Pin [ i ] + "\t\t   " + i + "\t\t " + Savings [ i ]);
-            System.out.println("---------------------------------------------------------------------------------------");
+        if (found == true)   //When found is true, index of location of key is printed.
+        {
+        	System.out.println("This is the information for the requested ID at " + key);
+    	  	
+            System.out.println(AccountsOfExistingCustomers[ i ].toString());
       }
       else
       {
-            System.out.println(key + "is not in this array.");
+            System.out.println(key + " is not registered in the Bank");
       }
     }
-	
-	final public static void main(String [ ] args) {
-		PrintCustomers();
-		LogInMethod ();
-	}
-	
-	final public static void PrintCustomers() {
-		System.out.println("\t\t ATM\t\t"
-				+ "\n----------------------------------------------------------------------------------");
-		System.out.println("Names\t\tBalances\tIDs\t\tPINs\t\tSaving Accounts");
-		System.out.println("----------------------------------------------------------------------------------");
-		for(int i = 0; i < 6; i++) {
-			System.out.println(names [ i ] + "\t\t" + Balance [ i ] + "$" + "\t\t" + IDs [ i ] + "\t\t" + Pin [ i ] + "\t\t   " +  Savings[ i ] + "$");
-			
-		}
-		System.out.println("----------------------------------------------------------------------------------");
-	}
-	
-	public static void LogInMethod () {
-		System.out.println("Please enter your PIN");
-		toInt = X.next();
-		inputValidation();
-		tostring = Integer.parseInt(toInt);
-		for ( int i = 0; i < names.length; i ++ ) {
-			if (tostring == Pin [ i ]) {
-				index = i;
-				SelectionMenu();
-			}
-		}
-		for (int i = 0; i < names.length; i ++) {
-			if(tostring != Pin[i]) {
-				System.out.println("Invalid PIN");
-				AttemptMethod();
-				LogInMethod();
-			}
-		}
-	}
-	
-	private static void SelectionMenu() {
-		
-		while(true) {
-			System.out.println("Select one of the following:\n1.Bank Statement\n2.Withdraw\n3.Deposite\n4.Back to the main menu\n5.Exit\n6.Change your PIN?\n7.Save money with interest");
-			toInt = X.next();
-			switch(toInt) {
-			case "1" : StatementMethod();
-			case "2" : WithdrawMethod();
-			case "3" : DepositeMethod();
-			case "4" : BankOptions.TheMainMethodIsHere();
-			case "5" : System.out.println("Thank you, Bye!"); System.exit(0);
-			case "6" : changePin();
-			case "7" : InterestRateMethod();
-			default:
-                System.out.println("Wrong choice!!"); 
-                break;
-			}
-		}
-	}
-
-	private static void DepositeMethod() {
-			System.out.println("How much you want to deposit");
-			toInt = X.next();
-			inputValidation();
-			CustomerDeposite = Integer.parseInt(toInt);
-			//update user account balance after depositing
-			Balance [ index ] = Balance [ index ] + CustomerDeposite;
-			//print the updating balance for the customer so they know 
-			System.out.println("Your new balance is now: " + Balance [ index ] + "$");
-			SelectionMenu();
-		}//end method
-	
-	static void InterestRateMethod () {
-		System.out.println("Number 1 to deposit with interest\nNumber 2 to return to the main menu");
-		toInt = X.next();
-		inputValidation();
-		switch(toInt) {
-		
-		case "1" : 
-			System.out.println("How much you want to deposit?");
-			toInt = X.next();
-			inputValidation();
-			CustomerDeposite = Integer.parseInt(toInt);
-			//update user account balance after depositing
-			Savings [ index ] = Savings [ index ] + CustomerDeposite;
-			Balance[index] = Savings [ index ]  + ((0.5/10) * CustomerDeposite);
-			//print the updating balance for the customer so they know 
-			System.out.println("Your annual interest is 0.05%, your savings: " + Balance[index] + "$");
-			SelectionMenu();
-			break;
-			
-		case "2" : BankOptions.TheMainMethodIsHere(); 
-		break;
-		
-		default:
-            System.out.println("Wrong choice!!"); inputValidation();
-            break;
-		}
-	}
-	
-	private static void StatementMethod() {
-		System.out.println("Your bank statement is:");
-		
-		System.out.println("\t\tName\t\tPin\t\tBalance\t\tID\t\tSavings"
-				+ "\n\t\t--------------------------------------------------------------------------");
-		System.out.println("\t\t" + names [ index ] + "\t\t" + Pin [ index ] + "\t\t" + Balance [ index ] + "$" + "\t\t" + IDs [ index ] + "\t\t" + Savings [ index ] + "$\n");
-		SelectionMenu();
-	}
-
-	private static void WithdrawMethod() {
-		int Q = 0;
-		
-		System.out.println("How much do you want to withdraw?");
-		toInt = X.next();
-		inputValidation();
-		CustomerWithdaw = Integer.parseInt(toInt);
-		if(Balance[index] >= Q) {
-			Balance[index] = Balance[index] - CustomerWithdaw;
-			Balance[index] = Balance[index] - ((0.5/100) * CustomerWithdaw);
-			System.out.println("Your new Balance is: " + Balance[index] + "$");
-			System.out.println("Fees been taken " + (0.5/100) * CustomerWithdaw + "$\n");
-			SelectionMenu();
-		}
-		else {
-			System.out.println("Not enough funds");
-			SelectionMenu();
-		}
-	}
-
-	public static void AttemptMethod() {
-		Counter--;
-		System.out.println("\nYou have " + Counter + " attempts left\n");
-		if(Counter == 0) {
-			System.out.println("Attention your card is blocked");
-			System.exit(0);
-		}
-		else {
-			LogInMethod();
-		}
-	}
-	
-	public static void inputValidation() {
-		while (!toInt.matches("\\d+")) {
-			System.out.println("Not Allowed, numbers only!");
-			toInt = X.next();
-		}
-	}
-	
-	public static void changePin() {//start changePin method 
-		System.out.println("Please enter your new "
-				+ "PIN");//	Asking the customer to enter their new PIN 
-		toInt = X.next();//take in user input as a string
-		inputValidation();//check if the user input is valid
-		ChangePIN = Integer.parseInt(toInt);//parse String into integer
-		//reset the PIN to zero and taking user input PIN instead and store it in the array 
-		if(ChangePIN == Pin[index]) {
-			
-			System.out.println("Not Allowed, try again");
-			changePin();
-			
-		}
-		else {
-			Pin[index]= Pin[index] + ChangePIN - Pin[index];//update pin index
-			 DateTimeFormatter dtf = DateTimeFormatter.ofPattern
-					 ("yyyy/MM/dd HH:mm:ss");//set format for date and time that been imported from the machine
-	    	   LocalDateTime now = LocalDateTime.now();//get the time and the date from the machine  
-		 System.out.println("Your new PIN is now: "+ Pin [ index ] + " This PIN been changed on " + dtf.format(now));
-		 SelectionMenu();//get the customer to selection Menu in-case for any other process
-		}
-		
-				
-				 
-	}//end method changePin
-	
-
 }
