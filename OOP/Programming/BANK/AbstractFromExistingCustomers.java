@@ -65,6 +65,7 @@ package ATM;//Declaring a packing location
 		    	this.AccountBalance = AccountBalance;//setting value of the variable to the parameter 
 		    }//end set method 
 
+			//Override toString method 
 		    @Override
 		    public String toString() {//start toString method to return String value/s 
 		        return "ID: "+ AccountID + "  \nName: " + AccountName + " \nPIN: " 
