@@ -62,7 +62,8 @@ package ATM;
 
 		    @Override
 		    public String toString() {
-		        return "ID: "+ AccountID + "  \nName: " + AccountName + " \nPIN: " + AccountPin + " \nBalance: " + AccountBalance+"$\n\n";
+		        return "ID: "+ AccountID + "  \nName: " + AccountName + " \nPIN: " 
+				+ AccountPin + " \nBalance: " + AccountBalance+"$\n\n";
 		    }
 		
 		public void LogInMethod () {
@@ -222,9 +223,10 @@ package ATM;
 			
 			Attempts--;
 			System.out.println("\nYou have " + Attempts + " attempts left\n");
-			if(Attempts == 0) {
-				System.out.println("Attention your card is blocked");
-				System.exit(0);
+
+				if(Attempts == 0) {
+					System.out.println("Attention your card is blocked");
+					System.exit(0);
 			}
 		}
 		
