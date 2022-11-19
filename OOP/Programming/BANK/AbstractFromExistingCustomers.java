@@ -97,8 +97,8 @@ package ATM;
 		public void SelectionMenu () {
 	        
 	    	while(true) {
-				System.out.println("Select one of the following:"
-						+ "\n1.Bank Statement\n"
+				System.out.println("Select one of the following:\n"
+						+ "1.Bank Statement\n"
 						+ "2.Withdraw\n"
 						+ "3.Deposite\n"
 						+ "4.Back to the main menu\n"
