@@ -78,7 +78,7 @@ package ATM;
 			toInt = X.next();
 			inputValidation();
 			int tostring = Integer.parseInt(toInt);
-			for ( int i = 0; i <= AccountsOfExistingCustomers.length; i ++ ) {
+			for ( int i = 0; i < AccountsOfExistingCustomers.length; i ++ ) {
 				if (tostring == AccountsOfExistingCustomers[ i ].getAccountPin()) {
 					//StartExistedCustomers CorrectPin = new StartExistedCustomers();
 					AccountsOfExistingCustomers[ i ].SelectionMenu();
@@ -87,7 +87,7 @@ package ATM;
 				}
 			}
 			
-			for (int i = 0; i <= AccountsOfExistingCustomers.length; i ++) {
+			for (int i = 0; i < AccountsOfExistingCustomers.length; i ++) {
 				if(tostring != AccountsOfExistingCustomers[ i ].getAccountPin()) {
 					System.out.println("Invalid PIN");
 					AttemptMethod();
