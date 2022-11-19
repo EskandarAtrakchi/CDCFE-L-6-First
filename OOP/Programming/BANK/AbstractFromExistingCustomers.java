@@ -1,25 +1,24 @@
-package ATM;
+package ATM;//Declaring a packing location 
 
-	import java.time.LocalDateTime;
-	import java.time.format.DateTimeFormatter;
-	import java.util.Scanner;
+	import java.time.LocalDateTime;//importing local date and time from java library 
+	import java.time.format.DateTimeFormatter;//importing format of date and time from java library 
+	import java.util.Scanner;// importing Scanner from java library 
 
-	 public class AbstractFromExistingCustomers {
-		  Scanner X = new Scanner (System.in);    
+	 public class AbstractFromExistingCustomers {//start class 
+		  Scanner X = new Scanner (System.in);//X is the user input streamed as System.in     
 	    
-		    private int AccountID;
+		    private int AccountID;//declare int variable 
 		    private String AccountName;
-		    private int AccountPin;
-		    private int AccountBalance;
+		    private int AccountPin;//declare int variable 
+		    private int AccountBalance;//declare int variable 
 		    public String toInt;
-		    public static int Attempts = 3;
-		    protected int index;
-		    Scanner input = new Scanner(System.in);
+		    public static int Attempts = 3;//declare int variable 
+		    protected int ProtectedVarForPIN;//declare int variable 
 
 		    static DB [ ] AccountsOfExistingCustomers = new DB [ 6 ];
 
 		    public AbstractFromExistingCustomers
-		    (int AccountID, String AccountName, int AccountPin, int AccountBalance) {
+		    ( int AccountID, String AccountName, int AccountPin, int AccountBalance ) {
 		        this.AccountID = AccountID;
 		        this.AccountName = AccountName;
 		        this.AccountPin = AccountPin;
@@ -183,7 +182,8 @@ package ATM;
 					//update Account account balance after depositing
 					AccountBalance = (int) (AccountBalance + CustomerDepositeWithInterest 
 							+ ((0.5/10) * CustomerDepositeWithInterest));
-					System.out.println("Your annual interest is 0.05%, your savings: " + getAccountBalance () + "$");
+					System.out.println("Your annual interest is 0.05%, your savings: " 
+							+ getAccountBalance () + "$");
 					SelectionMenu();
 					break;
 				
@@ -222,17 +222,19 @@ package ATM;
 		public void AttemptMethod() {
 			
 			Attempts--;
-			System.out.println("\nYou have " + Attempts + " attempts left\n");
+			System.out.println("\nYou have " 
+			+ Attempts + 
+			" attempts left\n");
 
-				if(Attempts == 0) {
+				if ( Attempts == 0 ) {
 					System.out.println("Attention your card is blocked");
-					System.exit(0);
+					System.exit( 0 );
 			}
 		}
 		
 		public void inputValidation() {
 
-			while (!toInt.matches("\\d+")) {
+			while ( ! toInt.matches("\\d+") ) {
 				System.out.println("Not Allowed, numbers only!");
 				toInt = X.next();
 			}
@@ -244,24 +246,25 @@ package ATM;
 	        System.out.println("Enter your Pin: ");
 	        toInt = X.next();
 	        inputValidation();
-	        int index = Integer.parseInt(toInt);
+	        int ProtectedVarForPIN = Integer.parseInt(toInt);
 	        int i;
 	        for ( i =0; i < AccountsOfExistingCustomers.length; i ++ ) {
 	        	
-	        	 if (index == AccountsOfExistingCustomers[ i ].getAccountPin() ) {
+	        	 if ( ProtectedVarForPIN == AccountsOfExistingCustomers [ i ].getAccountPin() ) {
 		                System.out.println("The PIN is exist in the Database, please try again");
 		                AccountsOfExistingCustomers [ i ].ChangePin();
 		                break;
 		            }
 	        }
 
-	        for ( i =0; i < AccountsOfExistingCustomers.length; i ++ ) {
+	        for ( i = 0; i < AccountsOfExistingCustomers.length; i ++ ) {
 	        	
-	        	if (index != AccountsOfExistingCustomers[ i ].getAccountPin()) {
-	                AccountPin = AccountPin + index - AccountPin;
+	        	if ( ProtectedVarForPIN != AccountsOfExistingCustomers [ i ].getAccountPin() ) {
+	                AccountPin = AccountPin + ProtectedVarForPIN - AccountPin;
 	                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 	                LocalDateTime now = LocalDateTime.now();
-	                System.out.println("Your new PIN is: " + getAccountPin() +" This PIN been changed on " + dtf.format(now)+"\n");
+	                System.out.println("Your new PIN is: " + getAccountPin() + 
+	                		" This PIN been changed on " + dtf.format( now ) + "\n");
 	                SelectionMenu();
 	                break;
 	            }
@@ -279,18 +282,18 @@ package ATM;
        
         for ( i = 0; i < AccountsOfExistingCustomers.length; i ++ )
         {
-             if (AccountsOfExistingCustomers[ i ].getAccountID() == key) {
+             if ( AccountsOfExistingCustomers [ i ].getAccountID() == key ) {
             	 
                      found = true;  
                      break;
              }
        }
 
-        if (found == true)   //When found is true, index of location of key is printed.
+        if ( found == true )   //When found is true, ProtectedVarForPIN of location of key is printed.
         {
         	System.out.println("This is the information for the requested ID at " + key);
     	  	
-            System.out.println(AccountsOfExistingCustomers[ i ].toString());
+            System.out.println( AccountsOfExistingCustomers [ i ].toString() );
         }
         else
         {
