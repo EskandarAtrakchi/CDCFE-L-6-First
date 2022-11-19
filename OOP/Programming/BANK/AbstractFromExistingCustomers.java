@@ -104,18 +104,45 @@ package ATM;
 	            int LOOP = Integer.parseInt(toInt);
 	            
 				switch(LOOP) {
-				case 1 : System.out.println(toString()); break;
-				case 2 : WithdrawMethod();break;
-				case 3 : DepositeMethod();break;
-				case 4 : BankOptions.TheMainMethodOfBankOption();break;
-				case 5 : System.out.println("Thank you, Bye!"); System.exit(0);break;
-				case 6 : ChangePin(); break;
-				case 7 : InterestRateMethod();break;
-				case 8 : SearchCustomers();break;
-				case 9 : BankOptions.TheMainMenu ();
+				case 1 : System.out.println(toString()); 
+				break;
+
+				case 2 : 
+				WithdrawMethod();
+				break;
+
+				case 3 : 
+				DepositeMethod();
+				break;
+
+				case 4 : 
+				BankOptions.TheMainMethodOfBankOption();
+				break;
+
+				case 5 : 
+				System.out.println("Thank you, Bye!"); 
+				System.exit(0);
+				break;
+
+				case 6 : 
+				ChangePin(); 
+				break;
+
+				case 7 : 
+				InterestRateMethod();
+				break;
+
+				case 8 : 
+				SearchCustomers();
+				break;
+
+				case 9 : 
+				BankOptions.TheMainMenu ();
+				break;
+
 				default:
-	                System.out.println("Wrong choice!!"); 
-	                break;
+	            System.out.println("Wrong choice!!"); 
+	            break;
 				}
 			}
 	    }
