@@ -88,8 +88,8 @@ package ATM;
 			for (int i = 0; i < AccountsOfExistingCustomers.length; i ++) {
 				if(tostring != AccountsOfExistingCustomers[ i ].getAccountPin()) {
 					System.out.println("Invalid PIN");
-					AttemptMethod();
-					LogInMethod();
+					AccountsOfExistingCustomers[ i ].AttemptMethod();
+					AccountsOfExistingCustomers[ i ].LogInMethod();
 				}
 			}
 		}
