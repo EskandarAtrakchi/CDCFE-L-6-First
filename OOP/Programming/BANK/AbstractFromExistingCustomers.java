@@ -8,64 +8,65 @@ package ATM;//Declaring a packing location
 		  Scanner X = new Scanner (System.in);//X is the user input streamed as System.in     
 	    
 		    private int AccountID;//declare int variable 
-		    private String AccountName;
+		    private String AccountName;//declare String variable
 		    private int AccountPin;//declare int variable 
 		    private int AccountBalance;//declare int variable 
-		    public String toInt;
+		    public String toInt;//declare String variable
 		    public static int Attempts = 3;//declare int variable 
 		    protected int ProtectedVarForPIN;//declare int variable 
 
+		  //declare object array for 6 Accounts constructed in DB class objected as AccountsOfExistingCustomers
 		    static DB [ ] AccountsOfExistingCustomers = new DB [ 6 ];
 
 		    public AbstractFromExistingCustomers
-		    ( int AccountID, String AccountName, int AccountPin, int AccountBalance ) {
-		        this.AccountID = AccountID;
-		        this.AccountName = AccountName;
-		        this.AccountPin = AccountPin;
-		        this.AccountBalance = AccountBalance;
-		    }
+		    ( int AccountID, String AccountName, int AccountPin, int AccountBalance ) {//start constructor with parameters 
+		        this.AccountID = AccountID;//initiating the value of variable to the value of the parameter 
+		        this.AccountName = AccountName;//initiating the value of variable to the value of the parameter 
+		        this.AccountPin = AccountPin;//initiating the value of variable to the value of the parameter 
+		        this.AccountBalance = AccountBalance;//initiating the value of variable to the value of the parameter 
+		    }//end constructor 
 
-		    public AbstractFromExistingCustomers() {}
+		    public AbstractFromExistingCustomers() {}//empty constructor 
 
-		    public int getAccountID() {
-		        return AccountID;
-		    }
+		    public int getAccountID() {//start get method 
+		        return AccountID;//return the variable 
+		    }//end get method 
 
-		    public void setAccountID(int AccountID) {
-		        this.AccountID = AccountID;
-		    }
+		    public void setAccountID(int AccountID) {//start set method 
+		        this.AccountID = AccountID;//setting value of the variable to the parameter 
+		    }//end set method 
 
-		    public String getAccountName() {
-		        return AccountName;
-		    }
+		    public String getAccountName() {//start get method 
+		        return AccountName;//return the variable 
+		    }//end get method 
 
-		    public void setAccountName(String AccountName) {
-		        this.AccountName = AccountName;
-		    }
+		    public void setAccountName(String AccountName) {//start set method 
+		        this.AccountName = AccountName;//setting value of the variable to the parameter 
+		    }//end set method 
 
-		    public int getAccountPin() {
-		        return AccountPin;
-		    }
+		    public int getAccountPin() {//start get method 
+		        return AccountPin;//return the variable 
+		    }//end get method 
 
-		    public void setAccountPin(int AccountPin) {
-		        this.AccountPin = AccountPin;
-		    }
+		    public void setAccountPin(int AccountPin) {//start set method 
+		        this.AccountPin = AccountPin;//setting value of the variable to the parameter 
+		    }//end set method 
 
-		    public int getAccountBalance() {
-		        return AccountBalance;
-		    }
+		    public int getAccountBalance() {//start get method 
+		        return AccountBalance;//return the variable 
+		    }//end get method 
 
-		    public void setAccountBalance(int AccountBalance) {
-		    	this.AccountBalance = AccountBalance;
-		    }
+		    public void setAccountBalance(int AccountBalance) {//start set method 
+		    	this.AccountBalance = AccountBalance;//setting value of the variable to the parameter 
+		    }//end set method 
 
 		    @Override
-		    public String toString() {
+		    public String toString() {//start toString method to return String value/s 
 		        return "ID: "+ AccountID + "  \nName: " + AccountName + " \nPIN: " 
 				+ AccountPin + " \nBalance: " + AccountBalance+"$\n\n";
-		    }
+		    }//end toString method 
 		
-		public void LogInMethod () {
+		public void LogInMethod () {//start method 
 			
 			AccountsOfExistingCustomers [ 0 ] = new DB(101,"Eska",1111, 111);
 			AccountsOfExistingCustomers [ 1 ] = new DB(102,"Alex",2222, 222);
@@ -94,7 +95,7 @@ package ATM;//Declaring a packing location
 			}
 		}
 
-		public void SelectionMenu () {
+		public void SelectionMenu () {//start method 
 	        
 	    	while(true) {
 				System.out.println("Select one of the following:\n"
@@ -156,7 +157,7 @@ package ATM;//Declaring a packing location
 			}
 	    }
 		
-		private void DepositeMethod() {
+		private void DepositeMethod() {//start method 
 
 				System.out.println("How much you want to deposit");
 				toInt = X.next();
@@ -167,7 +168,7 @@ package ATM;//Declaring a packing location
 				SelectionMenu();
 			}//end method
 		
-		  void InterestRateMethod () {
+		  void InterestRateMethod () {//start method 
 
 			System.out.println("Number 1 to deposit with interest\nNumber 2 to return to the main menu");
 			toInt = X.next();
@@ -198,7 +199,7 @@ package ATM;//Declaring a packing location
 			}
 		}
 
-		private void WithdrawMethod() {
+		private void WithdrawMethod() {//start method 
 
 			int Q = 0;
 			
@@ -219,7 +220,7 @@ package ATM;//Declaring a packing location
 			}
 		}
 
-		public void AttemptMethod() {
+		public void AttemptMethod() {//start method 
 			
 			Attempts--;
 			System.out.println("\nYou have " 
@@ -232,7 +233,7 @@ package ATM;//Declaring a packing location
 			}
 		}
 		
-		public void inputValidation() {
+		public void inputValidation() {//start method 
 
 			while ( ! toInt.matches("\\d+") ) {
 				System.out.println("Not Allowed, numbers only!");
@@ -241,7 +242,7 @@ package ATM;//Declaring a packing location
 		}
 		
 		
-	    public void ChangePin() {
+	    public void ChangePin() {//start method 
 	    	
 	        System.out.println("Enter your Pin: ");
 	        toInt = X.next();
@@ -271,7 +272,7 @@ package ATM;//Declaring a packing location
 	        }
 	    }
 		
-	    public void SearchCustomers() {
+	    public void SearchCustomers() {//start method 
 	    	
     	System.out.println("Please enter the ID number");
     	toInt = X.next();
