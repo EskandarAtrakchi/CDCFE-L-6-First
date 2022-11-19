@@ -32,7 +32,7 @@ public class Balance {//start class
     }//end get 
 
     public double getBalance() {//start get 
-        return balance;//retruning value (this value been assigned to money and to b.balance)
+        return balance;//Returning value (this value been assigned to money and to b.balance)
     }
 
     public void setBalance(double balance) {//start set
