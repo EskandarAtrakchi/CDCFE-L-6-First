@@ -89,6 +89,22 @@ package ATM;//Declaring a packing location
 			for ( int i = 0; i < AccountsOfExistingCustomers.length; i ++ ) {//start for loop 
 				if (tostring == AccountsOfExistingCustomers[ i ].getAccountPin()) {// start if statement 
 					
+					boolean found = false;//set variable found to false for now 
+				       
+			        for (int j = 0; j < AccountsOfExistingCustomers.length; j ++ )
+			        {//start for loop
+			             if ( AccountsOfExistingCustomers [ j ].getAccountPin() == tostring ) {//start if 
+			            	 
+			                     found = true;//change the value of found to true   
+			                     break;//stop the loop 
+			             }//end if 
+			       }//end loop 
+
+			        if ( found == true )   //When found is true, ProtectedVarForPIN of location of key is printed.
+			        {
+			            System.out.println("Hello " + AccountsOfExistingCustomers [ i ].getAccountName() + " You logged in at " + date.format ( now ) +"\n");//output the specific account in the array 
+			        }//end if 
+					
 					AccountsOfExistingCustomers[ i ].SelectionMenu();//The specific account in the array has the right to access only
 				}//end if statement 
 			}//end for loop
@@ -103,8 +119,7 @@ package ATM;//Declaring a packing location
 		}//end method 
 
 		public void SelectionMenu () {//start method 
-	        
-			System.out.println("You logged in at " + date.format ( now ) +"\n");
+			
 	    	while(true) {//start while loop 
 				System.out.println("Select one of the following:\n"
 						+ "1.Bank Statement\n"
@@ -122,7 +137,7 @@ package ATM;//Declaring a packing location
 	            
 				switch(LOOP) {//start switch statement 
 				case 1 : //start case 1
-					System.out.println(toString());//output the toString method  
+					System.out.println("The last update for your bank statement was on " + date.format ( now ) + "\n" + toString());//output the toString method  
 					//all the (break) to stop cases interacting with each other 
 					break;
 
