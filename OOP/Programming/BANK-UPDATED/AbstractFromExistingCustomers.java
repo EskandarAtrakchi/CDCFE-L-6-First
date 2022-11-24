@@ -1,6 +1,4 @@
-package ATM;//Declaring a packing location 
-
-	import java.time.LocalDateTime;//importing local date and time from java library 
+import java.time.LocalDateTime;//importing local date and time from java library 
 	import java.time.format.DateTimeFormatter;//importing format of date and time from java library 
 	import java.util.Scanner;// importing Scanner from java library 
 
@@ -85,7 +83,7 @@ package ATM;//Declaring a packing location
 			System.out.println("Please enter your PIN");
 			toInt = X.next();//take user input as a String 
 			inputValidation();//calling the method 
-			int tostring = Integer.parseInt(toInt);//parse int to String 
+			long tostring = Integer.parseInt(toInt);//parse int to String 
 			for ( int i = 0; i < AccountsOfExistingCustomers.length; i ++ ) {//start for loop 
 				if (tostring == AccountsOfExistingCustomers[ i ].getAccountPin()) {// start if statement 
 					
@@ -109,11 +107,11 @@ package ATM;//Declaring a packing location
 				}//end if statement 
 			}//end for loop
 
-			for (int i = 0; i < AccountsOfExistingCustomers.length; i ++) {//start for loop 
-				if(tostring != AccountsOfExistingCustomers[ i ].getAccountPin()) {// start if statement 
+			for (long i = 0; i < AccountsOfExistingCustomers.length; i ++) {//start for loop 
+				if(tostring != AccountsOfExistingCustomers[ (int) i ].getAccountPin()) {// start if statement 
 					System.out.println("Invalid PIN");
 					AttemptMethod();//The method will be called on The specific account in the array
-					AccountsOfExistingCustomers[ i ].LogInMethod();//The method will be called on The specific account in the array
+					AccountsOfExistingCustomers[ (int) i ].LogInMethod();//The method will be called on The specific account in the array
 				}//end if statement 
 			}//end for loop
 		}//end method 
@@ -134,7 +132,8 @@ package ATM;//Declaring a packing location
 	            
 				switch(LOOP) {//start switch statement 
 				case 1 : //start case 1
-					System.out.println("The last update for your bank statement was on " + date.format ( now ) + "\n" + toString());//output the toString method  
+					System.out.println("The last update for your bank statement was on " 
+				+ date.format ( now ) + "\n" + toString());//output the toString method  
 					//all the (break) to stop cases interacting with each other 
 					break;
 
@@ -170,7 +169,7 @@ package ATM;//Declaring a packing location
 				System.out.println("How much you want to deposit");
 				toInt = X.next();//take user input as a String 
 				inputValidation();//calling the method 
-				int CustomerDeposite = Integer.parseInt(toInt);//parsing int to String 
+				long CustomerDeposite = Integer.parseInt(toInt);//parsing int to String 
 				AccountBalance = AccountBalance + CustomerDeposite;//updating balance 
 				System.out.println("Your new balance is now: " + getAccountBalance() + 
 						"$ on " + date.format ( now ) );//output the balance 
@@ -210,7 +209,7 @@ package ATM;//Declaring a packing location
 
 		private void WithdrawMethod() {//start method 
 
-			int Q = 0;//declare local variable 
+			long Q = 0;//declare local variable 
 			
 			System.out.println("How much do you want to withdraw?");
 			toInt = X.next();//take user input as a String 
@@ -258,8 +257,8 @@ package ATM;//Declaring a packing location
 	        System.out.println("Enter your Pin: ");
 	        toInt = X.next();//take user input as a String 
 	        inputValidation();//calling the method 
-	        int ProtectedVarForPIN = Integer.parseInt(toInt);//parsing int to String 
-	        int i;//local variable i
+	        long ProtectedVarForPIN = Integer.parseInt(toInt);//parsing int to String 
+	        long i;//local variable i
 	        for ( i =0; i < AccountsOfExistingCustomers.length; i ++ ) {//start for loop 
 	        	
 	        	 if ( ProtectedVarForPIN == getAccountPin() ) {//start if statement 
