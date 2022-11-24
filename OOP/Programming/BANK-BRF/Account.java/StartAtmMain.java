@@ -5,13 +5,14 @@ import java.util.Scanner;
  *
  */
 public class StartAtmMain {
-	private static int Attempts = 3;
+	private static int Attempts = 6;
 	static {
 		System.out.println("This is a test ATM");
 	}
 	public static void main(String[] args) {
 		while(true) {
-		System.out.println("1.SavingsAccounts\n"
+		System.out.println(
+				"1.SavingsAccounts\n"
 				+ "2.CurrentAccounts\n"
 				+ "3.Exit the ATM");
 		SavingsAccount SavingsObj = new SavingsAccount();
@@ -39,8 +40,11 @@ public class StartAtmMain {
 		default:
 			System.out.println("Wrong choice!");
 			Attempts--;//decrement the variable value 
+			if ( Attempts == 1 ) {//start if 
+				System.out.println("Attention too many wrong attempts! You have one last try!");
+		}//end if 
 			if ( Attempts == 0 ) {//start if 
-				System.out.println("Attention too many wrong attempts! try again later!");
+				System.out.println("Attention too many wrong attempts! you been kickedout");
 				System.exit( 0 );//shutdown the system 
 		}//end if 
 			break;
