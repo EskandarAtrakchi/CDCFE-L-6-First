@@ -5,13 +5,15 @@
 
 	 public class SavingsAccount {//start class 
 		 
+		 Account OBJ = new Account();
+		 private String toInt;//declare String variable
+		 
 		 public class CurrentDB extends SavingsAccount{
 		    	public CurrentDB(int AccountID, String AccountName, int AccountPin, double AccountBalance) {
 		    		super(AccountID,AccountName, AccountPin, AccountBalance);
 		    	}
 		    }
-		 Account OBJ = new Account();
-		 private String toInt;//declare String variable
+		 
 		 DateTimeFormatter date = DateTimeFormatter.ofPattern
 					("yyyy/MM/dd HH:mm:ss");//set format for date and time that been imported from the device 
 		  LocalDateTime now = LocalDateTime.now();//special method here for local time and date
