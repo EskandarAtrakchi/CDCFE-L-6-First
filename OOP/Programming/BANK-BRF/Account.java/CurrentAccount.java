@@ -3,7 +3,7 @@
 	import java.time.format.DateTimeFormatter;//importing format of date and time from java library 
 	import java.util.Scanner;// importing Scanner from java library 
 
-	 public class CurrentAccount {//start class 
+	 public class CurrentAccount {//start class
 		 Account OBJ = new Account();
 		 private String toInt;//declare String variable
 		 DateTimeFormatter date = DateTimeFormatter.ofPattern
@@ -101,6 +101,7 @@
 
 				case 5 : //start case 5
 					System.out.println("Thank you for using CURRENT ACCOUNT, Bye!"); 
+					X.close();
 					System.exit(0);//shutdown the system 
 					
 					
@@ -118,10 +119,10 @@
 				inputValidation();//calling the method 
 				double CustomerDeposite = Integer.parseInt(toInt);//parsing int to String 
 				OBJ.setAccountBalance(OBJ.getAccountBalance() 
-						+ CustomerDeposite - ((0.5/10) * CustomerDeposite));//updating balance 
+					+ CustomerDeposite - ((0.5/100) * CustomerDeposite));//updating balance 
 				System.out.println("Your new balance is now: " + OBJ.getAccountBalance() + 
 						"$ on " + date.format ( now ) );//output the balance
-				System.out.println("Fees been taken " + (0.5/10) * CustomerDeposite + "$\n");//output the fee 
+				System.out.println("Fees been taken " + (0.5/100) * CustomerDeposite + "$\n");//output the fee 
 				SelectionMenu();//calling the method 
 			}//end method
 		
@@ -130,10 +131,10 @@
 			System.out.println("How much do you want to withdraw?");
 			toInt = X.next();//take user input as a String 
 			inputValidation();//calling the method 
-			int CustomerWithdawWithFees = Integer.parseInt(toInt);//parsing int to String 
+			double CustomerWithdawWithFees = Integer.parseInt(toInt);//parsing int to String 
 			
 			OBJ.setAccountBalance(OBJ.getAccountBalance() 
-					+ CustomerWithdawWithFees - ((0.5/10) * CustomerWithdawWithFees));//updating balance 
+					- CustomerWithdawWithFees - ((0.5/100) * CustomerWithdawWithFees));//updating balance 
 			
 				System.out.println("Your new Balance is: " + OBJ.getAccountBalance() + "$ on " + date.format ( now ) );//output the value 
 				System.out.println("Fees been taken " + (0.5/100) * CustomerWithdawWithFees + "$\n");//output the fee 
@@ -194,6 +195,5 @@
 	    	}
 
 	    }
-	    
 }//end class 
 	 
