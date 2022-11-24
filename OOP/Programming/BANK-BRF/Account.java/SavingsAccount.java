@@ -5,17 +5,19 @@
 
 	 public class SavingsAccount {//start class 
 		 
-		 
-		 
+		 public class CurrentDB extends SavingsAccount{
+		    	public CurrentDB(int AccountID, String AccountName, int AccountPin, double AccountBalance) {
+		    		super(AccountID,AccountName, AccountPin, AccountBalance);
+		    	}
+		    }
 		 Account OBJ = new Account();
 		 private String toInt;//declare String variable
 		 DateTimeFormatter date = DateTimeFormatter.ofPattern
 					("yyyy/MM/dd HH:mm:ss");//set format for date and time that been imported from the device 
-				LocalDateTime now = LocalDateTime.now();//special method here for local time and date
-		 
+		  LocalDateTime now = LocalDateTime.now();//special method here for local time and date
 		  Scanner X = new Scanner (System.in);//X is the user input streamed as System.in     
 		  //declare object array for 6 Accounts constructed in CurrentAccount class objected as AccountsOfExistingCustomers
-		    static SavingsAccount [ ] Current = new SavingsAccount [ 3 ];
+		  static SavingsAccount [ ] Current = new SavingsAccount [ 3 ];
 
 		public SavingsAccount(int AccountID, String AccountName, int AccountPin, double AccountBalance) {
 			OBJ.AccountID = AccountID;//initiating the value of variable to the value of the parameter 
@@ -32,35 +34,26 @@
 			Current [ 0 ] = new SavingsAccount (104,"Apul",4444, 444);
 			Current [ 1 ] = new SavingsAccount (105,"Faby",5555, 555);
 			Current [ 2 ] = new SavingsAccount (106,"Jeny",6666, 666);
-			
-	        
 			System.out.println("Please enter your PIN");
 			toInt = X.next();//take user input as a String 
 			inputValidation();//calling the method 
 			int tostring = Integer.parseInt(toInt);//parse int to String 
 			for ( int i = 0; i < Current.length; i ++ ) {//start for loop 
 				if (tostring == Current[ i ].OBJ.getAccountPin()) {// start if statement 
-					
 					boolean found = false;//set variable found to false for now 
-				       
 			        for (int j = 0; j < Current.length; j ++ )
 			        {//start for loop
 			             if ( Current [ j ].OBJ.getAccountPin() == tostring ) {//start if 
-			            	 
 			                     found = true;//change the value of found to true   
 			                     break;//stop the loop 
 			             }//end if 
 			       }//end loop 
-
-			        if ( found == true )   //When found is true, ProtectedVarForPIN of location of key is printed.
-			        {
-			            System.out.println("Hello " + Current [ i ].OBJ.getAccountName() + " You logged in at " + date.format ( now ) +"\nto the SAVING ACCOUNT\n");//output the specific account in the array 
+			        if ( found == true )  { //When found is true, ProtectedVarForPIN of location of key is printed.
+			            System.out.println("Hello " + Current [ i ].OBJ.getAccountName() + " You logged in to the SAVING ACCOUNT at \n" + date.format ( now ) +"\n");//output the specific account in the array 
 			        }//end if 
-					
 					Current[ i ] . SelectionMenu();//The specific account in the array has the right to access only
 				}//end if statement 
 			}//end for loop
-
 			for (int i = 0; i < Current.length; i ++) {//start for loop 
 				if(tostring != Current[ i ].OBJ.getAccountPin()) {// start if statement 
 					System.out.println("Invalid PIN");
@@ -82,7 +75,6 @@
 				toInt = X.next();//take user input as a String 
 				inputValidation();//calling method
 	            int LOOP = Integer.parseInt(toInt);//parse local int variable to String 
-	            
 				switch(LOOP) {//start switch statement 
 				case 1 : //start case 1
 					System.out.println("The last update for your bank statement was on " 
@@ -107,7 +99,6 @@
 					X.close();
 					System.exit(0);//shutdown the system 
 					
-					
 				default: //start default 
 					System.out.println("Wrong choice!!"); 
 					break;
@@ -122,10 +113,10 @@
 				inputValidation();//calling the method 
 				double CustomerDeposite = Integer.parseInt(toInt);//parsing int to String 
 				OBJ.setAccountBalance(OBJ.getAccountBalance() 
-						+ CustomerDeposite - ((0.5/10) * CustomerDeposite));//updating balance 
+						+ CustomerDeposite + ((0.5/10) * CustomerDeposite));//updating balance 
 				System.out.println("Your new balance is now: " + OBJ.getAccountBalance() + 
 						"$ on " + date.format ( now ) );//output the balance
-				System.out.println("Fees been taken " + (0.5/10) * CustomerDeposite + "$\n");//output the fee 
+				System.out.println("Annual interest of " + (0.5/10) * CustomerDeposite + "$ is currently active\n");//output the fee 
 				SelectionMenu();//calling the method 
 			}//end method
 		
@@ -135,16 +126,11 @@
 			toInt = X.next();//take user input as a String 
 			inputValidation();//calling the method 
 			int CustomerWithdawWithFees = Integer.parseInt(toInt);//parsing int to String 
-			
 			OBJ.setAccountBalance(OBJ.getAccountBalance() 
-					- CustomerWithdawWithFees - ((0.5/10) * CustomerWithdawWithFees));//updating balance 
-			
+					- CustomerWithdawWithFees);//updating balance 
 				System.out.println("Your new Balance is: " + OBJ.getAccountBalance() + "$ on " + date.format ( now ) );//output the value 
-				System.out.println("Fees been taken " + (0.5/100) * CustomerWithdawWithFees + "$\n");//output the fee 
 				SelectionMenu();//calling the method 
 		}//end method 
-		
-		
 		
 	    public void ChangePin() {//start method 
 	    	
@@ -165,10 +151,8 @@
 	        for ( i = 0; i < Current.length; i ++ ) {//start loop 
 	        	
 	        	if ( ProtectedVarForPIN != OBJ.getAccountPin() ) {//start if 
-	        		
 	        		OBJ.setAccountPin(OBJ.getAccountPin() 
 							+ ProtectedVarForPIN - OBJ.getAccountPin());//updating password 
-	        		
 	                //establish format for date and time that been imported from java library 
 	                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 	                //establish local date and time that been imported from java library 
@@ -186,17 +170,8 @@
 
 			while ( ! toInt.matches("\\d+") ) {//start while loop 
 				System.out.println("Not Allowed, numbers only!");
-				
 				toInt = X.next();//take user input as a String 
 			}//end while loop 
 		}//end method 
-	    
-	    public class CurrentDB extends SavingsAccount{
-
-	    	public CurrentDB(int AccountID, String AccountName, int AccountPin, double AccountBalance) {
-	    		super(AccountID,AccountName, AccountPin, AccountBalance);
-	    	}
-
-	    }
 }//end class 
 	 
