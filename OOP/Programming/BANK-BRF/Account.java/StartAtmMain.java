@@ -19,7 +19,6 @@ public class StartAtmMain {
 		String LOOP;
 		Scanner X = new Scanner(System.in);
 		LOOP = X.next();//take user input as a String 
-		
 		switch(LOOP) {//start switch statement
 		case "1" : 
 			SavingsObj.SavingsLogIn ();
@@ -44,6 +43,7 @@ public class StartAtmMain {
 		}//end if 
 			if ( Attempts == 0 ) {//start if 
 				System.out.println("Attention too many wrong attempts! you been kickedout");
+				X.close();
 				System.exit( 0 );//shutdown the system 
 		}//end if 
 			break;
