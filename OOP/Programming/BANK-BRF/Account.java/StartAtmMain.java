@@ -4,10 +4,7 @@ import java.util.Scanner;
  *
  */
 public class StartAtmMain {
-	private static int Attempts = 6;
-	static {
-		System.out.println("This is a test ATM");
-	}
+	
 	public static void main(String[] args) {
 		while(true) {
 		System.out.println(
@@ -36,6 +33,7 @@ public class StartAtmMain {
 			System.exit(0);
 			
 		default:
+			int Attempts = 6;
 			System.out.println("Wrong choice!");
 			Attempts--;//decrement the variable value 
 			if ( Attempts == 1 ) {//start if 
@@ -49,5 +47,8 @@ public class StartAtmMain {
 			break;
 		}
 	   }
-	}
+	 }
+		static {
+			System.out.println("This is a test ATM");
+		}
 }
