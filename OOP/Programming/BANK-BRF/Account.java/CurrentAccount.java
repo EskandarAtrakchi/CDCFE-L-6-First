@@ -4,6 +4,14 @@
 	import java.util.Scanner;// importing Scanner from java library 
 
 	 public class CurrentAccount {//start class
+		 
+		 public class CurrentDB extends CurrentAccount{
+
+		    	public CurrentDB(int AccountID, String AccountName, int AccountPin, double AccountBalance) {
+		    		super(AccountID,AccountName, AccountPin, AccountBalance);
+		    	}
+		    }
+		 
 		 Account OBJ = new Account();
 		 private String toInt;//declare String variable
 		 DateTimeFormatter date = DateTimeFormatter.ofPattern
@@ -51,7 +59,7 @@
 
 			        if ( found == true )   //When found is true, ProtectedVarForPIN of location of key is printed.
 			        {
-			            System.out.println("Hello " + Current [ i ].OBJ.getAccountName() + " You logged in at " + date.format ( now ) +"\nto the CURRENT ACCOUNT\n");//output the specific account in the array 
+			        	System.out.println("Hello " + Current [ i ].OBJ.getAccountName() + " You logged in to the CURRENT ACCOUNT at \n" + date.format ( now ) +"\n");//output the specific account in the array  
 			        }//end if 
 					
 					Current[ i ] . SelectionMenu();//The specific account in the array has the right to access only
@@ -187,13 +195,5 @@
 				toInt = X.next();//take user input as a String 
 			}//end while loop 
 		}//end method 
-	    
-	    public class CurrentDB extends CurrentAccount{
-
-	    	public CurrentDB(int AccountID, String AccountName, int AccountPin, double AccountBalance) {
-	    		super(AccountID,AccountName, AccountPin, AccountBalance);
-	    	}
-
-	    }
 }//end class 
 	 
