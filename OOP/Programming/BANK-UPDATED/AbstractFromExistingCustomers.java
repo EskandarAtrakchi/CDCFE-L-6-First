@@ -112,7 +112,7 @@ package ATM;//Declaring a packing location
 			for (int i = 0; i < AccountsOfExistingCustomers.length; i ++) {//start for loop 
 				if(tostring != AccountsOfExistingCustomers[ i ].getAccountPin()) {// start if statement 
 					System.out.println("Invalid PIN");
-					AccountsOfExistingCustomers[ i ].inputValidation();//The method will be called on The specific account in the array
+					AttemptMethod();//The method will be called on The specific account in the array
 					AccountsOfExistingCustomers[ i ].LogInMethod();//The method will be called on The specific account in the array
 				}//end if statement 
 			}//end for loop
@@ -234,17 +234,22 @@ package ATM;//Declaring a packing location
 
 			while ( ! toInt.matches("\\d+") ) {//start while loop 
 				System.out.println("Not Allowed, numbers only!");
-				Attempts--;//decrement the variable value 
-				System.out.println("\nYou have " 
-				+ Attempts + 
-				" attempts left\n");//output the decremented variable 
-
-					if ( Attempts == 0 ) {//start if 
-						System.out.println("Attention your card is blocked");
-						System.exit( 0 );//shutdown the system 
-				}//end if 
+				
 				toInt = X.next();//take user input as a String 
 			}//end while loop 
+		}//end method 
+		
+		public void AttemptMethod() {//start method 
+			
+			Attempts--;//decrement the variable value 
+			System.out.println("\nYou have " 
+			+ Attempts + 
+			" attempts left\n");//output the decremented variable 
+
+				if ( Attempts == 0 ) {//start if 
+					System.out.println("Attention your card is blocked");
+					System.exit( 0 );//shutdown the system 
+			}//end if 
 		}//end method 
 		
 		
