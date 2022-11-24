@@ -5,20 +5,20 @@
 
 	 public class CurrentAccount {//start class
 		 
-		 public class CurrentDB extends CurrentAccount{
+		 private String toInt;//declare String variable
+		 
+		 public class CurrentDB extends CurrentAccount {
 
 		    	public CurrentDB(int AccountID, String AccountName, int AccountPin, double AccountBalance) {
 		    		super(AccountID,AccountName, AccountPin, AccountBalance);
+		    		
 		    	}
 		    }
-		 
 		 Account OBJ = new Account();
-		 private String toInt;//declare String variable
 		 DateTimeFormatter date = DateTimeFormatter.ofPattern
 					("yyyy/MM/dd HH:mm:ss");//set format for date and time that been imported from the device 
-				LocalDateTime now = LocalDateTime.now();//special method here for local time and date
-		 
-		  Scanner X = new Scanner (System.in);//X is the user input streamed as System.in     
+		 LocalDateTime now = LocalDateTime.now();//special method here for local time and date
+		 Scanner X = new Scanner (System.in);//X is the user input streamed as System.in     
 		  //declare object array for 6 Accounts constructed in CurrentAccount class objected as AccountsOfExistingCustomers
 		    static CurrentAccount [ ] Current = new CurrentAccount [ 3 ];
 
@@ -149,8 +149,6 @@
 				SelectionMenu();//calling the method 
 		}//end method 
 		
-		
-		
 	    public void ChangePin() {//start method 
 	    	
 	        System.out.println("Enter your Pin: ");
@@ -173,7 +171,6 @@
 	        		
 	        		OBJ.setAccountPin(OBJ.getAccountPin() 
 							+ ProtectedVarForPIN - OBJ.getAccountPin());//updating password 
-	        		
 	                //establish format for date and time that been imported from java library 
 	                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 	                //establish local date and time that been imported from java library 
