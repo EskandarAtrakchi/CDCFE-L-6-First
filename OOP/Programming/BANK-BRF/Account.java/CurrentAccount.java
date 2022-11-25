@@ -38,7 +38,6 @@
 			Current [ 1 ] = new CurrentAccount(102,"Alex",2222, 222);
 			Current [ 2 ] = new CurrentAccount(103,"Annm",3333, 333);
 			
-	        
 			System.out.println("Please enter your PIN");
 			toInt = X.next();//take user input as a String 
 			inputValidation();//calling the method 
