@@ -1,7 +1,7 @@
 
 public class Account {
 	 
-    private static int Attempts = 3;//declare int variable 
+    private static int Attempts;//declare int variable 
 	protected int AccountID;//declare int variable 
     protected String AccountName;//declare String variable
     protected int AccountPin;//declare int variable 
@@ -45,8 +45,10 @@ public class Account {
 	public String toString() {
 		return "Account [AccountID=" + AccountID + ", AccountName=" + AccountName + ", AccountPin=" + AccountPin
 				+ ", AccountBalance=" + AccountBalance + "$" + "]";
-	}//end toString
+	}
 
+	{ Attempts = 3; }
+	
 	public static void AttemptMethod() {//start method 
 		
 		Attempts--;//decrement the variable value 
@@ -58,4 +60,4 @@ public class Account {
 				System.exit( 0 );//shutdown the system 
 		}//end if 
 	}//end method 
-}//end class
+}
