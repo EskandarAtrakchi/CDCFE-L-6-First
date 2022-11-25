@@ -47,7 +47,7 @@ public class Account {
 				+ ", AccountBalance=" + AccountBalance + "$" + "]";
 	}
 
-	{ Attempts = 3; }
+	static { Attempts = 3; }
 	
 	public static void AttemptMethod() {//start method 
 		
