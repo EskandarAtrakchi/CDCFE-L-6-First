@@ -1,18 +1,22 @@
+import java.io.IOException;
 import java.util.Scanner;
+import javax.security.auth.login.AccountException;
 /**
  * @author Eskandar Atrakchi
  *
  */
 public class StartAtmMain {
+	static SavingsAccount SavingsObj = new SavingsAccount();
+	static CurrentAccount CurrentObj = new CurrentAccount();
 	private static int MainAttempts;
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException, AccountException {
+		
 		while(true) {
 		System.out.println(
 				"1.SavingsAccounts\n"
 				+ "2.CurrentAccounts\n"
 				+ "3.Exit the ATM");
-		SavingsAccount SavingsObj = new SavingsAccount();
-		CurrentAccount CurrentObj = new CurrentAccount();
+		
 		String LOOP;
 		Scanner X = new Scanner(System.in);
 		LOOP = X.next();//take user input as a String 
@@ -33,7 +37,6 @@ public class StartAtmMain {
 			System.exit(0);
 			
 		default:
-			
 			System.out.println("Wrong choice!");
 			MainAttempts--;//decrement the variable value 
 			if ( MainAttempts == 1 ) {//start if 

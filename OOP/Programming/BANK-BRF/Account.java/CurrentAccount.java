@@ -3,6 +3,8 @@
 	import java.time.format.DateTimeFormatter;//importing format of date and time from java library 
 	import java.util.Scanner;// importing Scanner from java library 
 
+import javax.security.auth.login.AccountException;
+
 	 public class CurrentAccount {//start class
 		 
 		 private String toInt;//declare String variable
@@ -31,13 +33,14 @@
 
 		public CurrentAccount() {}
 		
-		public void CurrentLogIn () {//start method 
+		public void CurrentLogIn () throws AccountException {//start method 
 			
 			//Assigning values for the object arrays 
 			Current [ 0 ] = new CurrentAccount(101,"Eska",1111, 111);
 			Current [ 1 ] = new CurrentAccount(102,"Alex",2222, 222);
 			Current [ 2 ] = new CurrentAccount(103,"Annm",3333, 333);
 			
+	        
 			System.out.println("Please enter your PIN");
 			toInt = X.next();//take user input as a String 
 			inputValidation();//calling the method 
@@ -60,6 +63,7 @@
 			        {
 			        	System.out.println("Hello " + Current [ i ].OBJ.getAccountName() + " You logged in to the CURRENT ACCOUNT at \n" + date.format ( now ) +"\n");//output the specific account in the array  
 			        }//end if 
+					
 					Current[ i ] . SelectionMenu();//The specific account in the array has the right to access only
 				}//end if statement 
 			}//end for loop
@@ -82,30 +86,28 @@
 						+ "3.Deposite\n"
 						+ "4.Change your PIN?\n"
 						+ "5.Exit");//output the menu 
-				toInt = X.next();//take user input as a String 
-				inputValidation();//calling method
-	            int LOOP = Integer.parseInt(toInt);//parse local int variable to String 
+				String LOOP = X.next();
 				switch(LOOP) {//start switch statement 
-				case 1 : //start case 1
+				case "1" : //start case 1
 					System.out.println("The last update for your bank statement was on " 
 				+ date.format ( now ) + "\n" + OBJ.toString());//output the toString method  
 					//all the (break) to stop cases interacting with each other 
 					break;
 
-				case 2 : //start case 2
+				case "2" : //start case 2
 					WithdrawMethod();//calling the method 
 					break;
 
-				case 3 : //start case 3
+				case "3" : //start case 3
 					DepositeMethod();//calling the method 
 					break;
 
-				case 4 : //start case 4
+				case "4" : //start case 4
 					ChangePin(); //calling the method 
 					break;
 
-				case 5 : //start case 5
-					System.out.println("Thank you for using CURRENT ACCOUNT, Bye!"); 
+				case "5" : //start case 5
+					System.out.println("Thank you for using SAVING ACCOUNT, Bye!"); 
 					X.close();
 					System.exit(0);//shutdown the system 
 					
@@ -139,6 +141,7 @@
 			
 			OBJ.setAccountBalance(OBJ.getAccountBalance() 
 					- CustomerWithdawWithFees - ((0.5/100) * CustomerWithdawWithFees));//updating balance 
+			
 				System.out.println("Your new Balance is: " + OBJ.getAccountBalance() + "$ on " + date.format ( now ) );//output the value 
 				System.out.println("Fees been taken " + (0.5/100) * CustomerWithdawWithFees + "$\n");//output the fee 
 				SelectionMenu();//calling the method 
@@ -183,6 +186,7 @@
 
 			while ( ! toInt.matches("\\d+") ) {//start while loop 
 				System.out.println("Not Allowed, numbers only!");
+				
 				toInt = X.next();//take user input as a String 
 			}//end while loop 
 		}//end method 

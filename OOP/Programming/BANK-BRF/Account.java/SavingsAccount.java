@@ -3,6 +3,8 @@
 	import java.time.format.DateTimeFormatter;//importing format of date and time from java library 
 	import java.util.Scanner;// importing Scanner from java library 
 
+import javax.security.auth.login.AccountException;
+
 	 public class SavingsAccount {//start class 
 		 
 		 Account OBJ = new Account();
@@ -30,7 +32,7 @@
 
 		public SavingsAccount() {}
 		
-		public void SavingsLogIn () {//start method 
+		public void SavingsLogIn () throws AccountException {//start method 
 			
 			//Assigning values for the object arrays 
 			Current [ 0 ] = new SavingsAccount (104,"Apul",4444, 444);
@@ -73,30 +75,28 @@
 						+ "2.Withdraw\n"
 						+ "3.Deposite\n"
 						+ "4.Change your PIN?\n"
-						+ "5.Exit");//output the menu 
-				toInt = X.next();//take user input as a String 
-				inputValidation();//calling method
-	            int LOOP = Integer.parseInt(toInt);//parse local int variable to String 
+						+ "5.Exit");//output the menu
+	            String LOOP = X.next();
 				switch(LOOP) {//start switch statement 
-				case 1 : //start case 1
+				case "1" : //start case 1
 					System.out.println("The last update for your bank statement was on " 
 				+ date.format ( now ) + "\n" + OBJ.toString());//output the toString method  
 					//all the (break) to stop cases interacting with each other 
 					break;
 
-				case 2 : //start case 2
+				case "2" : //start case 2
 					WithdrawMethod();//calling the method 
 					break;
 
-				case 3 : //start case 3
+				case "3" : //start case 3
 					DepositeMethod();//calling the method 
 					break;
 
-				case 4 : //start case 4
+				case "4" : //start case 4
 					ChangePin(); //calling the method 
 					break;
 
-				case 5 : //start case 5
+				case "5" : //start case 5
 					System.out.println("Thank you for using SAVING ACCOUNT, Bye!"); 
 					X.close();
 					System.exit(0);//shutdown the system 
