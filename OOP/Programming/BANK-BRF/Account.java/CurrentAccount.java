@@ -61,7 +61,6 @@
 			        {
 			        	System.out.println("Hello " + Current [ i ].OBJ.getAccountName() + " You logged in to the CURRENT ACCOUNT at \n" + date.format ( now ) +"\n");//output the specific account in the array  
 			        }//end if 
-					
 					Current[ i ] . SelectionMenu();//The specific account in the array has the right to access only
 				}//end if statement 
 			}//end for loop
@@ -87,7 +86,6 @@
 				toInt = X.next();//take user input as a String 
 				inputValidation();//calling method
 	            int LOOP = Integer.parseInt(toInt);//parse local int variable to String 
-	            
 				switch(LOOP) {//start switch statement 
 				case 1 : //start case 1
 					System.out.println("The last update for your bank statement was on " 
@@ -111,7 +109,6 @@
 					System.out.println("Thank you for using CURRENT ACCOUNT, Bye!"); 
 					X.close();
 					System.exit(0);//shutdown the system 
-					
 					
 				default: //start default 
 					System.out.println("Wrong choice!!"); 
@@ -143,7 +140,6 @@
 			
 			OBJ.setAccountBalance(OBJ.getAccountBalance() 
 					- CustomerWithdawWithFees - ((0.5/100) * CustomerWithdawWithFees));//updating balance 
-			
 				System.out.println("Your new Balance is: " + OBJ.getAccountBalance() + "$ on " + date.format ( now ) );//output the value 
 				System.out.println("Fees been taken " + (0.5/100) * CustomerWithdawWithFees + "$\n");//output the fee 
 				SelectionMenu();//calling the method 
@@ -188,7 +184,6 @@
 
 			while ( ! toInt.matches("\\d+") ) {//start while loop 
 				System.out.println("Not Allowed, numbers only!");
-				
 				toInt = X.next();//take user input as a String 
 			}//end while loop 
 		}//end method 
