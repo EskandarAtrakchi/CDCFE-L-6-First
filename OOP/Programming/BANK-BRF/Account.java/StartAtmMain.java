@@ -4,7 +4,7 @@ import java.util.Scanner;
  *
  */
 public class StartAtmMain {
-	
+	private static int MainAttempts;
 	public static void main(String[] args) {
 		while(true) {
 		System.out.println(
@@ -33,13 +33,13 @@ public class StartAtmMain {
 			System.exit(0);
 			
 		default:
-			int Attempts = 6;
+			
 			System.out.println("Wrong choice!");
-			Attempts--;//decrement the variable value 
-			if ( Attempts == 1 ) {//start if 
+			MainAttempts--;//decrement the variable value 
+			if ( MainAttempts == 1 ) {//start if 
 				System.out.println("Attention too many wrong attempts! You have one last try!");
 		}//end if 
-			if ( Attempts == 0 ) {//start if 
+			if ( MainAttempts == 0 ) {//start if 
 				System.out.println("Attention too many wrong attempts! you been kickedout");
 				X.close();
 				System.exit( 0 );//shutdown the system 
@@ -49,6 +49,7 @@ public class StartAtmMain {
 	   }
 	 }
 		static {
+			MainAttempts = 6;
 			System.out.println("This is a test ATM");
 		}
 }
