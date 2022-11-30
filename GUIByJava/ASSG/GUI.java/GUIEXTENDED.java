@@ -25,9 +25,8 @@ import javax.swing.JOptionPane;
  * @author Eskandar's Laptop
  */
 public class LinkedList {
-    
     static int index;
-    
+    static boolean Found = false; 
     public static ArrayList<Integer> UserID = new ArrayList<>();
     public static ArrayList<String> UserFirstName = new ArrayList<>();
     public static ArrayList<Integer> UserPin = new ArrayList<>();
@@ -84,17 +83,55 @@ public class LinkedList {
         }
     }
     
+    public static void AddAccount () {
+       
+        JOptionPane.showMessageDialog(null,"ACCOUNT ADDED!");
+        UserPin.add(Integer.parseInt(jTextField10.getText()));
+        UserID.add(Integer.parseInt(jTextField1.getText()));
+        UserFirstName.add(jTextField3.getText());
+        UserLastName.add(jTextField2.getText());
+        UserCurrentBalance.add(Double.parseDouble(jTextField4.getText()));
+        UserAge.add(GUIAssignment.jSlider2.getValue());
+        if(GUIAssignment.jToggleButton2.isSelected() == true){
+            UserAccountType.add("Current");
+        }
+        
+        else {
+            
+            UserAccountType.add("Saving");
+        }
+        
+        if(GUIAssignment.jToggleButton1.isSelected() == true) {
+            
+            UserOferDraft.add("OVER-DRAFT");
+            
+        }
+        
+        else  {
+            
+            UserOferDraft.add("NOT-OVERDRAFT");
+            
+        }
+        
+        UserGender.add(jComboBox1.getSelectedItem().toString());
+        
+       
+    }
+    
     public static void search(){
         boolean UserAccount = false;
         for (int i=0;i < UserID.size();i++){
                 if (GUIAssignment.jTextField1.getText().matches(Integer.toString(UserID.get(i))) || 
                        GUIAssignment.jTextField10.getText().matches(Integer.toString(UserPin.get(i)))){
                     UserAccount = true;
+                    
                     index = i;
                 } //end if
             //end if
             }//end for 
             if (UserAccount == true){
+                Found = true;
+                GUIAssignment.jButton4.setEnabled(true);
                 JOptionPane.showMessageDialog(null,"Staff Found!");
                 GUIAssignment.jTextField1.setText(Integer.toString(UserID.get(index)));
                 GUIAssignment.jTextField10.setText(Integer.toString(UserPin.get(index)));
@@ -116,6 +153,28 @@ public class LinkedList {
             }//needs some attention here 
     }//end search
     
+    public static void EditBTN () {
+        for (int i=0;i < UserID.size();i++){
+                if (GUIAssignment.jTextField1.getText().matches(Integer.toString(UserID.get(i)))){
+                    Found = true;
+                    index = i;
+                }
+            }
+        if (Found == true){
+                UserID.set(index, Integer.valueOf(GUIAssignment.jTextField1.getText()));
+                //UserLastName.set(GUIAssignment.jTextField3.getText());
+                UserLastName.set(index, jTextField2.getText());
+                UserPin.set(index, Integer.valueOf(GUIAssignment.jTextField10.getText()));
+                JOptionPane.showMessageDialog(null,"ACCOUNT HAS BEEN UPDATED");
+            }
+        if (Found == false){
+                JOptionPane.showMessageDialog(null,"ACCOUNT NOT UPDATED!");
+                GUIAssignment.jTextField1.setText(null);
+                GUIAssignment.jTextField3.setText(null);
+                GUIAssignment.jTextField10.setText("");
+            }//end if
+    }
+
     public static void ToggleBTNForAccountType () {
         
         if (jToggleButton2.isSelected() == true){
@@ -205,58 +264,20 @@ public class LinkedList {
         
     }
     
-    public static void AddAccount 
-        (String text, String text1, String text2, String text6, String text7, String text8, String text9, String text10, String text11) {
-        
-        boolean UserAccount = false;
-        
-        for (int i =0; i < UserID.size(); i ++) {
+        public static void HelpBTN () {
             
-            if (GUIAssignment.jTextField1.getText().matches(Integer.toString(UserID.get(i)))) {
-                
-                UserAccount = true;
-                index = i;
+            if (GUIAssignment.jTextArea2.getText().equals("")) { 
+            
+                JOptionPane.showMessageDialog(null,"PLEASE, WRITE THE ISSUE BEFORE YOU SEND US..");
                 
             }
             
-        }
-        
-        if (UserAccount == false) {
+            else {
+                
+                JOptionPane.showMessageDialog(null,"THANK YOU FOR CONTACTING US, WE WILL BE IN TOUCH WITH YOU SOON!.");
+                
+            }
             
-            jTextField1.setText("");     
-            jTextField2.setText("");     
-            jTextField3.setText(""); 
-            jTextField4.setText(""); 
-            jLabel5.setText("?");
-            jLabel6.setText("");
-            jLabel8.setText("");
-            jTextField10.setText("");
-            jLabel9.setText("");
-            UserID.add(index);
-            UserPin.add(index);
-            
-            UserAge.add(index);
-           // UserGender.add(index);
-            JOptionPane.showMessageDialog(null,"Account Added!");
-            
-        }
-        
-        else if (UserAccount == true) {
-            
-            JOptionPane.showMessageDialog(null,"User ((ID)) Already exist in the database!");
-            
-        }
-        
-        else {
-            
-            JOptionPane.showMessageDialog(null,"Something went wrong!");
-            
-        }
-    }
-        
-        public static void HelpBTN () {
-            
-            JOptionPane.showMessageDialog(null,"Thank you for contacting us.");
             GUIAssignment.jTextArea2.setText("");
             
         }
