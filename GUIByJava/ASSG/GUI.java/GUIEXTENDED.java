@@ -2,6 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+
 package assignmentonegui;
 import static assignmentonegui.GUIAssignment.jComboBox1;
 import static assignmentonegui.GUIAssignment.jLabel5;
@@ -20,13 +21,17 @@ import java.util.ArrayList;
 import java.util.Collections;
 import static java.util.Collections.list;
 import javax.swing.JOptionPane;
+
 /**
  *
  * @author Eskandar's Laptop
  */
+
 public class LinkedList {
+    
     static int index;
     static boolean Found = false; 
+    
     public static ArrayList<Integer> UserID = new ArrayList<>();
     public static ArrayList<String> UserFirstName = new ArrayList<>();
     public static ArrayList<Integer> UserPin = new ArrayList<>();
@@ -38,6 +43,7 @@ public class LinkedList {
     public static ArrayList<String> UserGender = new ArrayList<>();
     
     public static void addrecords(){
+        
         UserID.add(101);
         UserFirstName.add("Appul");
         UserPin.add(1111);
@@ -70,6 +76,7 @@ public class LinkedList {
     }
     
     public static void ViewUsers() {
+        
         GUIAssignment.jTextArea1.setText("");
         GUIAssignment.jTextArea1.append("ID\tF-NAME\tPIN\tL-NAME\tBALANCE\tAGE\tACCOUNT\tOVER-DRAFT\tGENDER\n\n");
         for(int i = 0; i < UserID.size(); i ++) {
@@ -92,13 +99,16 @@ public class LinkedList {
         UserLastName.add(jTextField2.getText());
         UserCurrentBalance.add(Double.parseDouble(jTextField4.getText()));
         UserAge.add(GUIAssignment.jSlider2.getValue());
+        
         if(GUIAssignment.jToggleButton2.isSelected() == true){
-            UserAccountType.add("Current");
+            
+            UserAccountType.add("SAVINGS");
+            
         }
         
         else {
             
-            UserAccountType.add("Saving");
+            UserAccountType.add("CURRENT");
         }
         
         if(GUIAssignment.jToggleButton1.isSelected() == true) {
@@ -119,18 +129,23 @@ public class LinkedList {
     }
     
     public static void search(){
+        
         boolean UserAccount = false;
+        
         for (int i=0;i < UserID.size();i++){
+            
                 if (GUIAssignment.jTextField1.getText().matches(Integer.toString(UserID.get(i))) || 
                        GUIAssignment.jTextField10.getText().matches(Integer.toString(UserPin.get(i)))){
-                    UserAccount = true;
                     
+                    UserAccount = true;
                     index = i;
-                } //end if
-            //end if
-            }//end for 
+                }
+            }
+        
             if (UserAccount == true){
+                
                 Found = true;
+                
                 GUIAssignment.jButton4.setEnabled(true);
                 JOptionPane.showMessageDialog(null,"Staff Found!");
                 GUIAssignment.jTextField1.setText(Integer.toString(UserID.get(index)));
@@ -142,56 +157,105 @@ public class LinkedList {
                 GUIAssignment.jLabel9.setText(UserGender.get(index));
                 GUIAssignment.jTextField3.setText(UserFirstName.get(index));
                 GUIAssignment.jTextField2.setText(UserLastName.get(index));
-            }//end if
+            }
             
             else if (UserAccount == false){
-                JOptionPane.showMessageDialog(null,"ATTENTION, YOU CAN SEARCH ONLY BY ((ID)) OR ((PIN)), SO, PLEASE TRY AGAIN");
+                
+                    JOptionPane.showMessageDialog(null,"ATTENTION, YOU CAN SEARCH ONLY BY ((ID)) OR ((PIN)), SO, PLEASE TRY AGAIN");
+                
             }//end if
             
             else{
-            JOptionPane.showMessageDialog(null,"ID & Name can not be empty!");
-            }//needs some attention here 
-    }//end search
+                
+                JOptionPane.showMessageDialog(null,"ID & Name can not be empty!");
+            
+            }
+    }
     
     public static void EditBTN () {
+        
         for (int i=0;i < UserID.size();i++){
+            
                 if (GUIAssignment.jTextField1.getText().matches(Integer.toString(UserID.get(i)))){
+                    
                     Found = true;
                     index = i;
+                    
                 }
             }
+        
         if (Found == true){
+            
                 UserID.set(index, Integer.valueOf(GUIAssignment.jTextField1.getText()));
-                //UserLastName.set(GUIAssignment.jTextField3.getText());
-                UserLastName.set(index, jTextField2.getText());
                 UserPin.set(index, Integer.valueOf(GUIAssignment.jTextField10.getText()));
+                UserFirstName.set(index, jTextField3.getText());
+                UserLastName.set(index, jTextField2.getText());
+                UserCurrentBalance.set(index, Double.valueOf(GUIAssignment.jTextField4.getText()));
+                UserAge.set(index, GUIAssignment.jSlider2.getValue());
+                
+                if(GUIAssignment.jToggleButton2.isSelected() == true){
+                    
+                    UserAccountType.set(index, GUIAssignment.jToggleButton2.getText());
+                    
+                }
+
+                else {
+
+                    UserAccountType.set(index, GUIAssignment.jToggleButton2.getText());
+                    
+                }
+                
+                if(GUIAssignment.jToggleButton1.isSelected() == true){
+                    
+                    UserOferDraft.set(index, GUIAssignment.jToggleButton1.getText());
+                    
+                }
+
+                else {
+
+                    UserOferDraft.set(index, GUIAssignment.jToggleButton1.getText());
+                    
+                }
+                
+                UserGender.set(index, GUIAssignment.jComboBox1.getSelectedItem().toString());
+
                 JOptionPane.showMessageDialog(null,"ACCOUNT HAS BEEN UPDATED");
+                
             }
+        
         if (Found == false){
+            
                 JOptionPane.showMessageDialog(null,"ACCOUNT NOT UPDATED!");
-                GUIAssignment.jTextField1.setText(null);
-                GUIAssignment.jTextField3.setText(null);
-                GUIAssignment.jTextField10.setText("");
-            }//end if
+               
+            }
     }
 
     public static void ToggleBTNForAccountType () {
         
         if (jToggleButton2.isSelected() == true){
+            
             jLabel8.setText("SAVINGS");
+            
         }
+        
         else if (jToggleButton2.isSelected() == false) {
+            
             jLabel8.setText("CURRENT");
+            
         }
     }
     
     public static void ToggleBTNForOverDraft () {
         
         if (jToggleButton1.isSelected() == true){
+            
             jLabel6.setText("YES");
+            
         }
         else if (jToggleButton1.isSelected() == false) {
+            
             jLabel6.setText("NO");
+            
         }
     }
     
@@ -216,7 +280,9 @@ public class LinkedList {
     }
     
     public static void DeleteAccounts () {
+        
         boolean UserAccount = false;
+        
         for (int i = 0; i < UserID.size(); i ++) {
             
             if (GUIAssignment.jTextField1.getText().matches(Integer.toString(UserID.get(i)))) {
@@ -247,6 +313,7 @@ public class LinkedList {
             UserAccountType.remove(index);
             UserOferDraft.remove(index);
             UserGender.remove(index);
+            
             JOptionPane.showMessageDialog(null,"Account Deleted!");
             
         }
