@@ -20,7 +20,7 @@ Budget: 1.93€ a day for activities.
 
 Logistics: If CDCFE does not provide buses for students, It cost 1 euro for 27 bus to go
 
-Expectation:
+Expectation:&#x20;
 
 &#x20;
 
