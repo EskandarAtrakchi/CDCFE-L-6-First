@@ -1,5 +1,5 @@
 
-public class Account {
+public class Account {//start class 
 	 
     private static int Attempts;//declare int variable 
 	protected int AccountID;//declare int variable 
@@ -8,6 +8,8 @@ public class Account {
     protected double AccountBalance;//declare int variable
     protected int ProtectedVarForPIN;//declare int variable 
     
+	//generating setters and getters 
+
 	public int getAccountID() {
 		return AccountID;
 	}
@@ -32,22 +34,28 @@ public class Account {
 	public void setAccountBalance(double accountBalance) {
 		AccountBalance = accountBalance;
 	}
+
+
+	//starting a constructor 
 	public Account(int accountID, String accountName, int accountPin, double accountBalance) {
-		super();
+		super();//The super keyword refers to superclass
 		AccountID = accountID;
 		AccountName = accountName;
 		AccountPin = accountPin;
 		AccountBalance = accountBalance;
-	}
-	public Account() {
-	}
-	@Override
-	public String toString() {
-		return "Account [AccountID=" + AccountID + ", AccountName=" + AccountName + ", AccountPin=" + AccountPin
-				+ ", AccountBalance=" + AccountBalance + "$" + "]";
-	}
+	}//end constructor 
 
-	static { Attempts = 3; }
+	public Account() {}//empty constructors 
+	//start override toString method 
+
+	@Override
+	
+	public String toString() {//start toString method 
+		return "Account [AccountID=" + AccountID + ", AccountName=" + AccountName + ", AccountPin=" + AccountPin
+				+ ", AccountBalance=" + AccountBalance + "$" + "]";//returning the values 
+	}//end to String method 
+
+	static { Attempts = 3; }//static block to assign attempts in static in the beginning of the run code 
 	
 	public static void AttemptMethod() {//start method 
 		
