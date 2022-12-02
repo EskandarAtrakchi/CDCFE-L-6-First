@@ -9,29 +9,32 @@ import javax.security.auth.login.AccountException;
 		 
 		 private String toInt;//declare String variable
 		 
-		 public class CurrentDB extends CurrentAccount {
-
+		 public class CurrentDB extends CurrentAccount {//start extended class for the constructor
+				//start a constructor
 		    	public CurrentDB(int AccountID, String AccountName, int AccountPin, double AccountBalance) {
-		    		super(AccountID,AccountName, AccountPin, AccountBalance);
+		    		super(AccountID,AccountName, AccountPin, AccountBalance);//The super keyword refers to superclass
 		    		
-		    	}
-		    }
-		 Account OBJ = new Account();
+		    	}//end constructor 
+		    }//end class 
+
+		 Account OBJ = new Account();//create an object 
+
 		 DateTimeFormatter date = DateTimeFormatter.ofPattern
 					("yyyy/MM/dd HH:mm:ss");//set format for date and time that been imported from the device 
 		 LocalDateTime now = LocalDateTime.now();//special method here for local time and date
 		 Scanner X = new Scanner (System.in);//X is the user input streamed as System.in     
 		  //declare object array for 6 Accounts constructed in CurrentAccount class objected as AccountsOfExistingCustomers
-		    static CurrentAccount [ ] Current = new CurrentAccount [ 3 ];
+
+		    static CurrentAccount [ ] Current = new CurrentAccount [ 3 ];//create database array object for 3 users 
 
 		public CurrentAccount(int AccountID, String AccountName, int AccountPin, double AccountBalance) {
 			OBJ.AccountID = AccountID;//initiating the value of variable to the value of the parameter 
 	        OBJ.AccountName = AccountName;//initiating the value of variable to the value of the parameter 
 	        OBJ.AccountPin = AccountPin;//initiating the value of variable to the value of the parameter 
 	        OBJ.AccountBalance = AccountBalance;//initiating the value of variable to the value of the parameter 
-		}
+		}//end constructor 
 
-		public CurrentAccount() {}
+		public CurrentAccount() {}//empty constructor 
 		
 		public void CurrentLogIn () throws AccountException {//start method 
 			
