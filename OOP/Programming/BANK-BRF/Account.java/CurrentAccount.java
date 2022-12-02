@@ -9,7 +9,7 @@ import javax.security.auth.login.AccountException;
 		 
 		 private String toInt;//declare String variable
 		 
-		 public class CurrentDB extends CurrentAccount {//start extended class for the constructor
+		 public class CurrentDB extends CurrentAccount {//start extended (nested) class for the constructor
 				//start a constructor
 		    	public CurrentDB(int AccountID, String AccountName, int AccountPin, double AccountBalance) {
 		    		super(AccountID,AccountName, AccountPin, AccountBalance);//The super keyword refers to superclass

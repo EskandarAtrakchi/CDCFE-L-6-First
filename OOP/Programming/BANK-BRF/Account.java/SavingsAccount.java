@@ -3,18 +3,18 @@
 	import java.time.format.DateTimeFormatter;//importing format of date and time from java library 
 	import java.util.Scanner;// importing Scanner from java library 
 
-import javax.security.auth.login.AccountException;
+import javax.security.auth.login.AccountException;//importing the exception
 
 	 public class SavingsAccount {//start class 
 		 
-		 Account OBJ = new Account();
+		 Account OBJ = new Account();//create an object 
 		 private String toInt;//declare String variable
 		 
-		 public class CurrentDB extends SavingsAccount{
+		 public class CurrentDB extends SavingsAccount{//start extended (nested) class 
 		    	public CurrentDB(int AccountID, String AccountName, int AccountPin, double AccountBalance) {
-		    		super(AccountID,AccountName, AccountPin, AccountBalance);
-		    	}
-		    }
+		    		super(AccountID,AccountName, AccountPin, AccountBalance);//The super keyword refers to superclass
+		    	}//end constructor 
+		    }//end nested class 
 		 
 		 DateTimeFormatter date = DateTimeFormatter.ofPattern
 					("yyyy/MM/dd HH:mm:ss");//set format for date and time that been imported from the device 
@@ -30,7 +30,7 @@ import javax.security.auth.login.AccountException;
 	        OBJ.AccountBalance = AccountBalance;//initiating the value of variable to the value of the parameter 
 		}
 
-		public SavingsAccount() {}
+		public SavingsAccount() {}//empty constructor 
 		
 		public void SavingsLogIn () throws AccountException {//start method 
 			
@@ -80,7 +80,8 @@ import javax.security.auth.login.AccountException;
 				switch(LOOP) {//start switch statement 
 				case "1" : //start case 1
 					System.out.println("The last update for your bank statement was on " 
-				+ date.format ( now ) + "\n" + OBJ.toString());//output the toString method  
+				+ date.format ( now ) + "\n" + OBJ.toString());//output the toString method
+
 					//all the (break) to stop cases interacting with each other 
 					break;
 
@@ -104,6 +105,7 @@ import javax.security.auth.login.AccountException;
 				default: //start default 
 					System.out.println("Wrong choice!!"); 
 					break;
+					
 				}// switch 
 			}//end loop
 	    }//end method 
