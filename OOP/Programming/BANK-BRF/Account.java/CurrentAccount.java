@@ -110,7 +110,7 @@ import javax.security.auth.login.AccountException;
 					break;
 
 				case "5" : //start case 5
-					System.out.println("Thank you for using SAVING ACCOUNT, Bye!"); 
+					System.out.println("Thank you for using CURRENT ACCOUNT, Bye!"); 
 					X.close();
 					System.exit(0);//shutdown the system 
 					
