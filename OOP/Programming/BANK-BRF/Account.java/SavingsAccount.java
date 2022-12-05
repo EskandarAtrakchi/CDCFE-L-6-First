@@ -129,7 +129,7 @@ import javax.security.auth.login.AccountException;//importing the exception
 			System.out.println("How much do you want to withdraw?");
 			toInt = X.next();//take user input as a String 
 			inputValidation();//calling the method 
-			int CustomerWithdawWithFees = Integer.parseInt(toInt);//parsing int to String 
+			double CustomerWithdawWithFees = Double.parseDouble(toInt);//parsing int to String 
 			OBJ.setAccountBalance(OBJ.getAccountBalance() 
 					- CustomerWithdawWithFees);//updating balance 
 				System.out.println("Your new Balance is: " + OBJ.getAccountBalance() + "$ on " + date.format ( now ) );//output the value 
