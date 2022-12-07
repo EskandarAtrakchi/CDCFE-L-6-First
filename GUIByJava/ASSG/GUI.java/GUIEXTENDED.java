@@ -4,6 +4,7 @@
  */
 
 package assignmentonegui;
+import static assignmentonegui.GUIAssignment.jButton1;
 import static assignmentonegui.GUIAssignment.jComboBox1;
 import static assignmentonegui.GUIAssignment.jLabel5;
 import static assignmentonegui.GUIAssignment.jLabel6;
@@ -91,8 +92,19 @@ public class LinkedList {
     }
     
     public static void AddAccount () {
-       
-        JOptionPane.showMessageDialog(null,"ACCOUNT ADDED!");
+        
+        if (GUIAssignment.jTextField10.getText().isEmpty() == true || GUIAssignment.jTextField1.getText().isEmpty() == true ||
+                GUIAssignment.jTextField3.getText().isEmpty() == true || GUIAssignment.jTextField2.getText().isEmpty() == true 
+                    || GUIAssignment.jTextField4.getText().isEmpty() == true || GUIAssignment.jSlider2.getValue() == 0
+                        || GUIAssignment.jLabel8.getText().isEmpty() == true || GUIAssignment.jLabel6.getText().isEmpty() == true
+                            || GUIAssignment.jLabel9.getText().isEmpty() == true) {
+            
+            JOptionPane.showMessageDialog(null,"The Fields are empty!");
+            
+        }
+        
+        else {
+            jButton1.setEnabled(true);
         UserPin.add(Integer.parseInt(jTextField10.getText()));
         UserID.add(Integer.parseInt(jTextField1.getText()));
         UserFirstName.add(jTextField3.getText());
@@ -113,19 +125,20 @@ public class LinkedList {
         
         if(GUIAssignment.jToggleButton1.isSelected() == true) {
             
-            UserOferDraft.add("OVER-DRAFT");
+            UserOferDraft.add("YES");
             
         }
         
         else  {
             
-            UserOferDraft.add("NOT-OVERDRAFT");
+            UserOferDraft.add("NO");
             
         }
         
         UserGender.add(jComboBox1.getSelectedItem().toString());
-        
-       
+         JOptionPane.showMessageDialog(null,"ACCOUNT ADDED!");
+         
+        }
     }
     
     public static void search(){
@@ -151,6 +164,7 @@ public class LinkedList {
                 GUIAssignment.jTextField1.setText(Integer.toString(UserID.get(index)));
                 GUIAssignment.jTextField10.setText(Integer.toString(UserPin.get(index)));
                 GUIAssignment.jLabel5.setText(Integer.toString(UserAge.get(index)));
+                GUIAssignment.jSlider2.setValue(UserAge.get(index));
                 GUIAssignment.jTextField4.setText(Double.toString(UserCurrentBalance.get(index)));
                 GUIAssignment.jLabel8.setText(UserAccountType.get(index));
                 GUIAssignment.jLabel6.setText(UserOferDraft.get(index));
@@ -173,6 +187,18 @@ public class LinkedList {
     }
     
     public static void EditBTN () {
+        
+        if (GUIAssignment.jTextField10.getText().isEmpty() == true || GUIAssignment.jTextField1.getText().isEmpty() == true ||
+                GUIAssignment.jTextField3.getText().isEmpty() == true || GUIAssignment.jTextField2.getText().isEmpty() == true 
+                    || GUIAssignment.jTextField4.getText().isEmpty() == true || GUIAssignment.jSlider2.getValue() == 0
+                        || GUIAssignment.jLabel8.getText().isEmpty() == true || GUIAssignment.jLabel6.getText().isEmpty() == true
+                            || GUIAssignment.jLabel9.getText().isEmpty() == true) {
+            
+            JOptionPane.showMessageDialog(null,"The Fields are empty!");
+            
+        }
+        
+        else {
         
         for (int i=0;i < UserID.size();i++){
             
@@ -228,6 +254,7 @@ public class LinkedList {
                 JOptionPane.showMessageDialog(null,"ACCOUNT NOT UPDATED!");
                
             }
+        }
     }
 
     public static void ToggleBTNForAccountType () {
@@ -276,7 +303,7 @@ public class LinkedList {
         jLabel8.setText("");
         jTextField10.setText("");
         jLabel9.setText("");
-        
+        GUIAssignment.jButton4.setEnabled(false);
     }
     
     public static void DeleteAccounts () {
@@ -388,6 +415,3 @@ public class LinkedList {
                 
         }
 }
-
-    
-

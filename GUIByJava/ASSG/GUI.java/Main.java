@@ -4,6 +4,8 @@
  */
 package assignmentonegui;
 
+import static assignmentonegui.LinkedList.UserID;
+import static assignmentonegui.LinkedList.index;
 import java.awt.HeadlessException;
 import javax.swing.JOptionPane;
 
@@ -184,12 +186,23 @@ public class GUIAssignment extends javax.swing.JFrame {
             }
         });
         jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField1KeyPressed(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField1KeyTyped(evt);
             }
         });
 
         jTextField2.setBackground(new java.awt.Color(204, 204, 204));
+        jTextField2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField2KeyPressed(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField2KeyTyped(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("ID");
@@ -198,12 +211,23 @@ public class GUIAssignment extends javax.swing.JFrame {
         jLabel2.setText("FIRST-NAME");
 
         jTextField3.setBackground(new java.awt.Color(204, 204, 204));
+        jTextField3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField3KeyPressed(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField3KeyTyped(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("LAST-NAME");
 
         jTextField4.setBackground(new java.awt.Color(204, 204, 204));
         jTextField4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField4KeyPressed(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField4KeyTyped(evt);
             }
@@ -216,6 +240,8 @@ public class GUIAssignment extends javax.swing.JFrame {
         jSlider2.setMinorTickSpacing(10);
         jSlider2.setPaintLabels(true);
         jSlider2.setPaintTicks(true);
+        jSlider2.setToolTipText("");
+        jSlider2.setValue(0);
         jSlider2.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jSlider2StateChanged(evt);
@@ -223,7 +249,6 @@ public class GUIAssignment extends javax.swing.JFrame {
         });
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel5.setText("    ?");
         jLabel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "AGE", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18), new java.awt.Color(102, 102, 102))); // NOI18N
 
         jToggleButton1.setText("OVER-DRAFT?");
@@ -266,7 +291,15 @@ public class GUIAssignment extends javax.swing.JFrame {
         });
 
         jTextField10.setBackground(new java.awt.Color(204, 204, 204));
+        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField10ActionPerformed(evt);
+            }
+        });
         jTextField10.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField10KeyPressed(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField10KeyTyped(evt);
             }
@@ -358,7 +391,7 @@ public class GUIAssignment extends javax.swing.JFrame {
                     .addComponent(jButton3)
                     .addComponent(jButton4)
                     .addComponent(jButton5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -376,7 +409,7 @@ public class GUIAssignment extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSlider2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
@@ -493,11 +526,11 @@ public class GUIAssignment extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel19)
                             .addComponent(jLabel16)
                             .addComponent(jLabel15)
                             .addComponent(jLabel18)
-                            .addComponent(jLabel17))
+                            .addComponent(jLabel17)
+                            .addComponent(jLabel19))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -505,7 +538,7 @@ public class GUIAssignment extends javax.swing.JFrame {
                                 .addComponent(jTextField8)
                                 .addComponent(jTextField9, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)
                                 .addComponent(jTextField5))
-                            .addComponent(jTextField6, javax.swing.GroupLayout.DEFAULT_SIZE, 284, Short.MAX_VALUE)))
+                            .addComponent(jTextField6, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -695,6 +728,9 @@ public class GUIAssignment extends javax.swing.JFrame {
             evt.consume();
             
         }
+        
+        
+          
     }                                     
 
     private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {                                     
@@ -716,6 +752,86 @@ public class GUIAssignment extends javax.swing.JFrame {
             
         }
     }                                    
+
+    private void jTextField10KeyPressed(java.awt.event.KeyEvent evt) {                                        
+        
+        int lengthPIN = jTextField10.getText().length();
+        
+        if (lengthPIN == 4 ) {
+            
+            jTextField10.setText("");
+            JOptionPane.showMessageDialog(null,"You cannot enter more than 4 digits");
+            
+        }
+    }                                       
+
+    private void jTextField1KeyPressed(java.awt.event.KeyEvent evt) {                                       
+        int lengthID = jTextField1.getText().length();
+        
+        if (lengthID == 4 ) {
+            
+            jTextField1.setText("");
+            JOptionPane.showMessageDialog(null,"You cannot enter more than 4 digits");
+            
+        }
+    }                                      
+
+    private void jTextField4KeyPressed(java.awt.event.KeyEvent evt) {                                       
+        int lengthBalance = jTextField4.getText().length();
+        
+        if (lengthBalance == 10 ) {
+            
+            jTextField4.setText("");
+            JOptionPane.showMessageDialog(null,"You cannot enter more than 10 digits");
+            
+        }
+    }                                      
+
+    private void jTextField3KeyTyped(java.awt.event.KeyEvent evt) {                                     
+        char X = evt.getKeyChar();
+        
+        if (Character.isDigit(X)) {
+            
+            evt.consume();
+            
+        }
+    }                                    
+
+    private void jTextField2KeyTyped(java.awt.event.KeyEvent evt) {                                     
+        char X = evt.getKeyChar();
+        
+        if (Character.isDigit(X)) {
+            
+            evt.consume();
+            
+        }
+    }                                    
+
+    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        
+    }                                            
+
+    private void jTextField3KeyPressed(java.awt.event.KeyEvent evt) {                                       
+        int lengthFirstName = jTextField3.getText().length();
+        
+        if (lengthFirstName == 20 ) {
+            
+            jTextField3.setText("");
+            JOptionPane.showMessageDialog(null,"You cannot enter more than 20 letters");
+            
+        }
+    }                                      
+
+    private void jTextField2KeyPressed(java.awt.event.KeyEvent evt) {                                       
+        int lengthLastName = jTextField2.getText().length();
+        
+        if (lengthLastName == 20 ) {
+            
+            jTextField2.setText("");
+            JOptionPane.showMessageDialog(null,"You cannot enter more than 20 letters");
+            
+        }
+    }                                      
 
     /**
      * @param args the command line arguments
