@@ -1,3 +1,10 @@
+/*
+This program generates a random number between 1 and 10 and prompts the user to guess the number. 
+If the player's guess is incorrect, 
+the program displays a hint to help the player guess the correct number. 
+The program continues to loop until the player guesses the secret number.
+*/
+
 import java.util.Scanner;
 
 public class Game {
