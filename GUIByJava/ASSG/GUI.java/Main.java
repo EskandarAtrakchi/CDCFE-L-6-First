@@ -91,8 +91,10 @@ public class GUIAssignment extends javax.swing.JFrame {
         setAlwaysOnTop(true);
 
         jTabbedPane1.setBackground(new java.awt.Color(0, 204, 204));
+        jTabbedPane1.setToolTipText("Main tabs");
 
         jButton10.setText("START PROGRAM");
+        jButton10.setToolTipText("Start the program first");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton10ActionPerformed(evt);
@@ -145,6 +147,8 @@ public class GUIAssignment extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(0, 204, 204));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/add.png"))); // NOI18N
         jButton1.setText("ADD");
+        jButton1.setToolTipText("Add new accounts");
+        jButton1.setEnabled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -154,6 +158,8 @@ public class GUIAssignment extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(0, 204, 204));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/exit.png"))); // NOI18N
         jButton2.setText("DELETE");
+        jButton2.setToolTipText("Remove the selected account");
+        jButton2.setEnabled(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -163,6 +169,8 @@ public class GUIAssignment extends javax.swing.JFrame {
         jButton3.setBackground(new java.awt.Color(0, 204, 204));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/edit.png"))); // NOI18N
         jButton3.setText("SEARCH");
+        jButton3.setToolTipText("Search for an existed account ");
+        jButton3.setEnabled(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -172,6 +180,7 @@ public class GUIAssignment extends javax.swing.JFrame {
         jButton4.setBackground(new java.awt.Color(0, 204, 204));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/job.png"))); // NOI18N
         jButton4.setText("EDIT");
+        jButton4.setToolTipText("Edit an existed account ");
         jButton4.setEnabled(false);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,6 +189,7 @@ public class GUIAssignment extends javax.swing.JFrame {
         });
 
         jTextField1.setBackground(new java.awt.Color(204, 204, 204));
+        jTextField1.setToolTipText("Four digits as an ID");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -195,6 +205,7 @@ public class GUIAssignment extends javax.swing.JFrame {
         });
 
         jTextField2.setBackground(new java.awt.Color(204, 204, 204));
+        jTextField2.setToolTipText("Account's second name");
         jTextField2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jTextField2KeyPressed(evt);
@@ -211,6 +222,7 @@ public class GUIAssignment extends javax.swing.JFrame {
         jLabel2.setText("FIRST-NAME");
 
         jTextField3.setBackground(new java.awt.Color(204, 204, 204));
+        jTextField3.setToolTipText("Account's first name ");
         jTextField3.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jTextField3KeyPressed(evt);
@@ -224,6 +236,7 @@ public class GUIAssignment extends javax.swing.JFrame {
         jLabel3.setText("LAST-NAME");
 
         jTextField4.setBackground(new java.awt.Color(204, 204, 204));
+        jTextField4.setToolTipText("User's balance as a double");
         jTextField4.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jTextField4KeyPressed(evt);
@@ -240,7 +253,7 @@ public class GUIAssignment extends javax.swing.JFrame {
         jSlider2.setMinorTickSpacing(10);
         jSlider2.setPaintLabels(true);
         jSlider2.setPaintTicks(true);
-        jSlider2.setToolTipText("");
+        jSlider2.setToolTipText("Slid bar for age");
         jSlider2.setValue(0);
         jSlider2.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -249,9 +262,11 @@ public class GUIAssignment extends javax.swing.JFrame {
         });
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setToolTipText("Age is here as Integer ");
         jLabel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "AGE", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18), new java.awt.Color(102, 102, 102))); // NOI18N
 
         jToggleButton1.setText("OVER-DRAFT?");
+        jToggleButton1.setToolTipText("Select to switch between OVER-DRAFT and NONE-OVER-DRAFT");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton1ActionPerformed(evt);
@@ -260,11 +275,14 @@ public class GUIAssignment extends javax.swing.JFrame {
 
         jLabel6.setBackground(new java.awt.Color(102, 0, 0));
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setToolTipText("");
 
         jLabel8.setBackground(new java.awt.Color(102, 0, 0));
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel8.setText("Type");
 
         jToggleButton2.setText("ACCOUNT-TYPE");
+        jToggleButton2.setToolTipText("Select to  switch between CURRENT and SAVINGS ");
         jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton2ActionPerformed(evt);
@@ -275,6 +293,7 @@ public class GUIAssignment extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MALE", "FEMALE", "OTHER" }));
+        jComboBox1.setToolTipText("Select the GENDER of the user ");
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -284,6 +303,8 @@ public class GUIAssignment extends javax.swing.JFrame {
         jButton5.setBackground(new java.awt.Color(0, 204, 204));
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/folder.png"))); // NOI18N
         jButton5.setText("CLEAR");
+        jButton5.setToolTipText("Reset the panel");
+        jButton5.setEnabled(false);
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -291,6 +312,7 @@ public class GUIAssignment extends javax.swing.JFrame {
         });
 
         jTextField10.setBackground(new java.awt.Color(204, 204, 204));
+        jTextField10.setToolTipText("Four digits as a PIN");
         jTextField10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField10ActionPerformed(evt);
@@ -409,7 +431,7 @@ public class GUIAssignment extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSlider2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
@@ -439,6 +461,7 @@ public class GUIAssignment extends javax.swing.JFrame {
         jButton6.setBackground(new java.awt.Color(0, 204, 204));
         jButton6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton6.setText("CLICK ME TO VIEW ALL USERS");
+        jButton6.setEnabled(false);
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -511,6 +534,8 @@ public class GUIAssignment extends javax.swing.JFrame {
         jButton7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/addemployee.png"))); // NOI18N
         jButton7.setText("GET STATISTICS");
+        jButton7.setToolTipText("Click again to get the statistics up-to-date");
+        jButton7.setEnabled(false);
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -588,6 +613,8 @@ public class GUIAssignment extends javax.swing.JFrame {
         jButton8.setForeground(new java.awt.Color(60, 63, 65));
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/edit.png"))); // NOI18N
         jButton8.setText("CLICK ME TO SEND");
+        jButton8.setToolTipText("Make sure to write something before you send");
+        jButton8.setEnabled(false);
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
@@ -713,6 +740,14 @@ public class GUIAssignment extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null,"Program has started!.");
         //this.dispose();
         jButton10.setVisible(false);
+        jButton7.setEnabled(true);
+        jButton1.setEnabled(true);
+        jButton5.setEnabled(true);
+        jButton2.setEnabled(true);
+        jButton3.setEnabled(true);
+        jButton6.setEnabled(true);
+        jButton8.setEnabled(true);
+        
     }                                         
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {                                         
