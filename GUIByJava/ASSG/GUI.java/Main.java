@@ -91,7 +91,9 @@ public class GUIAssignment extends javax.swing.JFrame {
         setAlwaysOnTop(true);
 
         jTabbedPane1.setBackground(new java.awt.Color(0, 204, 204));
-        jTabbedPane1.setToolTipText("Main tabs");
+        jTabbedPane1.setToolTipText("");
+
+        jPanel6.setToolTipText("Start the program first before moving to tabs");
 
         jButton10.setText("START PROGRAM");
         jButton10.setToolTipText("Start the program first");
@@ -102,6 +104,7 @@ public class GUIAssignment extends javax.swing.JFrame {
         });
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/men.png"))); // NOI18N
+        jLabel11.setToolTipText("Start the program first before moving to tabs");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -506,6 +509,8 @@ public class GUIAssignment extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("VIEW-ALL", jPanel3);
+
+        jPanel4.setToolTipText("All the satistics are in this tab");
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel15.setText("HOW MANY ACCOUNTS ARE IN THE BANK");
