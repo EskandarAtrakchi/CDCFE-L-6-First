@@ -279,7 +279,6 @@ public class GUIAssignment extends javax.swing.JFrame {
 
         jLabel8.setBackground(new java.awt.Color(102, 0, 0));
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel8.setText("Type");
 
         jToggleButton2.setText("ACCOUNT-TYPE");
         jToggleButton2.setToolTipText("Select to  switch between CURRENT and SAVINGS ");
@@ -456,11 +455,13 @@ public class GUIAssignment extends javax.swing.JFrame {
         jTextArea1.setBackground(new java.awt.Color(204, 204, 204));
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
+        jTextArea1.setToolTipText("Here to display all accounts in the bank");
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton6.setBackground(new java.awt.Color(0, 204, 204));
         jButton6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton6.setText("CLICK ME TO VIEW ALL USERS");
+        jButton6.setToolTipText("Show all the accounts in the bank");
         jButton6.setEnabled(false);
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -471,6 +472,7 @@ public class GUIAssignment extends javax.swing.JFrame {
         jButton9.setBackground(new java.awt.Color(0, 204, 204));
         jButton9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton9.setText("CLICK HERE TO CLEAR");
+        jButton9.setToolTipText("Clear the names");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -602,6 +604,7 @@ public class GUIAssignment extends javax.swing.JFrame {
         jTextArea2.setBackground(new java.awt.Color(204, 204, 204));
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
+        jTextArea2.setToolTipText("You cannot send an empty message ");
         jScrollPane2.setViewportView(jTextArea2);
 
         jLabel10.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
@@ -763,9 +766,6 @@ public class GUIAssignment extends javax.swing.JFrame {
             evt.consume();
             
         }
-        
-        
-          
     }                                     
 
     private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {                                     
