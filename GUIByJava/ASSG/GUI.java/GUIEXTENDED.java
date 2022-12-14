@@ -32,6 +32,7 @@ import javax.swing.JOptionPane;
 public class LinkedList {
     
     static int index;
+    
     static boolean Found = false; 
     
     public static ArrayList<Integer> UserID = new ArrayList<>();
@@ -83,11 +84,11 @@ public class LinkedList {
         GUIAssignment.jTextArea1.append("ID\tF-NAME\tPIN\tL-NAME\tBALANCE\tAGE\tACCOUNT\tOVER-DRAFT\tGENDER\n\n");
         for(int i = 0; i < UserID.size(); i ++) {
             GUIAssignment.jTextArea1.append
-        (UserID.get(i).toString() + "\t" + UserFirstName.get(i)
-        + "\t" + UserPin.get(i).toString() + "\t" + UserLastName.get(i)
-        + "\t" + UserCurrentBalance.get(i).toString() + "$\t" + UserAge.get(i).toString()
-        + "\t" + UserAccountType.get(i) + "\t" + UserOferDraft.get(i) + "\t" 
-        + UserGender.get(i) + "\n");
+            (UserID.get(i).toString() + "\t" + UserFirstName.get(i)
+            + "\t" + UserPin.get(i).toString() + "\t" + UserLastName.get(i)
+            + "\t" + UserCurrentBalance.get(i).toString() + "$\t" + UserAge.get(i).toString()
+            + "\t" + UserAccountType.get(i) + "\t" + UserOferDraft.get(i) + "\t" 
+            + UserGender.get(i) + "\n");
             
         }
     }
@@ -110,8 +111,6 @@ public class LinkedList {
             
             UserPin.add(Integer.parseInt(jTextField10.getText()));
             
-            //UserID.sort( UserID , new Comparator<Integer>() {};
-            
             for(int i = 0; i < UserID.size(); i ++) {
                 
                  if (UserID.contains(Integer.parseInt(GUIAssignment.jTextField1.getText()))) {
@@ -130,38 +129,42 @@ public class LinkedList {
                     UserCurrentBalance.add(Double.parseDouble(jTextField4.getText()));
                     UserAge.add(GUIAssignment.jSlider2.getValue());
         
-                if(GUIAssignment.jToggleButton2.isSelected() == true){
-            
-                    UserAccountType.add("SAVINGS");
-            
-                }
-        
-                 else {
-            
-                    UserAccountType.add("CURRENT");
-                }
-        
-                if(GUIAssignment.jToggleButton1.isSelected() == true) {
-            
-                    UserOferDraft.add("YES");
-            
-                }
-        
-                else  {
-            
-                    UserOferDraft.add("NO");
-            
-                }
-        
-                    UserGender.add(jComboBox1.getSelectedItem().toString());
-                     JOptionPane.showMessageDialog(null,"ACCOUNT ADDED!");
+                    if(GUIAssignment.jToggleButton2.isSelected() == true){
 
-            }
-            break;
-        }
+                        UserAccountType.add("SAVINGS");
+
+                    }
+
+                     else {
+
+                        UserAccountType.add("CURRENT");
+                    }
+
+                    if(GUIAssignment.jToggleButton1.isSelected() == true) {
+
+                        UserOferDraft.add("YES");
+
+                    }
+
+                    else  {
+
+                        UserOferDraft.add("NO");
+
+                    }
+
+                        UserGender.add(jComboBox1.getSelectedItem().toString());
+
+                         JOptionPane.showMessageDialog(null,"ACCOUNT ADDED!");
+
+                }//end else 
+
+                break;//break for
+                
+            }//end for 
         
-        }
-    }
+        }//end else 
+        
+    }//end method
     
     public static void search(){
         
@@ -173,6 +176,7 @@ public class LinkedList {
                        GUIAssignment.jTextField10.getText().matches(Integer.toString(UserPin.get(i)))){
                     
                     UserAccount = true;
+                    
                     index = i;
                 }
             }
@@ -193,15 +197,16 @@ public class LinkedList {
                 GUIAssignment.jLabel9.setText(UserGender.get(index));
                 GUIAssignment.jTextField3.setText(UserFirstName.get(index));
                 GUIAssignment.jTextField2.setText(UserLastName.get(index));
+                
             }
             
             else if (UserAccount == false){
                 
                     JOptionPane.showMessageDialog(null,"ATTENTION, YOU CAN SEARCH ONLY BY ((ID)) OR ((PIN)), SO, PLEASE TRY AGAIN");
                 
-            }//end if
+            }//end else if
             
-            else{
+            else {
                 
                 JOptionPane.showMessageDialog(null,"ID & Name can not be empty!");
             
@@ -227,6 +232,7 @@ public class LinkedList {
                 if (GUIAssignment.jTextField1.getText().matches(Integer.toString(UserID.get(i)))){
                     
                     Found = true;
+                    
                     index = i;
                     
                 }
@@ -243,45 +249,45 @@ public class LinkedList {
                 
             if(GUIAssignment.jToggleButton2.isSelected() == true){
                     
-                    UserAccountType.set(index, GUIAssignment.jToggleButton2.getText());
+                UserAccountType.set(index, GUIAssignment.jToggleButton2.getText());
                     
             }
 
             else {
 
-                    UserAccountType.set(index, GUIAssignment.jToggleButton2.getText());
+                UserAccountType.set(index, GUIAssignment.jToggleButton2.getText());
                     
             }
                 
             if(GUIAssignment.jToggleButton1.isSelected() == true){
                     
-                    UserOferDraft.set(index, GUIAssignment.jToggleButton1.getText());
+                UserOferDraft.set(index, GUIAssignment.jToggleButton1.getText());
                     
             }
 
-                else {
+            else {
 
-                    UserOferDraft.set(index, GUIAssignment.jToggleButton1.getText());
+                UserOferDraft.set(index, GUIAssignment.jToggleButton1.getText());
                     
-                }
-                
-                UserGender.set(index, GUIAssignment.jComboBox1.getSelectedItem().toString());
-
-                JOptionPane.showMessageDialog(null,"ACCOUNT HAS BEEN UPDATED, WITH THE SAME ID");
-                
             }
+                
+            UserGender.set(index, GUIAssignment.jComboBox1.getSelectedItem().toString());
+
+            JOptionPane.showMessageDialog(null,"ACCOUNT HAS BEEN UPDATED, WITH THE SAME ID");
+                
+        }
         
         if (Found == false){
             
-                JOptionPane.showMessageDialog(null,"ACCOUNT NOT UPDATED!");
+            JOptionPane.showMessageDialog(null,"ACCOUNT NOT UPDATED!");
                
-            }
+        }
         }
     }
 
     public static void ToggleBTNForAccountType () {
         
-        if (jToggleButton2.isSelected() == true){
+        if (jToggleButton2.isSelected() == true) {
             
             jLabel8.setText("SAVINGS");
             
@@ -301,6 +307,7 @@ public class LinkedList {
             jLabel6.setText("YES");
             
         }
+        
         else if (jToggleButton1.isSelected() == false) {
             
             jLabel6.setText("NO");
@@ -326,6 +333,7 @@ public class LinkedList {
         jTextField10.setText("");
         jLabel9.setText("");
         GUIAssignment.jButton4.setEnabled(false);
+        
     }
     
     public static void DeleteAccounts () {
@@ -337,6 +345,7 @@ public class LinkedList {
             if (GUIAssignment.jTextField1.getText().matches(Integer.toString(UserID.get(i)))) {
                 
                 UserAccount = true; 
+                
                 index = i;
                 
             }
@@ -401,9 +410,11 @@ public class LinkedList {
         public static void Statistics () {
             
             //HOW MANY ACCOUNTS ARE IN THE BANK
+            
             GUIAssignment.jTextField5.setText("There are " + UserID.size() + " accounts in this bank");
             
             //HOW MUCH MONEY IS IN THE BANK 
+            
             double AmountOfMoney = 0;
             
             for(int i = 0; i < UserCurrentBalance.size(); i ++ ) {
@@ -415,11 +426,13 @@ public class LinkedList {
             GUIAssignment.jTextField6.setText("There are " + AmountOfMoney + "$ in this bank");
             
             //HIGHEST AMOUNT OF MONEY IN THE BANK 
+            
             double HighestAmount = Collections.max(UserCurrentBalance);
             
             GUIAssignment.jTextField7.setText("The highest amount of money is  " + HighestAmount + "$");
             
             //AVERAGE AMOUNT OF MONEY PER PERSON 
+            
             double AvgAmountOfMoney = 0;
             
             for(int i = 0; i < UserCurrentBalance.size(); i ++ ) {
@@ -430,7 +443,8 @@ public class LinkedList {
             
             GUIAssignment.jTextField8.setText("The Avg $ per account is " + AvgAmountOfMoney / UserCurrentBalance.size()  + "$");
             
-            //HIGHEST AMOUNT OF MONEY IN THE BANK 
+            //HIGHEST AMOUNT OF MONEY IN THE BANK
+            
             double LowestAmount = Collections.min(UserCurrentBalance);
             
             GUIAssignment.jTextField9.setText("The lowest amount of money is  " + LowestAmount + "$");
