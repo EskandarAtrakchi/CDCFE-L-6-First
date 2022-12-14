@@ -21,6 +21,7 @@ import static assignmentonegui.GUIAssignment.jToggleButton2;
 import java.util.ArrayList;
 import java.util.Collections;
 import static java.util.Collections.list;
+import java.util.Comparator;
 import javax.swing.JOptionPane;
 
 /**
@@ -104,14 +105,21 @@ public class LinkedList {
         }
         
         else {
-            jButton1.setEnabled(true);
-        UserPin.add(Integer.parseInt(jTextField10.getText()));
-            for(int i = 0; i < UserID.size(); i ++) {
             
-                 if (Integer.parseInt(GUIAssignment.jTextField1.getText()) == UserID.get(i)) {
+            jButton1.setEnabled(true);
+            
+            UserPin.add(Integer.parseInt(jTextField10.getText()));
+            
+            //UserID.sort( UserID , new Comparator<Integer>() {};
+            
+            for(int i = 0; i < UserID.size(); i ++) {
+                
+                 if (UserID.contains(Integer.parseInt(GUIAssignment.jTextField1.getText()))) {
                 
                     JOptionPane.showMessageDialog(null,"The ID existed already!");
+                    
                     break;
+                    
                 }
             
                  else {
