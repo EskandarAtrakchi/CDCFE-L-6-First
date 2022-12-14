@@ -10,6 +10,7 @@ import static assignmentonegui.GUIAssignment.jLabel5;
 import static assignmentonegui.GUIAssignment.jLabel6;
 import static assignmentonegui.GUIAssignment.jLabel8;
 import static assignmentonegui.GUIAssignment.jLabel9;
+import static assignmentonegui.GUIAssignment.jSlider2;
 import static assignmentonegui.GUIAssignment.jTextArea1;
 import static assignmentonegui.GUIAssignment.jTextField1;
 import static assignmentonegui.GUIAssignment.jTextField10;
@@ -25,8 +26,7 @@ import java.util.Comparator;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author Eskandar's Laptop
+ * @author Eskandar Atrakchi
  */
 
 public class LinkedList {
@@ -82,6 +82,7 @@ public class LinkedList {
         
         GUIAssignment.jTextArea1.setText("");
         GUIAssignment.jTextArea1.append("ID\tF-NAME\tPIN\tL-NAME\tBALANCE\tAGE\tACCOUNT\tOVER-DRAFT\tGENDER\n\n");
+        
         for(int i = 0; i < UserID.size(); i ++) {
             GUIAssignment.jTextArea1.append
             (UserID.get(i).toString() + "\t" + UserFirstName.get(i)
@@ -154,7 +155,7 @@ public class LinkedList {
 
                         UserGender.add(jComboBox1.getSelectedItem().toString());
 
-                         JOptionPane.showMessageDialog(null,"ACCOUNT ADDED!");
+                        JOptionPane.showMessageDialog(null,"ACCOUNT ADDED!");
 
                 }//end else 
 
@@ -241,6 +242,7 @@ public class LinkedList {
         if (Found == true){
             
                 //UserID.set(index, Integer.valueOf(GUIAssignment.jTextField1.getText()));
+                
                 UserPin.set(index, Integer.valueOf(GUIAssignment.jTextField10.getText()));
                 UserFirstName.set(index, jTextField3.getText());
                 UserLastName.set(index, jTextField2.getText());
@@ -275,15 +277,15 @@ public class LinkedList {
 
             JOptionPane.showMessageDialog(null,"ACCOUNT HAS BEEN UPDATED, WITH THE SAME ID");
                 
-        }
+        }//end if 
         
         if (Found == false){
             
             JOptionPane.showMessageDialog(null,"ACCOUNT NOT UPDATED!");
                
-        }
-        }
-    }
+        }//end for loop 
+        }//end else 
+    }//end method 
 
     public static void ToggleBTNForAccountType () {
         
@@ -348,8 +350,9 @@ public class LinkedList {
                 
                 index = i;
                 
-            }
-        }
+            }//end if statement 
+
+        }//end for loop 
         
         if(UserAccount == true) {
             
@@ -374,7 +377,7 @@ public class LinkedList {
             
             JOptionPane.showMessageDialog(null,"Account Deleted!");
             
-        }
+        }//end if 
         
         if (UserAccount == false) {
             
@@ -450,4 +453,49 @@ public class LinkedList {
             GUIAssignment.jTextField9.setText("The lowest amount of money is  " + LowestAmount + "$");
                 
         }
+        
+        public static void jSlider2StateChanged() {
+            
+            jLabel5.setText(Integer.toString(jSlider2.getValue()));
+            
+        }
+        
+        public static void jButton10ActionPerformed() {
+            
+            JOptionPane.showMessageDialog(null,"Program has started!.");
+            //this.dispose();
+            GUIAssignment.jButton10.setVisible(false);//button disappear 
+            GUIAssignment.jButton7.setEnabled(true);
+            jButton1.setEnabled(true);//enabling the Button
+            GUIAssignment.jButton5.setEnabled(true);
+            GUIAssignment.jButton2.setEnabled(true);
+            GUIAssignment.jButton3.setEnabled(true);
+            GUIAssignment.jButton6.setEnabled(true);
+            GUIAssignment.jButton8.setEnabled(true);
+            
+        }
+        
+        //The evt throws exeption because it is not supported in the IDE version 
+        
+        /*
+        char c = evt.getKeyChar();
+        
+        if (!Character.isDigit(c)) {
+            
+            evt.consume();
+            
+        }
+        */
+        
+        /*
+        int lengthPIN = jTextField10.getText().length();
+        
+        if (lengthPIN == 4 ) {
+            
+            jTextField10.setText("");
+           
+            JOptionPane.showMessageDialog(null,"You cannot enter more than 4 digits");
+            
+        }
+        */
 }
