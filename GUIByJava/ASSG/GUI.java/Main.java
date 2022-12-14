@@ -677,7 +677,7 @@ public class GUIAssignment extends javax.swing.JFrame {
     }// </editor-fold>                        
 
     private void jSlider2StateChanged(javax.swing.event.ChangeEvent evt) {                                      
-        jLabel5.setText(Integer.toString(jSlider2.getValue()));
+        LinkedList.jSlider2StateChanged();
     }                                     
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {                                         
@@ -745,16 +745,7 @@ public class GUIAssignment extends javax.swing.JFrame {
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         LinkedList.addrecords();
-        JOptionPane.showMessageDialog(null,"Program has started!.");
-        //this.dispose();
-        jButton10.setVisible(false);
-        jButton7.setEnabled(true);
-        jButton1.setEnabled(true);
-        jButton5.setEnabled(true);
-        jButton2.setEnabled(true);
-        jButton3.setEnabled(true);
-        jButton6.setEnabled(true);
-        jButton8.setEnabled(true);
+        LinkedList.jButton10ActionPerformed();
         
     }                                         
 
@@ -766,14 +757,16 @@ public class GUIAssignment extends javax.swing.JFrame {
        
         char c = evt.getKeyChar();
         
-        if (!Character.isDigit(c)) {
+            if (!Character.isDigit(c)) {
+
+                evt.consume();
+
+            }
             
-            evt.consume();
-            
-        }
     }                                     
 
     private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {                                     
+        
         char c = evt.getKeyChar();
         
         if (!Character.isDigit(c)) {
@@ -784,6 +777,7 @@ public class GUIAssignment extends javax.swing.JFrame {
     }                                    
 
     private void jTextField4KeyTyped(java.awt.event.KeyEvent evt) {                                     
+        
         char c = evt.getKeyChar();
         
         if (!Character.isDigit(c)) {
@@ -800,34 +794,40 @@ public class GUIAssignment extends javax.swing.JFrame {
         if (lengthPIN == 4 ) {
             
             jTextField10.setText("");
+           
             JOptionPane.showMessageDialog(null,"You cannot enter more than 4 digits");
             
         }
     }                                       
 
     private void jTextField1KeyPressed(java.awt.event.KeyEvent evt) {                                       
+        
         int lengthID = jTextField1.getText().length();
         
         if (lengthID == 4 ) {
             
             jTextField1.setText("");
+            
             JOptionPane.showMessageDialog(null,"You cannot enter more than 4 digits");
             
         }
     }                                      
 
     private void jTextField4KeyPressed(java.awt.event.KeyEvent evt) {                                       
+        
         int lengthBalance = jTextField4.getText().length();
         
         if (lengthBalance == 10 ) {
             
             jTextField4.setText("");
+            
             JOptionPane.showMessageDialog(null,"You cannot enter more than 10 digits");
             
         }
     }                                      
 
     private void jTextField3KeyTyped(java.awt.event.KeyEvent evt) {                                     
+        
         char X = evt.getKeyChar();
         
         if (Character.isDigit(X)) {
@@ -838,6 +838,7 @@ public class GUIAssignment extends javax.swing.JFrame {
     }                                    
 
     private void jTextField2KeyTyped(java.awt.event.KeyEvent evt) {                                     
+        
         char X = evt.getKeyChar();
         
         if (Character.isDigit(X)) {
@@ -852,22 +853,26 @@ public class GUIAssignment extends javax.swing.JFrame {
     }                                            
 
     private void jTextField3KeyPressed(java.awt.event.KeyEvent evt) {                                       
+        
         int lengthFirstName = jTextField3.getText().length();
         
         if (lengthFirstName == 20 ) {
             
             jTextField3.setText("");
+            
             JOptionPane.showMessageDialog(null,"You cannot enter more than 20 letters");
             
         }
     }                                      
 
     private void jTextField2KeyPressed(java.awt.event.KeyEvent evt) {                                       
+        
         int lengthLastName = jTextField2.getText().length();
         
         if (lengthLastName == 20 ) {
             
             jTextField2.setText("");
+         
             JOptionPane.showMessageDialog(null,"You cannot enter more than 20 letters");
             
         }
@@ -910,13 +915,13 @@ public class GUIAssignment extends javax.swing.JFrame {
 
     // Variables declaration - do not modify                     
     public static javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
+    public static javax.swing.JButton jButton10;
     public static javax.swing.JButton jButton2;
     public static javax.swing.JButton jButton3;
     public static javax.swing.JButton jButton4;
     public static javax.swing.JButton jButton5;
     public static javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
+    public static javax.swing.JButton jButton7;
     public static javax.swing.JButton jButton8;
     public static javax.swing.JButton jButton9;
     public static javax.swing.JComboBox<String> jComboBox1;
