@@ -92,7 +92,9 @@ public class GUIAssignment extends javax.swing.JFrame {
 
         jTabbedPane1.setBackground(new java.awt.Color(0, 204, 204));
         jTabbedPane1.setToolTipText("");
+        jTabbedPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        jPanel6.setBackground(new java.awt.Color(0, 102, 102));
         jPanel6.setToolTipText("Start the program first before moving to tabs");
 
         jButton10.setText("START PROGRAM");
@@ -147,7 +149,10 @@ public class GUIAssignment extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("LOGO", jPanel1);
 
+        jPanel2.setBackground(new java.awt.Color(0, 153, 153));
+
         jButton1.setBackground(new java.awt.Color(0, 204, 204));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/add.png"))); // NOI18N
         jButton1.setText("ADD");
         jButton1.setToolTipText("Add new accounts");
@@ -159,6 +164,7 @@ public class GUIAssignment extends javax.swing.JFrame {
         });
 
         jButton2.setBackground(new java.awt.Color(0, 204, 204));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/exit.png"))); // NOI18N
         jButton2.setText("DELETE");
         jButton2.setToolTipText("Remove the selected account");
@@ -170,6 +176,7 @@ public class GUIAssignment extends javax.swing.JFrame {
         });
 
         jButton3.setBackground(new java.awt.Color(0, 204, 204));
+        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/edit.png"))); // NOI18N
         jButton3.setText("SEARCH");
         jButton3.setToolTipText("Search for an existed account ");
@@ -181,6 +188,7 @@ public class GUIAssignment extends javax.swing.JFrame {
         });
 
         jButton4.setBackground(new java.awt.Color(0, 204, 204));
+        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/job.png"))); // NOI18N
         jButton4.setText("EDIT");
         jButton4.setToolTipText("Edit an existed account ");
@@ -303,6 +311,7 @@ public class GUIAssignment extends javax.swing.JFrame {
         });
 
         jButton5.setBackground(new java.awt.Color(0, 204, 204));
+        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/folder.png"))); // NOI18N
         jButton5.setText("CLEAR");
         jButton5.setToolTipText("Reset the panel");
@@ -380,7 +389,7 @@ public class GUIAssignment extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                 .addGap(43, 43, 43)
                                 .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(97, Short.MAX_VALUE))
+                        .addContainerGap(84, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGap(40, 40, 40)
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -455,6 +464,8 @@ public class GUIAssignment extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("EDIT-USERS", jPanel2);
 
+        jPanel3.setBackground(new java.awt.Color(0, 153, 153));
+
         jTextArea1.setBackground(new java.awt.Color(204, 204, 204));
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -510,6 +521,7 @@ public class GUIAssignment extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("VIEW-ALL", jPanel3);
 
+        jPanel4.setBackground(new java.awt.Color(0, 153, 153));
         jPanel4.setToolTipText("All the satistics are in this tab");
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -605,6 +617,8 @@ public class GUIAssignment extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("STATISTICS", jPanel4);
+
+        jPanel5.setBackground(new java.awt.Color(0, 153, 153));
 
         jTextArea2.setBackground(new java.awt.Color(204, 204, 204));
         jTextArea2.setColumns(20);
