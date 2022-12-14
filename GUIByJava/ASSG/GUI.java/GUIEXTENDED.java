@@ -26,7 +26,8 @@ import java.util.Comparator;
 import javax.swing.JOptionPane;
 
 /**
- * @author Eskandar Atrakchi
+ *
+ * @author Eskandar's Laptop
  */
 
 public class LinkedList {
@@ -82,7 +83,6 @@ public class LinkedList {
         
         GUIAssignment.jTextArea1.setText("");
         GUIAssignment.jTextArea1.append("ID\tF-NAME\tPIN\tL-NAME\tBALANCE\tAGE\tACCOUNT\tOVER-DRAFT\tGENDER\n\n");
-        
         for(int i = 0; i < UserID.size(); i ++) {
             GUIAssignment.jTextArea1.append
             (UserID.get(i).toString() + "\t" + UserFirstName.get(i)
@@ -155,7 +155,7 @@ public class LinkedList {
 
                         UserGender.add(jComboBox1.getSelectedItem().toString());
 
-                        JOptionPane.showMessageDialog(null,"ACCOUNT ADDED!");
+                         JOptionPane.showMessageDialog(null,"ACCOUNT ADDED!");
 
                 }//end else 
 
@@ -242,7 +242,6 @@ public class LinkedList {
         if (Found == true){
             
                 //UserID.set(index, Integer.valueOf(GUIAssignment.jTextField1.getText()));
-                
                 UserPin.set(index, Integer.valueOf(GUIAssignment.jTextField10.getText()));
                 UserFirstName.set(index, jTextField3.getText());
                 UserLastName.set(index, jTextField2.getText());
@@ -351,7 +350,6 @@ public class LinkedList {
                 index = i;
                 
             }//end if statement 
-
         }//end for loop 
         
         if(UserAccount == true) {
@@ -464,9 +462,9 @@ public class LinkedList {
             
             JOptionPane.showMessageDialog(null,"Program has started!.");
             //this.dispose();
-            GUIAssignment.jButton10.setVisible(false);//button disappear 
+            GUIAssignment.jButton10.setVisible(false);
             GUIAssignment.jButton7.setEnabled(true);
-            jButton1.setEnabled(true);//enabling the Button
+            jButton1.setEnabled(true);
             GUIAssignment.jButton5.setEnabled(true);
             GUIAssignment.jButton2.setEnabled(true);
             GUIAssignment.jButton3.setEnabled(true);
