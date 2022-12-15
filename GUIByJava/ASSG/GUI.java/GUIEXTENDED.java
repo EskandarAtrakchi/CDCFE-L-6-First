@@ -55,7 +55,7 @@ public class LinkedList {
         UserCurrentBalance.add(1000.0);
         UserAge.add(20);
         UserAccountType.add("SAVINGS");
-        UserOferDraft.add("YES");
+        UserOferDraft.add("OVER-DRAFT");
         UserGender.add("OTHER");
         
         UserID.add(102);
@@ -65,7 +65,7 @@ public class LinkedList {
         UserCurrentBalance.add(2000.0);
         UserAge.add(21);
         UserAccountType.add("CURRENT");
-        UserOferDraft.add("NO");
+        UserOferDraft.add("NOT-OVER");
         UserGender.add("MALE");
         
         UserID.add(103);
@@ -75,7 +75,7 @@ public class LinkedList {
         UserCurrentBalance.add(3000.0);
         UserAge.add(22);
         UserAccountType.add("SAVINGS");
-        UserOferDraft.add("YES");
+        UserOferDraft.add("OVERDRAFT");
         UserGender.add("FEMALE");
     }
     
@@ -143,13 +143,13 @@ public class LinkedList {
 
                     if(GUIAssignment.jToggleButton1.isSelected() == true) {
 
-                        UserOferDraft.add("YES");
+                        UserOferDraft.add("OVER-DRAFT");
 
                     }
 
                     else  {
 
-                        UserOferDraft.add("NO");
+                        UserOferDraft.add("NOT-OVER");
 
                     }
 
@@ -250,25 +250,25 @@ public class LinkedList {
                 
             if(GUIAssignment.jToggleButton2.isSelected() == true){
                     
-                UserAccountType.set(index, GUIAssignment.jToggleButton2.getText());
+                UserAccountType.set(index, GUIAssignment.jLabel8.getText());
                     
             }
 
             else {
 
-                UserAccountType.set(index, GUIAssignment.jToggleButton2.getText());
+                UserAccountType.set(index, GUIAssignment.jLabel8.getText());
                     
             }
                 
             if(GUIAssignment.jToggleButton1.isSelected() == true){
                     
-                UserOferDraft.set(index, GUIAssignment.jToggleButton1.getText());
+                UserOferDraft.set(index, GUIAssignment.jLabel6.getText());
                     
             }
 
             else {
 
-                UserOferDraft.set(index, GUIAssignment.jToggleButton1.getText());
+                UserOferDraft.set(index, GUIAssignment.jLabel6.getText());
                     
             }
                 
@@ -305,13 +305,13 @@ public class LinkedList {
         
         if (jToggleButton1.isSelected() == true){
             
-            jLabel6.setText("YES");
+            jLabel6.setText("OVER-DRAFT");
             
         }
         
         else if (jToggleButton1.isSelected() == false) {
             
-            jLabel6.setText("NO");
+            jLabel6.setText("NOT-OVER");
             
         }
     }
