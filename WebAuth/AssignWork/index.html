@@ -2,6 +2,8 @@
 <html lang="en">
   <!-- start head -->
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--website icon-->
   <link rel="website icon" type="gif" href="https://moonbeam.network/wp-content/uploads/2020/10/rotating-ethereum-logo.gif">
   <!--footers css-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
@@ -35,105 +37,57 @@
 <!-- start Body -->
 
 <body onload="start()">
-  <div class="icon-bar">
-    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
-    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
-    <a href="#" class="google"><i class="fa fa-google"></i></a> 
-    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-    <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
-    <button onclick="document.getElementById('id01').style.display='block'" id="disableloginbtn">Login</button>
-  </div>
+
+  <div class="tracking-in-expand-fwd">
   
     <!-- start header -->
     
     <header>
+      
           <div id="header">
-            
-            <a href="https://eskandarte.w3spaces.com/" target= "_blank"><img src="https://moonbeam.network/wp-content/uploads/2020/10/rotating-ethereum-logo.gif" id="logo"/></a>
+            <div id="marqueeandlogoandbtns">
+            <a href="https://eskandarte.w3spaces.com/" target= "_blank"><img src="https://moonbeam.network/wp-content/uploads/2020/10/rotating-ethereum-logo.gif" id="logo" class="text-flicker-in-glow" /></a>
             <button onClick="swapStylesheet('style.css')" class="custom-btn btn-5" id="chanemode">Dark</button>
             <button onClick="swapStylesheet('styleLight.css')" class="custom-btn btn-5" id="chanemode"><span>Light</span></button>
-        <!--start login button-->
-        <div id="id01" class="modal" class="email">
-          
-          <form class="modal-content animate">
-            <div class="imgcontainer">
-              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-              <img src="https://media.istockphoto.com/id/1279388417/photo/cyber-security-digital-crime-concept.jpg?b=1&s=612x612&w=0&k=20&c=W5ep5z1mQU9hGYxDkieT7kQeP0lT1C5GWbGEAzQJ1c8=" alt="Avatar" class="avatar">
-            </div>
-
-            <div class="LoginFrame">
-              <label for="uname"><b>email</b></label>
-              <input type="text" placeholder="Enter email" name="id" onblur="validateEmail(this);" required>
-
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="pass" required>
-                
-              <a href="#"><button class="Submitin" type="submit" onclick="pasuser(this.form)">Submit</button></a>
-              <label>
-                <input type="checkbox" checked="checked" name="remember" style="Color:red;"> <h4 style="Color:red;"><strong>Remember me?</strong></h4>
-              </label>
-            </div>
-
-            <div class="LoginFrame">
-              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel?</button>
-              
-            </div>
-          </form>
-        </div>
-
-        <script>
-        // Get the modal
-        var modal = document.getElementById('id01');
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-        </script>
-            <!--end login button-->
-        <nav>
+        
           <!--class="mytext" onmouseover="mouseOver()" onmouseout="mouseOut()"-->
-          <marquee id="FirstMarquee">
+          <marquee id="FirstMarquee" class="text-flicker-in-glow">
             <span class="MarqueeStyling">This <span id="browser"></span> page been browsed <span id="hits"></span> times</span>
             <br>
             <span class="MarqueeStyling">Updated on <span id="date"></span></span>
           </marquee>
           <form class="search" action="search.php"> 
-            <input name="q" placeholder="Search..." type="search">
+            <input name="q" placeholder="Search..." type="search" class="text-flicker-in-glow">
           </form>
-          <ul>
-            <li>
-              <a href="">Home</a>
-            </li>
-            <li>
-              <a href="https://eskandarte.w3spaces.com/" target= "_blank">About</a>      
-            </li>
-            <li class="dropdown">
-              <a style="cursor: help;">Contact &darr;</a>
-                <ul>
-                  <li><a href="#">About Version</a></li>
-                  <li><a href="#">About Version</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                </ul>        
-            </li>
-            <li>
-              <a href="">Portfolio</a>
-            </li>
-            <li>
-              <a href="">Team</a>
-            </li>
-          </ul>
-        </nav>
+        </div>
+          <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="https://eskandarte.w3spaces.com/">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
       </div>
         
     </header>
+    <!--script for hiding the header on small devices-->
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
     <!-- end header -->
 
     <!--start content body-->
   <div id="firstDiv">
+    <h5>&nbsp;</h5>
     <h3 id="DynamicText"></h3>
     <div>
     <p>
@@ -145,13 +99,59 @@
       <br>
       Smart contracts are self-executing contracts with the terms of the agreement between buyer and seller being directly written into lines of code. The code and the agreements contained therein are stored and replicated on the blockchain network.
     </p>
-    <img src="https://i.gifer.com/3zMk.gif" style="float:right; width:40%;"/>
+    <img src="https://i.gifer.com/3zMk.gif" style="float:right; width:40%;" class="text-flicker-in-glow"/>
+    
     <p>
       Programming languages are used to create software applications, websites, and other systems by writing instructions for computers to execute. These instructions are written in a programming language that is understood by the computer, which can then execute the instructions to perform a specific task or solve a problem.<br>
 
       There are several reasons why we need to use programming languages:
       <br>
-      To automate tasks: <br>Programming languages allow us to write instructions that can be executed by a computer, enabling us to automate tasks and processes. This can save time and effort, and can also reduce the chances of human error.<br>
+      <h2>&nbsp;</h2>
+      To automate tasks: <br>Programming languages allow us to write instructions that can be executed by a computer, enabling us to automate tasks and processes. This can save time and effort, and can also reduce the chances of human error.
+      <br>
+      <h2>&nbsp;</h2>
+      There is high demand for programming languages such as Java, Python, and JavaScript, as they are widely used in various industries for developing applications, websites, and other software. C# and C++ are also popular languages, though demand may be slightly lower. Salaries for professionals proficient in these languages can range from $65,000 to $110,000, depending on the specific language and location.
+
+      <!--start table-->
+    <table>
+      <tr>
+        <th>Language</th>
+        <th>Demand</th>
+        <th>Popularity</th>
+        <th>Salary</th>
+      </tr>
+      <tr>
+        <td>Java</td>
+        <td>High</td>
+        <td>Very High</td>
+        <td>$80,000 - $110,000</td>
+      </tr>
+      <tr>
+        <td>Python</td>
+        <td>Very High</td>
+        <td>Very High</td>
+        <td>$80,000 - $110,000</td>
+      </tr>
+      <tr>
+        <td>JavaScript</td>
+        <td>High</td>
+        <td>Very High</td>
+        <td>$75,000 - $105,000</td>
+      </tr>
+      <tr>
+        <td>C#</td>
+        <td>Moderate</td>
+        <td>High</td>
+        <td>$70,000 - $100,000</td>
+      </tr>
+      <tr>
+        <td>C++</td>
+        <td>Low</td>
+        <td>Moderate</td>
+        <td>$65,000 - $95,000</td>
+      </tr>
+    </table>
+    <!--end table-->
 
       To create complex systems: <br>Programming languages enable us to create complex systems and applications that would be difficult or impossible to build without the use of a programming language. These systems can be used to solve problems, collect and analyze data, and perform a wide variety of other tasks.
 
@@ -217,7 +217,7 @@
 <!--end of this card-->
 <div class="sceneCards">
   <div class="C C-4">
-    <div class="CARD font">HTML and CSS <br>are essential tools for creating and styling web content, and they are an important part of any web developer's toolkit. Hover here for more</div>
+    <div class="CARD font">HTML&CSS <br>are essential tools for creating and styling web content, and they are an important part of any web developer's toolkit. Hover here for more</div>
     <div class="CARD back">
       <div class="text-rotate">
         <iframe width="160" height="215" src="https://www.youtube.com/embed/61dckXqDRJI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -242,7 +242,7 @@
       Overall, HTML is a valuable and widely-used tool for creating and structuring content on the web, and it is an essential part of any web developer's toolkit.
     </p></div>
   <div class="IFrameOneHTML">
-      <iframe src="https://www.htmlcompiler.ml/" width="100%" height="900px"></iframe>
+      <iframe src="https://www.htmlcompiler.ml/" width="95%" height="850px"></iframe>
     </div>
       <h2>&nbsp;</h2>
 
@@ -281,19 +281,68 @@
               
           </div>
           <div class="container">
-            <a href="#" class="FooterSocialIcons"><i class="fa fa-apple" id="apple"></i></a>
-            <a href="#"><i class="fa fa-twitter" id="twitter"></i></a>
-            <a href="#"><i class="fa fa-github-square github" id="github"></i></a>
-            <a href="#"><i class="fa fa-facebook-square" id="facebook"></i></a>
+            <a href="https://www.icloud.com/" class="FooterSocialIcons"><i class="fa fa-apple" id="apple"></i></a>
+            <a href="https://twitter.com/AtrakchiE"><i class="fa fa-twitter" id="twitter"></i></a>
+            <a href="https://github.com/EskandarAtrakchi/CDCFE-L-6-First/tree/main/WebAuth/AssignWork"><i class="fa fa-github-square github" id="github"></i></a>
+            <a href="https://www.facebook.com/EskandarTech/"><i class="fa fa-facebook-square" id="facebook"></i></a>
             
           </div>
-          
       </footer>
       <p class="copyright"> Eskandar Atrakchi &copy; 2023</p>
       <p><a href="#top"><strong><h1 style="float:right;"><img src="https://archive.org/download/arrowup/arrowup.gif" style="width:13%; height:33%; float:right;"/></h1></strong></a></p>
   </div>
   <!-- end footer -->
-  
+</div><!--end styling div-->
+<div class="icon-bar">
+  <a href="https://www.facebook.com/EskandarTech/" class="facebook"><i class="fa fa-facebook"></i></a> 
+  <a href="https://twitter.com/AtrakchiE" class="twitter"><i class="fa fa-twitter"></i></a> 
+  <a href="https://www.linkedin.com/in/eskandar-atrakchi-47603a22b/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="https://www.youtube.com/@eskandartech6237/videos" class="youtube"><i class="fa fa-youtube"></i></a> 
+  <button onclick="document.getElementById('id01').style.display='block'" id="disableloginbtn">Login</button>
+</div>
+<!--start login button-->
+<div id="id01" class="modal" class="email">
+          
+  <form class="modal-content animate">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="https://media.istockphoto.com/id/1279388417/photo/cyber-security-digital-crime-concept.jpg?b=1&s=612x612&w=0&k=20&c=W5ep5z1mQU9hGYxDkieT7kQeP0lT1C5GWbGEAzQJ1c8=" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="LoginFrame">
+      <label for="uname"><b>email</b></label>
+      <input type="text" placeholder="Enter email" name="id" onblur="validateEmail(this);" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="pass" required>
+        
+      <a href="#"><button class="Submitin" type="submit" onclick="pasuser(this.form)">Submit</button></a>
+      <label>
+
+        <input type="checkbox" checked="checked" name="remember" style="Color:red;"> <h4 style="Color:red;"><strong>Remember me?</strong></h4>
+      </label>
+    </div>
+
+    <div class="LoginFrame">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel?</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+    <!--end login button-->
+
 </body><!-- end Body  -->
 
 </html>

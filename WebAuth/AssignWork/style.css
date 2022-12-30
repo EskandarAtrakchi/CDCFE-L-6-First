@@ -1,14 +1,51 @@
+
 :root {
   background-color: rgba(0, 0, 21, 1);   
-}  /* This on all the pages */
+}  
+
+/* This on all the pages */
+
 /*start logo styling */
+
 #logo {
-  width:4%; 
-  height:8%; 
-  margin-left: 5%;
+  width:30%; 
+  height:90%; 
+  margin-left: 15%;
   cursor: alias;
 }
+
 /*end logo styling */
+
+/*start table css*/
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #fc6767;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/*end table css*/
+
+/*start css marqueeandlogoandbtns div in div*/
+
+#marqueeandlogoandbtns {
+  display: flex;
+}
+
+/*end css marqueeandlogoandbtns div in div*/
 
 /*start Iframe css*/
 
@@ -18,6 +55,10 @@ justify-content: center;
 align-items: center;
 height:fit-content;
 width:auto;
+resize:both;
+overflow: auto;
+height: 850px;
+width: 95%;
 }
 .CodingBTN {
 display: flex;
@@ -126,14 +167,6 @@ header a {
   padding:0;
 }
 
-body { 
-  background-color: rgba(0, 0, 21, 1); 
-  line-height:1.5;
-  font-family:sans-serif;
-  font-size:21px;
-  color:#fff;
-}
-
 a {
   text-decoration:none;
   color: white;
@@ -150,6 +183,7 @@ a {
   display:block
 }
 /*start search field */
+
 .search{
   float:right;
   padding:30px
@@ -161,63 +195,58 @@ input{
 }
  /*end search field */
 
-nav{
-  float:right;
+.topnav {
+  
+  overflow: hidden;
+  padding-right: 10%;
 }
-nav>ul{
-  float:left;
-  position:relative
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
-nav li{
-  list-style:none;
-  float:left
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  transition: 1s;
 }
-nav .dropdown{
-  position:relative
-}
-nav li a{
-  float:left;
-  padding:35px;
-}
-nav li a:hover{
-  background-color: white;
-  transition: 2s;
-}
-nav li ul{
-  display:none
-}
-nav li:hover ul{
-  display:inline
-}
-nav li li{
-  float:none
-}
-nav .dropdown ul{
-  text-shadow: 0 0 3px #FF0000;
+
+.topnav a.active {
+  background-color: #aa0404;
   color: white;
-  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-  position:absolute;
-  left:0;top:100%;
-  background:rgba(0, 0, 21, 5);
-  padding:20px 0;
-  border-bottom:3px solid #34495e
 }
-nav .dropdown li{
-  white-space:nowrap
+
+.topnav .icon {
+  display: none;
 }
-nav .dropdown li a{
-  text-shadow: 0 0 3px #FF0000;
-  color: white;
-  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-  padding:10px 35px;
-  font-size:13px;
-  min-width:200px;
-  Background-Color:rgba(0, 0, 21, 5);
-  transition: 0.5s;
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
 }
-nav .dropdown li a:hover{
-  background-color: white;
-  transition: 2s;
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    display: block;
+    text-align: left;
+  }
 }
 
 /*sticky Social media icon styling starts here */
@@ -382,8 +411,11 @@ footer{
     filter: hue-rotate(360deg);
   }
 }
+
 /*login button css start here*/
+
 /* Full-width input fields */
+
 input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
@@ -394,6 +426,7 @@ input[type=text], input[type=password] {
 }
 
 /* Set a style for all buttons */
+
 #disableloginbtn {
   background-color: #830000;
   color: white;
@@ -413,6 +446,7 @@ button:hover {
 }
 
 /* Extra styles for the cancel button */
+
 .cancelbtn {
   width: auto;
   padding: 10px 18px;
@@ -420,6 +454,7 @@ button:hover {
 }
 
 /* Center the image and position the close button */
+
 .imgcontainer {
   text-align: center;
   margin: 24px 0 12px 0;
@@ -441,6 +476,7 @@ span.psw {
 }
 
 /* The Modal (background) */
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -456,6 +492,7 @@ span.psw {
 }
 
 /* Modal Content/Box */
+
 .modal-content {
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
@@ -464,6 +501,7 @@ span.psw {
 }
 
 /* The Close Button (x) */
+
 .close {
   position: absolute;
   right: 25px;
@@ -480,6 +518,7 @@ span.psw {
 }
 
 /* Add Zoom Animation */
+
 .animate {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s
@@ -505,8 +544,11 @@ span.psw {
      width: 100%;
   }
 }
+
 /*login css end here */
+
 /*cards css start here */
+
 .sceneCards{
   /* !3D space! */
   perspective: 600px;
@@ -566,4 +608,56 @@ background-image: linear-gradient(to bottom, #520f60, #741580, #9918a1, #c118c2,
 }
 
 /*cards css ends here */
+
+/*Text stylings start here */
+/*Text styling ends here */
+
+/*Body styling*/
+
+@-webkit-keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+            transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+            transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+.tracking-in-expand-fwd {
+  -webkit-animation: tracking-in-expand-fwd 3s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+          animation: tracking-in-expand-fwd 3s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+}  
+/*end css Body styling*/
+/*start body css*/
+body { 
+  background-color: rgba(0, 0, 21, 1); 
+  line-height:1.5;
+  font-family:sans-serif;
+  font-size:21px;
+  color:#fff;
+}
+/*end body css*/
 
