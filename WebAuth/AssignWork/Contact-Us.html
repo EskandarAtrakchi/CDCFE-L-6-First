@@ -1,331 +1,245 @@
 <!DOCTYPE html> <!-- start HTML DOC -->
 <html lang="en">
-  <!-- start head -->
-<head>
-  <link rel="website icon" type="gif" href="https://moonbeam.network/wp-content/uploads/2020/10/rotating-ethereum-logo.gif">
-  <!--footers css-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <!--footers js-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-  <!--main css dark-->
-  <link id="swap" rel="stylesheet" href="style.css">
-  <!--social icons css-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-  <!--main js-->
-  <script src = "main.js"> </script>
+<!-- start head -->
 
-  <script>
-    
-    function start() {
-      browserDetection(); startDate(); hitCount(); scrollBox(); slideShow();
-    }
-    
-     
-  </script>
-    
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--website icon-->
+    <link rel="website icon" type="gif" href="https://moonbeam.network/wp-content/uploads/2020/10/rotating-ethereum-logo.gif">
+    <!--footers css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--footers js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <!--main css dark-->
+    <link id="swap" rel="stylesheet" href="css/style.css">
+    <!--social icons css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--main js-->
+    <script src="js/main.js"> </script>
+    <script>
+        function start() {
+            browserDetection();
+            startDate();
+            hitCount();
+            scrollBox();
+            slideShow();
+        }
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding-is-life</title>
-    <style>
-      @keyframes fade {
-	0% { opacity: 0; }
-	15% { opacity: 1; }
-	85% { opacity: 1; }
-	100% { opacity: 0; }
-}
-figure#slideshow {
-	width: 100%;
-	margin: 0 auto;
-	position: relative;
-}
-figure#slideshow img {
-	position: absolute;
-	left: 0; top: 0;
-	width: 100%;
-	height: auto;
-	opacity: 0;
-}
-figure#slideshow img:first-child { 
-	position: relative;
-}
-    </style>
+    <title><Contact-Us></Contact-Us></title>
 </head>
 <!-- end head  -->
 <!-- start Body -->
 
 <body onload="start()">
-
-  <figure id="slideshow">
-    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1600" alt>
-    <img src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1600" alt>
-    <img src="https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=1600" alt>
-    <img src="https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&w=1600" alt>
-    <img src="https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg?auto=compress&cs=tinysrgb&w=1600" alt>
-  </figure>
-
-  <div class="icon-bar">
-    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
-    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
-    <a href="#" class="google"><i class="fa fa-google"></i></a> 
-    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-    <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
-    <button onclick="document.getElementById('id01').style.display='block'" id="disableloginbtn">Login</button>
-  </div>
+        <!-- All HTML elements go here -->
+  <div>
   
     <!-- start header -->
     
     <header>
+      
           <div id="header">
-            
-            <a href="https://eskandarte.w3spaces.com/" target= "_blank"><img src="https://moonbeam.network/wp-content/uploads/2020/10/rotating-ethereum-logo.gif" id="logo"/></a>
-            <button onClick="swapStylesheet('style.css')" class="custom-btn btn-5" id="chanemode">Dark</button>
-            <button onClick="swapStylesheet('styleLight.css')" class="custom-btn btn-5" id="chanemode"><span>Light</span></button>
-        <!--start login button-->
-        <div id="id01" class="modal" class="email">
-          
-          <form class="modal-content animate">
-            <div class="imgcontainer">
-              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-              <img src="https://media.istockphoto.com/id/1279388417/photo/cyber-security-digital-crime-concept.jpg?b=1&s=612x612&w=0&k=20&c=W5ep5z1mQU9hGYxDkieT7kQeP0lT1C5GWbGEAzQJ1c8=" alt="Avatar" class="avatar">
-            </div>
-
-            <div class="LoginFrame">
-              <label for="uname"><b>email</b></label>
-              <input type="text" placeholder="Enter email" name="id" onblur="validateEmail(this);" required>
-
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="pass" required>
-                
-              <a href="#"><button class="Submitin" type="submit" onclick="pasuser(this.form)">Submit</button></a>
-              <label>
-                <input type="checkbox" checked="checked" name="remember" style="Color:red;"> <h4 style="Color:red;"><strong>Remember me?</strong></h4>
-              </label>
-            </div>
-
-            <div class="LoginFrame">
-              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel?</button>
-              
-            </div>
-          </form>
-        </div>
-
-        <script>
-        // Get the modal
-        var modal = document.getElementById('id01');
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-        </script>
-            <!--end login button-->
-        <nav>
-          <!--class="mytext" onmouseover="mouseOver()" onmouseout="mouseOut()"-->
-          <marquee id="FirstMarquee">
+            <div id="marqueeandlogoandbtns">
+            <a href="https://eskandarte.w3spaces.com/" target= "_blank"><img src="https://moonbeam.network/wp-content/uploads/2020/10/rotating-ethereum-logo.gif" id="logo" class="text-flicker-in-glow" /></a>
+            <button onClick="swapStylesheet('css/style.css')" class="custom-btn btn-5" id="chanemode"><span id="loginBTNSticky">Dark</span></button>
+            <button onClick="swapStylesheet('css/styleLight.css')" class="custom-btn btn-5" id="chanemode"><span id="loginBTNSticky">Light</span></button>
+          <marquee id="FirstMarquee" class="text-flicker-in-glow">
             <span class="MarqueeStyling">This <span id="browser"></span> page been browsed <span id="hits"></span> times</span>
             <br>
             <span class="MarqueeStyling">Updated on <span id="date"></span></span>
           </marquee>
           <form class="search" action="search.php"> 
-            <input name="q" placeholder="Search..." type="search">
+            <input name="q" placeholder="Search..." type="search" class="text-flicker-in-glow">
           </form>
-          <ul>
-            <li>
-              <a href="">Home</a>
-            </li>
-            <li>
-              <a href="https://eskandarte.w3spaces.com/" target= "_blank">About</a>      
-            </li>
-            <li class="dropdown">
-              <a style="cursor: help;">Contact &darr;</a>
-                <ul>
-                  <li><a href="#">About Version</a></li>
-                  <li><a href="#">About Version</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                </ul>        
-            </li>
-            <li>
-              <a href="">Portfolio</a>
-            </li>
-            <li>
-              <a href="">Team</a>
-            </li>
-          </ul>
-        </nav>
+        </div>
+          <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="https://eskandarte.w3spaces.com/" target="_blank">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
       </div>
-        
     </header>
+
     <!-- end header -->
 
     <!--start content body-->
-  <div id="firstDiv">
-    <h3 id="DynamicText"></h3>
-    <div>
-    <p>
-      Programming languages are the languages that computers understand and use to execute instructions. There are many programming languages available, each with its own syntax, semantics, and features. Some common programming languages include C, C++, Java, Python, and Ruby.
-      <br>
-      Blockchain is a distributed ledger technology that allows for secure, transparent, and tamper-evident record-keeping. It is often used for applications such as cryptocurrency transactions and supply chain management.
-      <br>
-      Solidity is a programming language specifically designed for writing smart contracts for the Ethereum blockchain. It is a high-level, object-oriented language that is similar to JavaScript and C++ in syntax. Solidity allows developers to write code that can be executed on the Ethereum blockchain, enabling the creation of decentralized applications (DApps) and other blockchain-based systems.
-      <br>
-      Smart contracts are self-executing contracts with the terms of the agreement between buyer and seller being directly written into lines of code. The code and the agreements contained therein are stored and replicated on the blockchain network.
-    </p>
-    <img src="https://i.gifer.com/3zMk.gif" style="float:right; width:40%;"/>
-    <p>
-      Programming languages are used to create software applications, websites, and other systems by writing instructions for computers to execute. These instructions are written in a programming language that is understood by the computer, which can then execute the instructions to perform a specific task or solve a problem.<br>
+    <div id="whitebody">
 
-      There are several reasons why we need to use programming languages:
-      <br>
-      To automate tasks: <br>Programming languages allow us to write instructions that can be executed by a computer, enabling us to automate tasks and processes. This can save time and effort, and can also reduce the chances of human error.<br>
-
-      To create complex systems: <br>Programming languages enable us to create complex systems and applications that would be difficult or impossible to build without the use of a programming language. These systems can be used to solve problems, collect and analyze data, and perform a wide variety of other tasks.
-
-      To communicate with computers: <br>Programming languages provide a way for humans to communicate with computers and tell them what to do. Without programming languages, it would be difficult for us to interact with computers and use them to do useful work.
-
-      To create new technologies: <br>Programming languages are the foundation of many modern technologies, such as mobile apps, websites, and software applications. Without programming languages, it would be difficult to create these technologies and the innovations they enable.<br>
-
-      In summary, programming languages are an essential tool for creating software and other systems, and they play a critical role in our modern world.
-    </p></div>
-    <!--start cards here -->
-<div class="cardsstarthere">
-  <div class="sceneCards">
-    <div class="C C-4">
-      <div class="CARD font">Java <br>is a powerful and widely-used programming language that is well-suited for a variety of applications. Hover here for more</div>
-      <div class="CARD back">
-        <div class="text-rotate">
-          <iframe width="160" height="215" src="https://www.youtube.com/embed/2Xa3Y4xz8_s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <p>
-            Introduction to Java 
-          </p>
-        </div></div>
-    </div>
-  </div>
-  <!--end of this card-->
-  <div class="sceneCards">
-    <div class="C C-4">
-      <div class="CARD font">Solidity <br>is an important tool for building blockchain-based applications and systems, and it is an essential part of the Ethereum ecosystem. Hover here for more</div>
-      <div class="CARD back">
-        <div class="text-rotate">
-          <iframe width="160" height="215" src="https://www.youtube.com/embed/kdvVwGrV7ec" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <p>
-            Introduction to Solidity 
-          </p>
-        </div></div>
-    </div>
-  </div>
-  <!--end of this card-->
-  <div class="sceneCards">
-    <div class="C C-4">
-      <div class="CARD font">JavaScript <br>is a powerful and widely-used programming language that is essential for creating interactive and engaging web experiences. Hover here for more</div>
-      <div class="CARD back">
-        <div class="text-rotate">
-          <iframe width="160" height="215" src="https://www.youtube.com/embed/PkZNo7MFNFg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <p>
-            Introduction to JavaScript 
-          </p>
-        </div></div>
-    </div>
-  </div>
-  <!--end of this card-->
-  <div class="sceneCards">
-    <div class="C C-4">
-      <div class="CARD font">Python <br>a powerful that is well-suited for a wide range of applications and is a great choice for anyone looking to learn programming. Hover here for more</div>
-      <div class="CARD back">
-        <div class="text-rotate">
-          <iframe width="160" height="215" src="https://www.youtube.com/embed/x7X9w_GIm1s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <p>
-            Introduction to Python 
-          </p>
-        </div></div>
-    </div>
-  </div>
-<!--end of this card-->
-<div class="sceneCards">
-  <div class="C C-4">
-    <div class="CARD font">HTML and CSS <br>are essential tools for creating and styling web content, and they are an important part of any web developer's toolkit. Hover here for more</div>
-    <div class="CARD back">
-      <div class="text-rotate">
-        <iframe width="160" height="215" src="https://www.youtube.com/embed/61dckXqDRJI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p>
-          Introduction to HTML and CSS 
-        </p>
-      </div></div>
-  </div>
-</div>
-      <!--end cards here --></div>
-     <div>
-    <h2><strong>Let's talk about HTML since it is the structure of tones of websites</strong></h2>
-    <p>
-      HTML (HyperText Markup Language) is a markup language used for creating and structuring content on the World Wide Web. HTML uses a set of tags and attributes to define the structure and layout of web pages, as well as to add content such as text, images, and videos.
-      <br>
-      HTML is an essential part of the World Wide Web and is used to create the vast majority of websites and web pages. It provides a standard way for designers and developers to create and structure content, and it is supported by all modern web browsers.
-      <br>
-      One of the main benefits of HTML is that it is easy to learn and use. The syntax is simple and intuitive, and there are many resources available for learning HTML, such as tutorials, books, and online courses.
-      <br>
-      HTML is also highly versatile and can be used to create a wide range of web content, from simple static pages to complex interactive applications. It can be used in conjunction with other technologies such as CSS (Cascading Style Sheets) and JavaScript to create sophisticated and engaging user experiences.
-      <br>
-      Overall, HTML is a valuable and widely-used tool for creating and structuring content on the web, and it is an essential part of any web developer's toolkit.
-    </p></div>
-  <div class="IFrameOneHTML">
-      <iframe src="https://www.htmlcompiler.ml/" width="100%" height="900px"></iframe>
-    </div>
-      <h2>&nbsp;</h2>
-
-    <div class="CodingBTN">
-      <button onclick ="dynamicFrame()" class="custom-btn btn-5" id="chanemode" class="BTNForHTML" style="Background-Color:rgb(242, 0, 255); Color:black;">Full-DEV</button>
-    </div>
-  </div>
- 
-    <!--end content body-->
-
-    <!-- start footer -->
-    <div class="footer-dark">
-      <footer>
+    <div class="contactuscontainer">
+      
+      <form action="/action_page.php">
+        <div style="display: flex;">
+        <input type="text" id="fname" class="inputFormCSS" name="firstname" placeholder="Your name.." style="width:25%;">
+        <div style="padding-left:10%; padding-right:10%;"></div>
+        <input type="text" id="lname" class="inputFormCSS" name="lastname" placeholder="Your last name.." style="width:25%;">
         
-          <div class="container">
-              <div class="row">
-                  <div class="col-sm-6 col-md-3 item">
-                      <h3>Services</h3>
-                      <ul>
-                          <li><a href="#">Web design</a></li>
-                          <li><a href="#">Development</a></li>
-                          <li><a href="#">Contact-Us</a></li>
-                      </ul>
-                  </div>
-                  <div class="col-sm-6 col-md-3 item">
-                      <h3>About</h3>
-                      <ul>
-                          <li><a href="#">Coding</a></li>
-                          <li><a href="#">History</a></li>
-                          <li><a href="#">Careers</a></li>
-                      </ul>
-                  </div>
-                  <div class="col-md-6 item text">
-                      <h3>Programming languages</h3>
-                      <p>C, C++, Java, Python, and Ruby. These languages are used to create software applications, websites, and other systems. They vary in syntax, semantics, and features, and are designed to be easy for humans to read and write.</p>
-              
-          </div>
-          <div class="container">
-            <a href="#" class="FooterSocialIcons"><i class="fa fa-apple" id="apple"></i></a>
-            <a href="#"><i class="fa fa-twitter" id="twitter"></i></a>
-            <a href="#"><i class="fa fa-github-square github" id="github"></i></a>
-            <a href="#"><i class="fa fa-facebook-square" id="facebook"></i></a>
-            
-          </div>
-          
-      </footer>
-      <p class="copyright"> Eskandar Atrakchi &copy; 2023</p>
-      <p><a href="#top"><strong><h1 style="float:right;"><img src="https://archive.org/download/arrowup/arrowup.gif" style="width:13%; height:33%; float:right;"/></h1></strong></a></p>
-  </div>
-  <!-- end footer -->
-  
-</body><!-- end Body  -->
+        </div>
 
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject">
+          <option value="Web-Development">Web-Development</option>
+          <option value="Java">Java</option>
+          <option value="Python">Python</option>
+          <option value="Solidity">Solidity</option>
+          <option value="IDEs">IDEs</option>
+        </select>
+    
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        
+        <div onclick="statusBar()" class="custom-btn btn-5" id="chanemode" id="statusBarPrecentage"><h4><strong style="padding-left: 12.5%;">Submit</strong></h4></div>
+        <div id="loadingbarbyEskandar">
+          <div style="display:flex;">
+            <div id="myBar" style="display:none; background-color: rgb(31, 26, 44);"></div>
+        </div>
+        </div>
+      </form>
+      <canvas id="canvas" width="1850"></canvas>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3224.683237691652!2d-6.21395104831374!3d53.396635278545666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670fd0cbb98613%3A0x332fde4a5227594d!2sCol%C3%A1iste%20Dh%C3%BAlaigh%20CDCFE!5e1!3m2!1sen!2sie!4v1672433658200!5m2!1sen!2sie" width="1850" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+    <button class="open-button" onclick="openForm()">sign up?</button>
+
+    <div style=" padding-left: 50px;">
+      <form name="myform">
+        <input type="text" name="customer" id="fname" placeholder="Set your Cookies" style="width:25%;" >
+        </form>
+        
+        <button onclick="writeCookie()" class="custom-btn btn-5" id="chanemode">Set Cookie</button>
+<button onclick="readCookie()" class="custom-btn btn-5" id="chanemode">Get Cookie</button>
+        
+        <div id="cookie"></div>
+    </div>
+  </div>
+    <!-- start footer -->
+            <div class="footer-dark">
+                <footer>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3 item">
+                                <h3>Useful-links</h3>
+                                <ul>
+                                    <li><a href="#">Web design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                    <li><a href="#">Contact-Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6 col-md-3 item">
+                                <h3>About</h3>
+                                <ul>
+                                    <li><a href="#">Coding</a></li>
+                                    <li><a href="#">History</a></li>
+                                    <li><a href="#">Careers</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 item text">
+                                <h3>Programming languages</h3>
+                                <p>C, C++, Java, Python, and Ruby. These languages are used to create software applications, websites, and other systems. They vary in syntax, semantics, and features, and are designed to be easy for humans to read and write.</p>
+
+                            </div>
+                            <div class="container">
+                                <a href="https://www.icloud.com/" class="FooterSocialIcons"><i class="fa fa-apple" id="apple"></i></a>
+                                <a href="https://twitter.com/AtrakchiE"><i class="fa fa-twitter" id="twitter"></i></a>
+                                <a href="https://github.com/EskandarAtrakchi/CDCFE-L-6-First/tree/main/WebAuth/AssignWork"><i class="fa fa-github-square github" id="github"></i></a>
+                                <a href="https://www.facebook.com/EskandarTech/"><i class="fa fa-facebook-square" id="facebook"></i></a>
+
+                            </div>
+                </footer>
+                <p class="copyright" id="myTextCopyright" onmouseover="mouseOver()" onmouseout="mouseOut()"><strong>Eskandar Atrakchi &copy; 2023</strong></p>
+
+                <p><a href="#top"><strong>
+                            <h1 style="float:right;"><img src="https://archive.org/download/arrowup/arrowup.gif" style="width:13%; height:33%; float:right;" /></h1>
+                        </strong></a></p>
+            </div>
+            <!-- end footer -->
+        </div>
+        <!--end styling div-->
+        <div class="icon-bar">
+            <a href="https://www.facebook.com/EskandarTech/" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/AtrakchiE" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/eskandar-atrakchi-47603a22b/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/@eskandartech6237/videos" class="youtube"><i class="fa fa-youtube"></i></a>
+            <button onclick="document.getElementById('id01').style.display='block'" id="disableloginbtn"><em id="loginBTNSticky">Login</em></button>
+        </div>
+        <!--start login button-->
+        <div id="id01" class="modal" class="email">
+
+          <form class="modal-content animate">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="https://media.istockphoto.com/id/1279388417/photo/cyber-security-digital-crime-concept.jpg?b=1&s=612x612&w=0&k=20&c=W5ep5z1mQU9hGYxDkieT7kQeP0lT1C5GWbGEAzQJ1c8=" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="LoginFrame">
+                <label for="uname"><b>email</b></label>
+                <input type="text" placeholder="Enter email" name="id" onblur="validateEmail(this);" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="pass" required>
+
+
+                <div style="display:flex;">
+
+                <button type="submit" onclick="pasuser(this.form)" class="custom-btn btn-5" id="chanemode" style="background-color:rgb(19, 19, 19); color: aliceblue;">Submit</button>
+                
+                    <div style=" padding-right:2%;"></div>
+
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="custom-btn btn-5" id="chanemode" style="background-color:rgb(19, 19, 19); color: aliceblue;">Cancel?</button>
+                </div>
+                <label>
+                    <div>
+
+
+                    <input type="checkbox" checked="checked" name="remember" style="Color:red;">
+                    <h4 style="Color:rgb(255, 0, 0);"><strong>Remember me?</strong></h4>
+                </div>
+                </label>
+            </div>
+                
+        </form>
+        </div>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById('id01');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+        <!--end login button-->
+        <!--start registeration button here-->
+
+
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h3>Register with us</h3>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" onblur="validateEmail(this);" required>
+
+                <label for="psw"><b>Create Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" class="btn" id="SignUpBTN" onclick="closeForm()">Create now</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+        <!--end registeration button here-->
+        <button class="open-button" onclick="openForm()" id="loginBTNSticky">sign up?</button>
+</body><!-- end Body  -->
 </html>
