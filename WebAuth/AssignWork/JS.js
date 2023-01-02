@@ -135,10 +135,10 @@ function buttonsname() {
 
   function changeButtonText() {
 
-    document.getElementById('changeName').innerHTML = 'Refresh';
-    
+      document.getElementById('changeName').innerHTML = 'Refresh';
+
   }
-  
+
   document.getElementById('changeName').addEventListener('click', changeButtonText);
 
 }
