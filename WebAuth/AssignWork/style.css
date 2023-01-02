@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 /* This on all the pages */
 
 :root {
