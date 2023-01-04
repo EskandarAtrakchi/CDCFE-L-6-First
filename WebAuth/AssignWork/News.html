@@ -3,8 +3,13 @@
 <!-- start head -->
 
 <head>
+    <!--styling for crypto prices is targeted by the script -->
+    <style id="myStyles"></style>
+    <!--calling the API charts from Google -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!--link for Fonts by Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--website icon-->
+    <!--website icon on the tab-->
     <link rel="website icon" type="gif" href="https://moonbeam.network/wp-content/uploads/2020/10/rotating-ethereum-logo.gif">
     <!--footers css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
@@ -19,7 +24,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--main js-->
     <script src="js/main.js"> </script>
-
     <script>
         function start() {
             browserDetection();
@@ -29,31 +33,22 @@
             slideShow();
         }
     </script>
-    <style>
-        /* change the font size of the title */
-        #piechart>.google-visualization-chart-title {
-            font-size: 18px;
-        }
-
-        /* change the font size of the legend */
-        #piechart>.google-visualization-legend {
-            font-size: 14px;
-        }
-
-        /* add a border around the chart */
-        #piechart {
-            border: 1px solid black;
-        }
-
-        /* add some padding around the chart */
-        #piechart {
-            padding: 10px;
-        }
-    </style>
+    <!--calling the API from Google for the charts -->
+    <script type="text/javascript">
+        // Load google charts
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+        //the function is in the js folder
+    </script>
+    <!--set chars-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--set the screen to device width-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding</title>
+    <!--start title -->
+    <title>News</title>
 </head>
 <!-- end head  -->
 <!-- start Body -->
@@ -95,75 +90,118 @@
             </div>
         </header>
         <!-- end header -->
+        <!--start body content -->
 
+        <div id="firstDiv">
+            <h2>&nbsp;</h2>
+            <h1 style="text-align:center; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; color:blueviolet">Blockchain technology & programming using Solidity</h1>
+            <h2>&nbsp;</h2>
+            <div style="display:flex;">
+                <div style="width:40%;">
+                    <p style="padding-left:2%;">
+                        Blockchain is a distributed database that allows for secure and transparent record-keeping and transfer of data or assets. Cryptocurrencies, such as Bitcoin and Ethereum, are digital assets that use blockchain technology to facilitate secure and decentralized financial transactions.
+                        <br>
+                    <h2>&nbsp;</h2>
 
-        <h1>My Web Page</h1>
+                    Solidity is a programming language specifically designed for writing smart contracts on the Ethereum blockchain. Smart contracts are self-executing contracts with the terms of the agreement between buyer and seller being directly written into lines of code.
+                    <br>
+                    They are stored on the blockchain and can be triggered automatically when certain conditions are met.
+                    <br>
+                    Using a programming language like Solidity to build on the blockchain allows developers to create decentralized applications (DApps) and automate processes in a secure and transparent manner.
+                    <br>
+                    <h2>&nbsp;</h2>
+                    Solidity is a high-level language, meaning it is easy to read and write, and it is designed to be similar to other popular programming languages such as JavaScript.
+                    <br>
+                    This makes it a good choice for developers who are already familiar with these languages and want to build on the Ethereum blockchain.
+                    <br>
+                    <h2>&nbsp;</h2>
+                    Overall, the use of programming languages like Solidity is important for building on the blockchain because it allows developers to create secure and transparent applications and automate processes in a decentralized manner.
+                    <br>
+                    </p>
+                </div>
 
-        <div id="piechart"></div>
+                <div class="SolidityIFrameDiv">
+                    <iframe src="https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.8+commit.dddeac2f.js" width="100%" height="100%">
 
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                    </iframe>
+                </div>
+            </div>
+            <h2>&nbsp;</h2>
+            <div id="SecondDivNewsPage">
+                <h1 style="text-align:center; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; color:blueviolet">Programming languages that are in demand in 2020</h1>
+                <h2>&nbsp;</h2>
+                <div style="display: flex;">
+                    <div style="padding-right:2%;">
+                        <p style="padding-left:2%;">
+                            Java is a popular programming language that is widely used in the development of enterprise-scale applications. It is an object-oriented language that is used to build a wide range of applications, including web, mobile, and desktop applications. Java is a reliable, high-performance language that is used by many large organizations, making it a language with high demand.
+                            <br>
 
-        <script type="text/javascript">
-            // Load google charts
-            google.charts.load('current', {
-                'packages': ['corechart']
-            });
-            google.charts.setOnLoadCallback(drawChart);
+                            Python is another popular programming language that is widely used in the development of a variety of applications, including web, mobile, and scientific applications. It is a high-level, interpreted language that is known for its simplicity and readability. Python is often used as a scripting language and is also popular in the field of data science. As a result, it is a language with high demand.
+                            <br>
 
-            // Draw the chart and set the chart values
-            function drawChart() {
-                var data = google.visualization.arrayToDataTable([
-                    ['Task', 'Hours per Day'],
-                    ['Work', 8],
-                    ['Eat', 2],
-                    ['TV', 4],
-                    ['Gym', 2],
-                    ['Sleep', 8]
-                ]);
+                            C++ is a popular programming language that is widely used in the development of high-performance applications, including operating systems, games, and applications that require a lot of computational power. C++ is a powerful, efficient language that is used by many large organizations, making it a language with high demand.
+                            <br>
 
-                // Optional; add a title and set the width and height of the chart
-                var options = {
-                    'title': 'My Average Day',
-                    'width': 550,
-                    'height': 400,
-                    'backgroundColor': 'transparent' // make the background transparent
-                };
+                            C# is a popular programming language that is widely used in the development of Windows applications. It is a modern, object-oriented language that is used to build a wide range of applications, including web, mobile, and desktop applications. C# is a versatile language with a large developer community, making it a language with high demand.
+                            <br>
 
-                // Display the chart inside the <div> element with id="piechart"
-                var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-                chart.draw(data, options);
-            }
-        </script>
+                            JavaScript is a popular programming language that is used to build web applications. It is a high-level, interpreted language that is known for its versatility and is used to build a wide range of applications, including web, mobile, and desktop applications. JavaScript is a language with high demand due to its widespread use in web development.
+                            <br>
+                        </p>
+                    </div>
+                    <div>
 
-        <!--end the pie chart -->
+                        <div id="piechart"></div>
+                    </div>
+                </div>
+                <!-- end the pie chart -->
+            </div>
+            <h2>&nbsp;</h2>
 
-        <!--start live prices-->
+            <!-- start live prices -->
+            <div style="display: flex;">
+                <div style="width:73%;">
+                    <p style="padding-left:2%;">
+                        Cryptocurrencies are digital or virtual currencies that use cryptography for secure financial transactions. Bitcoin, which was created in 2009, is the first and most widely known cryptocurrency. Since then, numerous cryptocurrencies have been created, and their popularity has grown significantly in recent years.
 
-        <script>
-            ! function() {
-                var e = document.getElementsByTagName("script"),
-                    t = e[e.length - 1],
-                    n = document.createElement("script");
+                        One of the main reasons for the rise in cryptocurrencies is the increasing acceptance of them as a legitimate form of payment and investment. In the past decade, the value of many cryptocurrencies has increased significantly. For example, the price of Bitcoin, the largest and most well-known cryptocurrency, has gone up from less than $1 in 2010 to over $50,000 in 2021. Other cryptocurrencies have also seen significant price increases.
 
-                function r() {
-                    var e = crCryptocoinPriceWidget.init({
-                        base: "USD,EUR",
-                        items: "GLQ,BTC,ETH,XRP,LTC,MCONTENT,BNB,ADA,SOL,AVAX,LUNA,DOT,DOGE,SHIB,CROATOM,LINK,TRX,NEAR,BCH,XLM,FTM,UNI,HBAR,MANA,SAND,ICP,CELR,VET,XMR,GRT,HNT,CAKE,ONE,ENJ,KSM,BAT,MINA,ZIL,KEEP",
-                        backgroundColor: "E0E0D9",
-                        streaming: "1",
-                        rounded: "1",
-                        boxShadow: "9",
-                        border: "5"
-                    });
-                    t.parentNode.insertBefore(e, t)
-                }
-                n.src = "https://co-in.io/widget/pricelist.js?items=BTC%2CETH%2CLTC%2CXMR%2CDASH", n.async = !0, n.readyState ? n.onreadystatechange = function() {
-                    "loaded" != n.readyState && "complete" != n.readyState || (n.onreadystatechange = null, r())
-                } : n.onload = function() {
-                    r()
-                }, t.parentNode.insertBefore(n, null)
-            }();
-        </script>
+                        However, it's important to note that the prices of cryptocurrencies are highly volatile and can fluctuate significantly over short periods of time. This means that investing in cryptocurrencies carries a high level of risk, and it's important for individuals to carefully consider their investment decisions before committing any funds.
+                    </p>
+                </div>
+                <div style="width:27%;">
+                    <script>
+                        ! function() {
+                            var e = document.getElementsByTagName("script"),
+                                t = e[e.length - 1],
+                                n = document.createElement("script");
+
+                            function r() {
+                                var e = crCryptocoinPriceWidget.init({
+                                    base: "USD,EUR",
+                                    items: "GLQ,BTC,ETH,XRP",
+                                    backgroundColor: "E0E0D9",
+                                    streaming: "1",
+                                    rounded: "1",
+                                    boxShadow: "9",
+                                    border: "5"
+                                });
+                                t.parentNode.insertBefore(e, t)
+                            }
+                            n.src = "https://co-in.io/widget/pricelist.js?items=BTC%2CETH%2CLTC%2CXMR%2CDASH", n.async = !0, n.readyState ? n.onreadystatechange = function() {
+                                "loaded" != n.readyState && "complete" != n.readyState || (n.onreadystatechange = null, r())
+                            } : n.onload = function() {
+                                r()
+                            }, t.parentNode.insertBefore(n, null)
+                        }();
+                    </script>
+                </div>
+            </div>
+            <!--This div for crypto prices and other elements displayed flex-->
+            <!--my tries start here -->
+
+            <!--end in here -->
+        </div>
 
 
         <!-- start footer -->
@@ -198,8 +236,8 @@
                             <a href="https://twitter.com/AtrakchiE"><i class="fa fa-twitter" id="twitter"></i></a>
                             <a href="https://github.com/EskandarAtrakchi/CDCFE-L-6-First/tree/main/WebAuth/AssignWork"><i class="fa fa-github-square github" id="github"></i></a>
                             <a href="https://www.facebook.com/EskandarTech/"><i class="fa fa-facebook-square" id="facebook"></i></a>
-
                         </div>
+
             </footer>
             <p class="copyright" id="myTextCopyright" onmouseover="mouseOver()" onmouseout="mouseOut()"><strong>Eskandar Atrakchi &copy; 2023</strong></p>
 
