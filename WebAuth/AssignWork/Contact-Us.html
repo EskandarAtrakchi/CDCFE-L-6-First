@@ -31,9 +31,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <Contact-Us></Contact-Us>
-    </title>
+    <title>Contact-Us</title>
 </head>
 <!-- end head  -->
 <!-- start Body -->
@@ -98,20 +96,37 @@
 
                     <label for="subject">Subject</label>
                     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                    <!--send documents start here (Without PHP), this code should be completed by PHP-->
+                    <h3>If you have a screenshot to a specific problem, please send us!</h3>
+                    <button>
+                        <form action="/action_page.php">
+                            <input type="file" id="myFile" name="filename">
 
+                        </form>
+                    </button>
+                    <!-- send documents ends  here (Without PHP), this code should be completed by PHP-->
+                    <h2>&nbsp;</h2>
                     <div onclick="statusBar()" class="custom-btn btn-5" id="chanemode" id="statusBarPrecentage">
                         <h4><strong style="padding-left: 12.5%;">Submit</strong></h4>
                     </div>
+
                     <div id="loadingbarbyEskandar">
                         <div style="display:flex;">
                             <div id="myBar" style="display:none; background-color: rgb(31, 26, 44);"></div>
                         </div>
                     </div>
-                </form>
-                <canvas id="canvas" width="1850"></canvas>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3224.683237691652!2d-6.21395104831374!3d53.396635278545666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670fd0cbb98613%3A0x332fde4a5227594d!2sCol%C3%A1iste%20Dh%C3%BAlaigh%20CDCFE!5e1!3m2!1sen!2sie!4v1672433658200!5m2!1sen!2sie" width="1850" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
 
+                </form>
+                <h2>&nbsp;</h2>
+                <div style="display:flex;">
+                    <div><canvas id="canvas" width="1000" height="400"></canvas>
+                    </div>
+                    <h2>&nbsp;</h2>
+                    <div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3224.683237691652!2d-6.21395104831374!3d53.396635278545666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670fd0cbb98613%3A0x332fde4a5227594d!2sCol%C3%A1iste%20Dh%C3%BAlaigh%20CDCFE!5e1!3m2!1sen!2sie!4v1672433658200!5m2!1sen!2sie" width="1000" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
             <button class="open-button" onclick="openForm()">sign up?</button>
 
             <div style=" padding-left: 50px;">
@@ -122,7 +137,7 @@
                 <button onclick="writeCookie()" class="custom-btn btn-5" id="chanemode">Set Cookie</button>
                 <button onclick="readCookie()" class="custom-btn btn-5" id="chanemode">Get Cookie</button>
 
-                <div id="cookie"></div>
+                <div id="cookie" class="glow"></div>
             </div>
         </div>
         <!-- start footer -->
@@ -246,4 +261,5 @@
     <!--end registeration button here-->
     <button class="open-button" onclick="openForm()" id="loginBTNSticky">sign up?</button>
 </body><!-- end Body  -->
+
 </html>
