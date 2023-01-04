@@ -49,16 +49,40 @@ function hitCount() {
 
 //function scrollBox
 
-var message = "Solidity, C++, Java, HTML, CSS, js,and Pthon. Build anything with those programming languages";
+var message = "earn & Build";
 i = 0;
+direction = 1;
+isTyping = true;
 
 function scrollBox() {
-  i++;
-  if (i > message.length) {
-      i = 1;
+
+  if (isTyping) { //when the condition is true 
+
+      document.getElementById("DynamicText").innerHTML = message.substring(0, i) + "_";
+
+  } else { //otherwise 
+
+      document.getElementById("DynamicText").innerHTML = message.substring(0, i);
+
   }
-  document.getElementById("DynamicText").innerHTML = message.substring(0, i) + "_";
-  setTimeout("scrollBox()", 250);
+
+  i += direction; //increment 
+
+  if (i > message.length || i < 0) {
+
+      direction *= -1;
+      i += direction;
+      if (direction == 1) {
+          setTimeout("scrollBox()", 2000); //pause time in msI choose 2 seconds 
+          return document.getElementById("DynamicText").innerHTML = "_";
+
+      }
+
+  }
+
+  isTyping = !isTyping;
+  setTimeout("scrollBox()", 300);
+
 }
 
 //end function scrollBox
@@ -135,7 +159,7 @@ function buttonsname() {
 
   function changeButtonText() {
 
-      document.getElementById('changeName').innerHTML = 'Refresh';
+      document.getElementById('changeName').innerHTML = 'Refresh?';
 
   }
 
@@ -172,9 +196,9 @@ function mouseOut() {
 //function for canvas been updated 12 times V.12.0 
 
 var img = new Image();
-img.src = 'https://www.netlabindia.com/wp-content/uploads/2018/06/contact-us-banner.jpg';
-var CanvasXSize = 1900;
-var CanvasYSize = 650;
+img.src = 'https://cdn.vox-cdn.com/thumbor/MF3OGE87i3w84zd8uixF8XA6_bc=/1400x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/18365342/dnb_land_ocean_ice.2012.3600x1800.0.jpg';
+var CanvasXSize = 900;
+var CanvasYSize = 900;
 var speed = 15; //lower is faster
 var scale = 1.05;
 var y = -4.5; //vertical offset
@@ -310,7 +334,7 @@ function writeCookie() {
       alert("Enter some value!");
       return;
   }
-  cookievalue = escape(document.myform.customer.value) + ";";
+  cookievalue = escape(document.myform.customer.value) + "";
   document.cookie = "name=" + cookievalue;
   alert("Setting Cookies : " + "name=" + cookievalue);
 }
@@ -349,4 +373,96 @@ function closeForm() {
 }
 
 //end functions
+
+//===================================
+
+//start API programming languages demand 
+// Draw the chart and set the chart values
+
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+      ['Programming Language', 'Demand'],
+      ['Java', 8],
+      ['Python', 6],
+      ['C++', 4],
+      ['C#', 3],
+      ['JavaScript', 7],
+      ['Solidity', 3]
+  ]);
+
+  var options = {
+      'title': 'Programming Languages Demand Index (2020)',
+      'titleTextStyle': {
+          'color': '#FF5555'
+      },
+      'width': 500,
+      'height': 500,
+      'backgroundColor': 'transparent',
+      'legend': {
+          'textStyle': {
+              'color': '#FF5555'
+          }
+      }
+  };
+
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+
+//end function for piechart in news page
+
+//===================================
+
+//start function for crypto prices 
+
+/*
+function r() {
+var e = crCryptocoinPriceWidget.init({
+    base: "USD,EUR",
+    items: "GLQ,BTC,ETH,XRP",
+    backgroundColor: "E0E0D9",
+    streaming: "1",
+    rounded: "1",
+    boxShadow: "9",
+    border: "5"
+});
+t.parentNode.insertBefore(e, t)
+}
+*/
+
+//This function in the news page 
+
+//===================================
+
+//function for drop down for the coding in multiple programming languges 
+
+const acc = document.getElementsByClassName('contentcontainer');
+
+for (i = 0; i < acc.length; i++) {
+
+  acc[i].addEventListener('click', function() {
+
+      this.classList.toggle('active');
+  });
+
+}
+
+// end function for drop down for the coding in multiple programming languges 
+
+//===================================
+
+//start function to check if the browser is online or offline 
+
+function internetChecker() {
+  var x = "Is the browser online? " + navigator.onLine;
+
+  if (navigator.onLine == true) {
+      alert('You are connected to the internet, refresh the page and try again');
+  } else {
+      alert('You may need internet connection!')
+  }
+}
+
+//end function to check if the browser is online or offline 
+
 //===================================
