@@ -1,3 +1,4 @@
+//function number 1
 //start function for browser dectection
 
 function browserDetection() {
@@ -20,6 +21,7 @@ function browserDetection() {
 
 //===================================
 
+//function number 2
 //date and time function
 
 function startDate() {
@@ -32,6 +34,7 @@ function startDate() {
 
 //===================================
 
+//function number 3
 //hitCount
 
 function hitCount() {
@@ -47,6 +50,7 @@ function hitCount() {
 
 //===================================
 
+//function number 4
 //function scrollBox
 
 var message = "earn & Build";
@@ -89,11 +93,15 @@ function scrollBox() {
 
 //===================================
 
+//function number 5
 //function to do nothing to call when we want to stop a specific event listener 
 
 function DoNothing() {}
 
 //===================================
+
+//function number 6
+//start function for email validation 
 
 function validateEmail(emailFieldBTN) {
 
@@ -112,9 +120,8 @@ function validateEmail(emailFieldBTN) {
 
 //===================================
 
+//function number 7
 //function for pop up of the sign up function when the user creates an account
-
-//===================================
 
 function pasuser(form) {
   if (form.id.value == "Eskandar@gmail.com") {
@@ -134,6 +141,7 @@ function pasuser(form) {
 
 //===================================
 
+//function number 8
 //start dark mode function
 
 function swapStylesheet(sheet) {
@@ -144,28 +152,29 @@ function swapStylesheet(sheet) {
 
 //===================================
 
+//function number 9
 //dynamicFrame function
 
 function dynamicFrame() {
+
   var frames = window.frames;
   frames[5].location = "https://www.programiz.com/html/online-compiler/";
+
 }
 
 //===================================
 
+//function number 10
 //start change buttons name from Full-DEV to refresh
 
-function buttonsname() {
+function changeButtonText() {
 
-  function changeButtonText() {
+  document.getElementById('changeName').innerHTML = 'Refresh?';
 
-      document.getElementById('changeName').innerHTML = 'Refresh?';
-
-  }
-
-  document.getElementById('changeName').addEventListener('click', changeButtonText);
+  document.getElementById("changeName").addEventListener('click', changeButtonText);
 
 }
+
 
 //end change buttons name
 
@@ -175,24 +184,34 @@ function buttonsname() {
 
 //===================================
 
-//img swap function in the index html page 
+//function number 11
+//copy-right swap function in the footer html page 
 
 function mouseOver() {
+
   document.getElementById("myTextCopyright").style.color = "red";
+
 }
 
 // end function
 
 //===================================
+
+//start functions for mouse out 
+//function number 12
 
 function mouseOut() {
+
   document.getElementById("myTextCopyright").style.color = "green";
+
 }
 
 // end function
+//end the two functions that related to the copy-right in the footer 
 
 //===================================
 
+//function number 13
 //function for canvas been updated 12 times V.12.0 
 
 var img = new Image();
@@ -236,6 +255,8 @@ img.onload = function() {
   return setInterval(draw, speed);
 }
 
+//start the draw function
+
 function draw() {
   //Clear Canvas
   ctx.clearRect(0, 0, clearX, clearY);
@@ -250,6 +271,7 @@ function draw() {
           ctx.drawImage(img, x - CanvasXSize + 1, y, imgW, imgH);
       }
   }
+
   //If image is > Canvas Size
   else {
       //reset, start from beginning
@@ -261,17 +283,20 @@ function draw() {
           ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
       }
   }
+
   //draw image
   ctx.drawImage(img, x, y, imgW, imgH);
   //amount to move
   x += dx;
-}
-// end function draw
 
+}
+
+// end function draw
 //this function is modified to set the image in the contact us page 
 
 //===================================
 
+//function number 14
 //start slidshow function 
 
 function slideShow() {
@@ -293,9 +318,11 @@ function slideShow() {
 }
 
 // end function slideShow
+//this function been modified 
 
 //===================================
 
+//function number 15
 // this function works in the contact us page when click on the button 
 
 function statusBar() {
@@ -306,7 +333,7 @@ function statusBar() {
   function frame() {
       elem.style.display = 'block';
       elem.textContent = width + '%'; // display the current percentage on the progress bar
-      if (width >= 100) {
+      if (width >= 101) {
           clearInterval(id);
           elem.style.display = 'none';
           alert('Yay! we recieved your message successfully! we will contact you soon!');
@@ -317,16 +344,12 @@ function statusBar() {
   }
 }
 
-//===================================
-
-function newWindow() {
-  window.open("https://eskandarte.w3spaces.com/");
-}
-
-//end newWindow
+//end function 
+//this function been modified 
 
 //===================================
 
+//function number 16
 //setting and getting cookies all are in contact us page
 
 function writeCookie() {
@@ -339,14 +362,25 @@ function writeCookie() {
   alert("Setting Cookies : " + "name=" + cookievalue);
 }
 
-function readCookie() {
-  document.getElementById("cookie").innerHTML = "Your cookie is " + cookievalue;
-}
-
-//end cookie function
+//end function write cookie 
 
 //===================================
 
+//start function get cookie 
+//function number 17
+
+function readCookie() {
+
+  document.getElementById("cookie").innerHTML = "Your cookie is " + cookievalue;
+
+}
+
+//end cookie function
+//all the cookie functions end here 
+
+//===================================
+
+//function number 18
 //script for hiding the header on small devices
 
 function myFunction() {
@@ -358,26 +392,31 @@ function myFunction() {
   }
 }
 
-//end function
+//end function for hiding the header on small devices
 
 //===================================
 
+//function number 19
 //two functions for sticky signup button
 
 function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
 
+//function number 20
+
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
 
 //end functions
+//two functions for sticky signup button end here 
 
 //===================================
 
+//function number 21
 //start API programming languages demand 
-// Draw the chart and set the chart values
+//Draw the chart and set the chart values
 
 function drawChart() {
   var data = google.visualization.arrayToDataTable([
@@ -407,33 +446,36 @@ function drawChart() {
 
   var chart = new google.visualization.PieChart(document.getElementById('piechart'));
   chart.draw(data, options);
+
 }
 
 //end function for piechart in news page
 
 //===================================
 
+//function number 22
 //start function for crypto prices 
 
 /*
 function r() {
 var e = crCryptocoinPriceWidget.init({
-    base: "USD,EUR",
-    items: "GLQ,BTC,ETH,XRP",
-    backgroundColor: "E0E0D9",
-    streaming: "1",
-    rounded: "1",
-    boxShadow: "9",
-    border: "5"
+  base: "USD,EUR",
+  items: "GLQ,BTC,ETH,XRP",
+  backgroundColor: "E0E0D9",
+  streaming: "1",
+  rounded: "1",
+  boxShadow: "9",
+  border: "5"
 });
 t.parentNode.insertBefore(e, t)
 }
 */
 
-//This function in the news page 
+//This function is in the news page between <script> tags to target the r and n elements in the page 
 
 //===================================
 
+//function number 23
 //function for drop down for the coding in multiple programming languges 
 
 const acc = document.getElementsByClassName('contentcontainer');
@@ -451,18 +493,215 @@ for (i = 0; i < acc.length; i++) {
 
 //===================================
 
+//function number 24
 //start function to check if the browser is online or offline 
 
 function internetChecker() {
+
   var x = "Is the browser online? " + navigator.onLine;
 
   if (navigator.onLine == true) {
-      alert('You are connected to the internet, refresh the page and try again');
+
+      alert('No problem has been detected! refreshing the page might fix the issue!');
   } else {
-      alert('You may need internet connection!')
+
+      alert('You may need internet connection!');
+
   }
 }
 
 //end function to check if the browser is online or offline 
+
+//===================================
+
+//pop-ups functions for iframes used in programming, index, and news pages 
+
+//start solidity pop-up 
+//function number 25
+
+function soildityPopup() {
+
+  window.open("https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.8+commit.dddeac2f.js", "Pop-up", "width=1200,height=1000");
+
+}
+
+//end solidity pop-up
+
+//===================================
+
+//start java pop-up fnction
+//function number 26
+
+function javaPopup() {
+
+  window.open("https://www.programiz.com/java-programming/online-compiler/", "Pop-up", "width=1200,height=1000");
+
+}
+
+//end java pop-up 
+
+//===================================
+
+//start python pop-up
+//function number 27
+
+function pythonPopup() {
+
+  window.open("https://www.programiz.com/python-programming/online-compiler/", "Pop-up", "width=1200,height=1000");
+
+}
+
+//end python pop-up
+
+//===================================
+
+//start C# pop-up
+//function number 28
+
+function CsharpPopup() {
+
+  window.open("https://www.programiz.com/csharp-programming/online-compiler/", "Pop-up", "width=1200,height=1000");
+
+}
+
+//end C# pop-up
+
+//===================================
+
+//start SQL function for pop-up
+//function number 29
+
+function SQLPopup() {
+
+  window.open("https://www.programiz.com/sql/online-compiler/", "Pop-up", "width=1200,height=1000");
+
+}
+
+//end SQL function for pop-up
+
+//===================================
+
+//start piechart pp-up
+//function number 30
+
+function pieChart() {
+
+  window.open("piechart.html", "Pop-up", "width=1200,height=1000");
+
+}
+
+//end piechart pop-up
+
+//===================================
+
+//start live prices function for pop-up
+//function number 31
+
+function liveprices() {
+
+  window.open("liveprices.html", "Pop-up", "width=1200,height=1000");
+
+}
+
+//end live prices function for pop-up
+
+//===================================
+
+//start html, css, and javascript compiler online function 
+//function number 32
+
+function livecompiler() {
+
+  window.open("live-compiler.html", "Pop-up", "width=1200,height=1000");
+
+}
+
+//end html, css, and javascript compiler online function 
+
+//===================================
+
+//end all pop-up functions here 
+
+//===================================
+
+//start animation for BTNs in the programming class for 3 seconds to check for the internet connection
+//function number 33
+
+function animateProgress() {
+  messageBTNscheckers.innerHTML = 'We are checking the problem, please wait!';
+  // select the progress bar element
+  var progressBar = document.querySelector(".progress-bar-Programming");
+
+  // show the progress bar
+  progressBar.style.display = "block";
+  messageBTNscheckers.style.display = "block";
+
+  // select the progress element
+  var progress = document.getElementById("progressProgramming");
+
+  // set the initial percentage
+  var percentage = 0;
+
+  // update the percentage and progress bar every 10 milliseconds
+  var interval = setInterval(function() {
+      percentage += 0.09;
+      progress.style.width = percentage + "%";
+      messageBTNscheckers.innerHTML = percentage + "% finding solution";
+
+      // stop the interval and call the internetChecker function when the percentage hits 100
+      if (percentage >= 50) {
+          hidePrograsbar.style.display = "none";
+          messageBTNscheckers.style.display = "none";
+          clearInterval(interval);
+          internetChecker();
+      }
+  }, 10);
+
+}
+
+//end animation for BTNs in the programming class for 3 seconds to check for the internet connection
+
+//===================================
+
+//start close window function for LiveCompiler
+//function number 34
+
+function CloseLiveCompiler() {
+
+  window.close("live-compiler.html");
+
+}
+
+//end close window function for LiveCompiler
+
+//===================================
+
+//function number 35
+//start function for live prices 
+
+function CloseLivePrices() {
+
+  window.close("liveprices.html");
+
+}
+
+//end function for live prices
+
+//===================================
+
+//start function for piechart 
+//function number 36
+
+function PieChart() {
+
+  window.close("piechart.html");
+
+}
+
+//end function for piechart 
+
+//===================================
+
+//end all closing windows functions here 
 
 //===================================
