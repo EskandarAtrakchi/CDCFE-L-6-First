@@ -45,24 +45,27 @@
         <header>
 
             <div id="header">
-                <div id="marqueeandlogoandbtns">
-                    <a href="https://eskandarte.w3spaces.com/" target="_blank"><img src="https://moonbeam.network/wp-content/uploads/2020/10/rotating-ethereum-logo.gif" id="logo" class="text-flicker-in-glow" /></a>
-                    <button onClick="swapStylesheet('css/style.css')" class="custom-btn btn-5" id="chanemode"><span id="loginBTNSticky">Dark</span></button>
-                    <button onClick="swapStylesheet('css/styleLight.css')" class="custom-btn btn-5" id="chanemode"><span id="loginBTNSticky">Light</span></button>
-                    <marquee id="FirstMarquee" class="text-flicker-in-glow">
-                        <span class="MarqueeStyling">This <span id="browser"></span> page been browsed <span id="hits"></span> times</span>
-                        <br>
-                        <span class="MarqueeStyling">Updated on <span id="date"></span></span>
-                    </marquee>
-                    <form class="search" action="search.php">
-                        <input name="q" placeholder="Search..." type="search" class="text-flicker-in-glow">
-                    </form>
+                <div class="CHeader">
+                    <div id="marqueeandlogoandbtns">
+                        <a href="https://eskandarte.w3spaces.com/" target="_blank"><img src="https://moonbeam.network/wp-content/uploads/2020/10/rotating-ethereum-logo.gif" id="logo" class="text-flicker-in-glow" /></a>
+                        <button onClick="swapStylesheet('css/style.css')" class="custom-btn btn-5" id="chanemode"><span id="loginBTNSticky">Dark</span></button>
+                        <button onClick="swapStylesheet('css/styleLight.css')" class="custom-btn btn-5" id="chanemode"><span id="loginBTNSticky">Light</span></button>
+                        <marquee id="FirstMarquee" class="text-flicker-in-glow">
+                            <span class="MarqueeStyling">This <span id="browser"></span> page been browsed <span id="hits"></span> times</span>
+                            <br>
+                            <span class="MarqueeStyling">Updated on <span id="date"></span></span>
+                        </marquee>
+                        <form class="search" action="search.php">
+                            <input name="q" placeholder="Search..." type="search" class="text-flicker-in-glow">
+                        </form>
+                    </div>
                 </div>
                 <div class="topnav" id="myTopnav">
-                    <a href="#home" class="active">Home</a>
-                    <a href="#news">News</a>
-                    <a href="#contact">Contact</a>
-                    <a href="https://eskandarte.w3spaces.com/" target="_blank">About</a>
+                    <a href="index.html">Home</a>
+                    <a href="news.html">News</a>
+                    <a href="contactus.html" class="active">Contact</a>
+                    <a href="about.html">About</a>
+                    <a href="programming.html">Programming</a>
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                         <i class="fa fa-bars"></i>
                     </a>
@@ -118,26 +121,30 @@
 
                 </form>
                 <h2>&nbsp;</h2>
-                <div style="display:flex;">
-                    <div><canvas id="canvas" width="1000" height="400"></canvas>
-                    </div>
-                    <h2>&nbsp;</h2>
-                    <div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3224.683237691652!2d-6.21395104831374!3d53.396635278545666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670fd0cbb98613%3A0x332fde4a5227594d!2sCol%C3%A1iste%20Dh%C3%BAlaigh%20CDCFE!5e1!3m2!1sen!2sie!4v1672433658200!5m2!1sen!2sie" width="1000" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
+                <div style="display:flex;" class="CHeader">
+                    <canvas id="canvas" width="600" height="250" class="CHeader"></canvas>
+
+
+                    <div class="CHeader">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3224.683237691652!2d-6.21395104831374!3d53.396635278545666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670fd0cbb98613%3A0x332fde4a5227594d!2sCol%C3%A1iste%20Dh%C3%BAlaigh%20CDCFE!5e1!3m2!1sen!2sie!4v1672433658200!5m2!1sen!2sie" width="150%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="CHeader"></iframe>
                     </div>
                 </div>
-            </div>
-            <button class="open-button" onclick="openForm()">sign up?</button>
 
-            <div style=" padding-left: 50px;">
-                <form name="myform">
-                    <input type="text" name="customer" id="fname" placeholder="Set your Cookies" style="width:25%;">
-                </form>
+                <button class="open-button" onclick="openForm()">sign up?</button>
 
-                <button onclick="writeCookie()" class="custom-btn btn-5" id="chanemode">Set Cookie</button>
-                <button onclick="readCookie()" class="custom-btn btn-5" id="chanemode">Get Cookie</button>
+                <div style=" padding-left: 50px;">
+                    <form name="myform">
+                        <input type="text" name="customer" id="fname" placeholder="Set your Cookies" style="width:25%;">
+                    </form>
 
-                <div id="cookie" class="glow"></div>
+                    <button onclick="writeCookie()" class="custom-btn btn-5" id="chanemode">Set Cookie</button>
+                    <button onclick="readCookie()" class="custom-btn btn-5" id="chanemode">Get Cookie</button>
+
+                    <div id="cookie" class="glow"></div>
+                </div>
             </div>
         </div>
         <!-- start footer -->
@@ -149,17 +156,17 @@
                         <div class="col-sm-6 col-md-3 item">
                             <h3>Useful-links</h3>
                             <ul>
-                                <li><a href="#">Web design</a></li>
-                                <li><a href="#">Development</a></li>
-                                <li><a href="#">Contact-Us</a></li>
+                                <li><a href="https://www.w3schools.com/js/">Web design</a></li>
+                                <li><a href="https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.8+commit.dddeac2f.js">Blockchain</a></li>
+                                <li><a href="contactus.html">Contact-Us</a></li>
                             </ul>
                         </div>
                         <div class="col-sm-6 col-md-3 item">
-                            <h3>About</h3>
+                            <h3 id="copyRightFrames">About</h3>
                             <ul>
-                                <li><a href="#">Coding</a></li>
-                                <li><a href="#">History</a></li>
-                                <li><a href="#">Careers</a></li>
+                                <li><a href="programming.html">Coding</a></li>
+                                <li><a href="https://www.cdcfe.ie/">CDCFE</a></li>
+                                <li><a href="careers.html">Careers</a></li>
                             </ul>
                         </div>
                         <div class="col-md-6 item text">
@@ -167,7 +174,7 @@
                             <p>C, C++, Java, Python, and Ruby. These languages are used to create software applications, websites, and other systems. They vary in syntax, semantics, and features, and are designed to be easy for humans to read and write.</p>
 
                         </div>
-                        <div class="container">
+                        <div class="container" id="socialmediaicons">
                             <a href="https://www.icloud.com/" class="FooterSocialIcons"><i class="fa fa-apple" id="apple"></i></a>
                             <a href="https://twitter.com/AtrakchiE"><i class="fa fa-twitter" id="twitter"></i></a>
                             <a href="https://github.com/EskandarAtrakchi/CDCFE-L-6-First/tree/main/WebAuth/AssignWork"><i class="fa fa-github-square github" id="github"></i></a>
