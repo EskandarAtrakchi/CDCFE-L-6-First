@@ -1,16 +1,42 @@
 /*apply small mode on small devices such as phones and iPads*/
-@media only screen and (max-width: 600px) {
+
+.ShowHeader {
+  display: none;
+}
+
+#divS {
+  width: 50%;
+}
+
+@media only screen and (max-width: 700px) {
   body {
-    font-size: 14px;
+      font-size: 14px;
   }
-  .wrapper {
-    width: 90%;
+
+  .ShowHeader {
+      display: block;
   }
-  header {
-    display: none;
+
+  #firstDiv {
+      width: 100%;
+  }
+
+  #divS {
+      width: 100%;
+  }
+
+  .CHeader {
+      display: none;
+  }
+
+  #socialmediaicons,
+  .CHeader {
+      display: none;
   }
 }
+
 /*start the html doc css */
+
 html {
   scroll-behavior: smooth;
 }
@@ -31,6 +57,18 @@ html {
 }
 
 /*end logo styling */
+
+/*start careers title*/
+
+#CareersTitle {
+
+  text-align: center;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  color: blueviolet;
+
+}
+
+/*end careers title*/
 
 /*start css of the fadig images of the figure */
 
@@ -109,35 +147,93 @@ textarea {
 .contactuscontainer {
   border-radius: 5px;
   padding: 20px;
-  padding-left: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 /*end css of contact us form */
 
+/*start prograss bar for BTNs to check for problem for the IDEs */
+
+/* define the styles for the progress bar */
+.progress-bar-Programming {
+  top: 4%;
+  width: 50%;
+  height: 5%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  position: fixed;
+  display: none;
+  /* initially hide the progress bar */
+}
+
+.progress {
+  top: 4%;
+  height: 5%;
+  width: 50%;
+  position: fixed;
+  background-color: #000000;
+  border-radius: 10px;
+  color: rgb(255, 140, 0);
+}
+
+#messageBTNscheckers {
+  color: red;
+  position: fixed;
+  top: 4%;
+}
+
+/*end prograss bar for BTNs to check for problem for the IDEs */
+
 /*start table css*/
 
-/*end table for small devices */
-/*start table for big devices above 600 px*/
-table {
-    border-collapse: collapse;
-    width: 90%;
-    justify-content: center;
-    margin-left: 5%;
+/* Add a media query for small screens */
+
+@media only screen and (max-width: 600px) {
+
+  /* Make the table full-width and remove the padding */
+  table {
+      width: 100%;
+      margin: 0;
   }
 
-  th,
-  td {
-    text-align: center;
-  }
-
-  tr:nth-child(even) {
-    background-color: #fc6767;
-  }
-
+  /* Hide the table header */
   th {
-    background-color: #4CAF50;
-    color: white;
+      display: none;
   }
+
+  /* Show the table cells in a single column */
+  td {
+      display: block;
+      width: auto;
+      text-align: left;
+  }
+}
+
+/*end table for small devices */
+
+/*start table for big devices above 600 px*/
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: auto;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #ff6f6f;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
 
 /*end table css*/
 
@@ -152,15 +248,12 @@ table {
 /*start Iframe css*/
 
 .SolidityIFrameDiv {
-  display: flex;
   justify-content: center;
   align-items: center;
-  height: fit-content;
-  width: auto;
+  width: 100%;
   resize: both;
   overflow: auto;
-  height: 850px;
-  width: 60%;
+  height: 700px;
 }
 
 .IFrameOneHTML {
@@ -171,7 +264,7 @@ table {
   width: auto;
   resize: both;
   overflow: auto;
-  height: 850px;
+  height: 700px;
   width: 95%;
 }
 
@@ -412,6 +505,7 @@ input {
   }
 
   .topnav.responsive a {
+      float: none;
       display: block;
       text-align: left;
   }
@@ -529,8 +623,7 @@ padding: 10px;
 .footer-dark .copyright {
   text-align: center;
   padding-top: 24px;
-  opacity: 0.3;
-  font-size: 13px;
+  font-size: 20px;
   margin-bottom: 0;
 }
 
