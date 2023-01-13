@@ -48,7 +48,6 @@ class CollegeApp {
             System.out.println("6. Remove an existing contact");
             System.out.println("7. Sort all students alphabetically");
             System.out.println("8. Print out student list to a text file");
-            System.out.println("9. printing to note pad");
 
             int choice = input.nextInt();
             input.nextLine();
@@ -158,11 +157,8 @@ class CollegeApp {
                 		    System.out.println(student.getName());
                 		}
                 	 
-                } else if (choice == 8) {
-                    // Print out student list to a text file
-                    // ...
-                }
-                else if (choice == 9) {
+                } 
+                else if (choice == 8) {
                 	PrintingMethod();
                 }
                 
