@@ -1,7 +1,7 @@
 package sac;
 
 class MatureStudent extends Student {
-    protected int age;
+    private int age;
 
     public MatureStudent(String name, int id, int age) {
         super(name, id);
