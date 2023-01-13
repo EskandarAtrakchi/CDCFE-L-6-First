@@ -1,8 +1,9 @@
-package rhntn;
-public class MatureStudent extends Student {
-    private int age;
+package sac;
 
-    public MatureStudent(String name, String id, int age) {
+class MatureStudent extends Student {
+    protected int age;
+
+    public MatureStudent(String name, int id, int age) {
         super(name, id);
         this.age = age;
     }
