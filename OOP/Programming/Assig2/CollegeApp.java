@@ -9,18 +9,18 @@ import java.util.Scanner;
 
 class CollegeApp {
 	
-	public static void PrintingMethod() {
-		
-		//I created the file gonote.txt to write to it
+	public static void PrintingMethod(ArrayList<Student> students) {
 		
 		Path path = Paths.get("C:\\Users\\escan\\Desktop\\gonote.txt");//Using Paths from Java 8
 		
-		String text = new String();
+		String text = "";
+		for (Student student : students) {
+			text += student.getName() + "\t" + student.getId() + "\n";
+		}
 		
 		try {//start try
-			
 			System.out.println("Successfully Printed To gonote!");//inform the user
-			Files.write(path, text.getBytes());//get the path to the note-pad 
+			Files.write(path, text.getBytes(), StandardOpenOption.APPEND);//get the path to the note-pad 
 		
 		} 
         
@@ -30,20 +30,8 @@ class CollegeApp {
 
         }
 
-	}//end catch
+	}
 
-		@SuppressWarnings("unused")
-		private static void timerMethod() {
-            //start timer method 
-            Thread.currentThread();//get current thread 
-
-            try {//start try 
-            Thread.sleep(500);//get the thread
-            } 
-            catch (InterruptedException e) {//start catch
-            e.printStackTrace();//catch errors
-            }//end catch
-		}//end method
     public static void main(String[] args) {
         ArrayList<Student> students = new ArrayList<Student>();
         Scanner input = new Scanner(System.in);
