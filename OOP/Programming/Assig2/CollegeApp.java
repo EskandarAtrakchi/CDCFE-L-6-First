@@ -20,7 +20,7 @@ class CollegeApp {
 		
 		try {//start try
 			System.out.println("Successfully Printed To gonote!");//inform the user
-			Files.write(path, text.getBytes(), StandardOpenOption.APPEND);//get the path to the note-pad 
+			Files.write(path, text.getBytes());//get the path to the note-pad 
 		
 		} 
         
