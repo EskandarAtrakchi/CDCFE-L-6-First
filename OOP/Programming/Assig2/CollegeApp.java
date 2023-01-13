@@ -6,6 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
+
 class CollegeApp {
 	
 	public static void PrintingMethod() {
@@ -21,18 +22,27 @@ class CollegeApp {
 			System.out.println("Successfully Printed To gonote!");//inform the user
 			Files.write(path, text.getBytes());//get the path to the note-pad 
 		
-		} catch (IOException e) {//start catch
+		} 
+        
+        catch (IOException e) {//start catch
 			System.out.println("Error, file already exist");//when it cannot print or create the file 
-		e.printStackTrace();}
-		}//end catch
+		    e.printStackTrace();
+
+        }
+
+	}//end catch
+
 		@SuppressWarnings("unused")
-		private static void timerMethod() {//start timer method 
-		Thread.currentThread();//get current thread 
-		  try {//start try 
-		  Thread.sleep(500);//get the thread
-		  } catch (InterruptedException e) {//start catch
-		  e.printStackTrace();//catch errors
-		  }//end catch
+		private static void timerMethod() {
+            //start timer method 
+            Thread.currentThread();//get current thread 
+
+            try {//start try 
+            Thread.sleep(500);//get the thread
+            } 
+            catch (InterruptedException e) {//start catch
+            e.printStackTrace();//catch errors
+            }//end catch
 		}//end method
     public static void main(String[] args) {
         ArrayList<Student> students = new ArrayList<Student>();
@@ -159,7 +169,7 @@ class CollegeApp {
                 	 
                 } 
                 else if (choice == 8) {
-                	PrintingMethod();
+                	PrintingMethod(students);
                 }
                 
                 else {
