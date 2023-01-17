@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 class CollegeApp {
 	
-	public static void PrintingMethod(ArrayList<Student> students) {
+	public static void PrintingMethod(ArrayList < Student > students) {
 		
 		Path path = Paths.get("C:\\Users\\escan\\Desktop\\gonote.txt");//Using Paths from Java 8
 		
@@ -28,7 +28,7 @@ class CollegeApp {
         
         catch (IOException e) {//start catch
 
-			System.out.println("Error, file already exist");//when it cannot print or create the file 
+			System.out.println("Error, file already exist, or something wrong happened!");//when it cannot print or create the file 
 		    e.printStackTrace();
 
         }
