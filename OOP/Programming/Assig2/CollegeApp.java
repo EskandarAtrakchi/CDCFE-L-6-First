@@ -209,7 +209,9 @@ class CollegeApp {
                      * students.sort((student1, student2) -> 
                      * student1.getName().compareTo(student2.getName()));
                      */
-                    
+
+                     //Lambda expression to compare 
+                     
                 	 students.sort((o1, o2) -> o1.getName().compareTo(o2.getName()));
 
                 	 for (Student student : students) {
