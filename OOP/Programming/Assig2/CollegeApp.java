@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 class CollegeApp {
 	
-	public static void PrintingMethod(ArrayList < Student > students) {
+	public static void X(ArrayList < Student > students) {
 		
 		Path path = Paths.get("C:\\Users\\escan\\Desktop\\gonote.txt");//Using Paths from Java 8
 		
