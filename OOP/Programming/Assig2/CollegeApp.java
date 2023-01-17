@@ -37,7 +37,7 @@ class CollegeApp {
 
     public static void main(String[] args) {
 
-        ArrayList<Student> students = new ArrayList<Student>();
+        ArrayList < Student > students = new ArrayList < Student > ( );
         Scanner input = new Scanner(System.in);
 
         while (true) {
@@ -205,6 +205,11 @@ class CollegeApp {
                 else if (choice == 7) {
 
                     // Sort all students alphabetically
+                    /**
+                     * students.sort((student1, student2) -> 
+                     * student1.getName().compareTo(student2.getName()));
+                     */
+                    
                 	 students.sort((o1, o2) -> o1.getName().compareTo(o2.getName()));
 
                 	 for (Student student : students) {
