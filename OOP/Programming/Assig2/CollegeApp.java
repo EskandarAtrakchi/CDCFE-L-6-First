@@ -224,7 +224,7 @@ class CollegeApp {
 
                 else if (choice == 8) {
 
-                	PrintingMethod(students);
+                	X(students);
 
                 }
                 
