@@ -24,7 +24,7 @@ class CollegeApp {
 			System.out.println("Successfully Printed To gonote!");//inform the user
 			Files.write(path, text.getBytes());//get the path to the note-pad 
 		
-		} 
+		}
         
         catch (IOException e) {//start catch
 
@@ -134,40 +134,54 @@ class CollegeApp {
                 else if (choice == 5) {
 
                     // Add a new mature student
-                    System.out.print("Enter student name: ");
-                    String name = input.nextLine();
-                    System.out.print("Enter student id: ");
-                    int id = input.nextInt();
-                    input.nextLine();
-                    System.out.print("Enter student age: ");
-                    int age = input.nextInt();
-                    input.nextLine();
+                	System.out.print("Enter student age: ");
+                	int age = input.nextInt();
+                	while(true) {
+                		if (age >= 23) {
+                			input.nextLine();
+                			
+                			System.out.print("Enter student name: ");
+                            String name = input.nextLine();
+                            System.out.print("Enter student id: ");
+                            int id = input.nextInt();
+                            input.nextLine();
+                            
+                            
+                            
 
-                    boolean idExists = false;
+                            boolean idExists = false;
 
-                    for (Student student : students) {
+                            for (Student student : students) {
 
-                        if (student.getId() == id) {
+                                if (student.getId() == id) {
 
-                            idExists = true;
+                                    idExists = true;
+                                    break;
+
+                                }
+                            }
+
+                            if (!idExists) {
+
+                                MatureStudent newStudent = new MatureStudent(name, id, age);
+                                students.add(newStudent);
+                                System.out.println("Student added successfully.");
+
+                            } 
+                            
+                            else {
+
+                                System.out.println("Error: student with ID " + id + " already exists.");
+
+                            }
                             break;
-
-                        }
-                    }
-
-                    if (!idExists) {
-
-                        MatureStudent newStudent = new MatureStudent(name, id, age);
-                        students.add(newStudent);
-                        System.out.println("Student added successfully.");
-
-                    } 
+                		}
+                		else {
+                			System.out.println("Too young! couldn't be added!");
+                			break;
+                		}
+                	}
                     
-                    else {
-
-                        System.out.println("Error: student with ID " + id + " already exists.");
-
-                    }
                 }
 
                 else if (choice == 6) {
