@@ -426,8 +426,8 @@ a {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
 }
 
 .topnav a:hover {
@@ -1008,3 +1008,119 @@ body {
 }
 
 /*end the css of the signup pop up window*/
+
+/*start wallet generator css*/
+
+.General {
+  display: flex;
+  justify-content: center;
+  align-items: 100vh;
+  text-align: center;
+}
+
+.CGBTC {
+  width: 550px;
+  height: 450px;
+}
+
+.main-content {
+  width: 100%;
+  height: 300px;
+  background-color: rgb(214, 214, 254);
+  border-radius: 15px;
+  padding: 50px 40px;
+  box-shadow: 0 0 10px;
+}
+
+.main-content .text-area {
+  font-size: 1, 5rem;
+  line-height: 1.5;
+}
+
+.main-content .person {
+  font-size: 1.6rem;
+  color: red;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.button-area button {
+  background-color: #262626;
+  color: #fff;
+  font-size: 1.3rem;
+  padding: 10px 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.button-area button:active {
+  background-color: lightblue;
+}
+
+/*end wallet generator css*/
+
+/*start css for the FAQ div*/
+
+.imgdivFAQ {
+  background: url(https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg?auto=compress&cs=tinysrgb&w=1600) no-repeat center center/cover;
+}
+
+.FAQdiv {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.acc {
+  width: 65%;
+  background-color: rgb(216, 220, 255);
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.acc .FQA-title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.acc .content-container .question {
+  padding: 18px;
+  font-size: 22px;
+  border-bottom: 1px solid #000;
+  position: relative;
+}
+
+.acc .content-container .question::after {
+  content: '+';
+  position: absolute;
+  right: -5px;
+}
+
+.acc .content-container .answer {
+  padding-top: 15px;
+  font-size: 22px;
+  line-height: 1.5;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.acc .content-container.active .answer {
+  height: 150px;
+}
+
+.acc .content-container.question .question {
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.acc .content-container.active .question::after {
+  content: '-';
+  font-size: 30px;
+  transition: 0.5s;
+}
+
+/*end css for the FAQ div*/
