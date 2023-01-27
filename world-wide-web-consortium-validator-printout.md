@@ -19,7 +19,7 @@ Nesting elements in HTML is a common practice, it allows for a more structured a
 
 It is not always necessary to have a completely error-free code according to the W3 validator. Some errors may be caused by using non-standard or experimental features and may not impact the functionality of the website. Additionally, some errors may not be important for the current use case and can be safely ignored. However, it's always better to correct errors if they are critical and may affect the website’s functionality. Ok, enough talking, down below are the screenshots of the w3 validator.
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 As predictable, it gave me errors and warning for the same ids that been used for the different elements.
 
