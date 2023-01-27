@@ -20,4 +20,6 @@
 
 <figure><img src=".gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
-Note: All of the pages of the website can turn to light mode also.
+{% hint style="info" %}
+All of the pages of the website can turn to light mode also.
+{% endhint %}
