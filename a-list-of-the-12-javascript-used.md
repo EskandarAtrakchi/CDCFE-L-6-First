@@ -1,19 +1,6 @@
 # A list of the 12 JavaScript used:
 
-| <mark style="color:red;">**JavaScript-Functions**</mark> |  <mark style="color:red;">**Where been used**</mark>  |
-| :------------------------------------------------------: | :---------------------------------------------------: |
-|                 Browser plug-in detection                |                      on all pages                     |
-|                    Status bar messages                   |                      on all pages                     |
-|                   Scrolling status bars                  |                      on all pages                     |
-|                         Rollovers                        |                      on all pages                     |
-|                    Cycling animations                    |                     contactus.html                    |
-|                        Slide shows                       |                       index.html                      |
-|                      Dynamic frames                      |                 index.html, news.html                 |
-|                     Form verification                    |                      on all pages                     |
-|                        New windows                       | on all pages exempt walletgenerator.html and FAQ.html |
-|                          Cookies                         |            careers.html and contactus.html            |
-|               Dynamic webpage updates time               |                      on all pages                     |
-|                     Hit Page Counter                     |                      on all pages                     |
+<table data-header-hidden><thead><tr><th align="center">JavaScript-Functions</th><th align="center">Where been used</th><th data-hidden data-type="select"></th></tr></thead><tbody><tr><td align="center"><mark style="color:red;"><strong>JavaScript-Functions</strong></mark></td><td align="center"><mark style="color:red;"><strong>Where been used</strong></mark></td><td></td></tr><tr><td align="center">Browser plug-in detection</td><td align="center">on all pages</td><td></td></tr><tr><td align="center">Status bar messages</td><td align="center">on all pages</td><td></td></tr><tr><td align="center">Scrolling status bars</td><td align="center">on all pages</td><td></td></tr><tr><td align="center">Rollovers</td><td align="center">on all pages</td><td></td></tr><tr><td align="center">Cycling animations</td><td align="center">contactus.html</td><td></td></tr><tr><td align="center">Slide shows</td><td align="center">index.html</td><td></td></tr><tr><td align="center">Dynamic frames</td><td align="center">index.html, news.html</td><td></td></tr><tr><td align="center">Form verification</td><td align="center">on all pages</td><td></td></tr><tr><td align="center">New windows</td><td align="center">on all pages exempt walletgenerator.html and FAQ.html</td><td></td></tr><tr><td align="center">Cookies</td><td align="center">careers.html and contactus.html</td><td></td></tr><tr><td align="center">Dynamic webpage updates time</td><td align="center">on all pages</td><td></td></tr><tr><td align="center">Hit Page Counter</td><td align="center">on all pages</td><td></td></tr></tbody></table>
 
 {% hint style="info" %}
 There are around 30 functions more
