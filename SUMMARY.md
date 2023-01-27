@@ -8,3 +8,4 @@
 * [Examine different HTML versions and backward compatibility issues.](examine-different-html-versions-and-backward-compatibility-issues..md)
 * [Examine the advantages and disadvantages of coding HTML and using HTML editors.](examine-the-advantages-and-disadvantages-of-coding-html-and-using-html-editors..md)
 * [Screenshots of the website.](screenshots-of-the-website..md)
+* [A list of the 12 JavaScript used:](a-list-of-the-12-javascript-used.md)
