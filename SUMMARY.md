@@ -1,7 +1,6 @@
 # Table of contents
 
-* [Untitled](README.md)
-* [Web-Auth](web-auth.md)
+* [Web-Auth](README.md)
 * [Introduction](introduction.md)
 * [World Wide Web Consortium validator printout](world-wide-web-consortium-validator-printout.md)
 * [A discussion of the development of hypertext mark-up language (HTML)](a-discussion-of-the-development-of-hypertext-mark-up-language-html.md)
