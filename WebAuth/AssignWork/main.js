@@ -459,13 +459,13 @@ function drawChart() {
 /*
 function r() {
 var e = crCryptocoinPriceWidget.init({
-  base: "USD,EUR",
-  items: "GLQ,BTC,ETH,XRP",
-  backgroundColor: "E0E0D9",
-  streaming: "1",
-  rounded: "1",
-  boxShadow: "9",
-  border: "5"
+base: "USD,EUR",
+items: "GLQ,BTC,ETH,XRP",
+backgroundColor: "E0E0D9",
+streaming: "1",
+rounded: "1",
+boxShadow: "9",
+border: "5"
 });
 t.parentNode.insertBefore(e, t)
 }
@@ -478,15 +478,9 @@ t.parentNode.insertBefore(e, t)
 //function number 23
 //function for drop down for the coding in multiple programming languges 
 
-const acc = document.getElementsByClassName('contentcontainer');
+function FAQ() {
 
-for (i = 0; i < acc.length; i++) {
-
-  acc[i].addEventListener('click', function() {
-
-      this.classList.toggle('active');
-  });
-
+  this.classList.toggle('active');
 }
 
 // end function for drop down for the coding in multiple programming languges 
@@ -705,3 +699,49 @@ function PieChart() {
 //end all closing windows functions here 
 
 //===================================
+
+////function number 37
+//start fuction for crypto wallets
+
+function walletGenerator() {
+  let Random = Math.floor(Math.random() * qoutes.length);
+
+  qoute.innerText = qoutes[Random].qoute;
+  person.innerText = qoutes[Random].person;
+
+}
+
+//This function targets the scripts in the wallet-Generator page to generate wallets
+//The completion of the function is in the wallet-Generator page as script tag
+//end fuction for crypto wallets
+
+//===================================
+
+//function number 38 
+//start function to check forms before any submission
+
+var form = document.getElementById("form");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault(); // prevent form from submitting if any errors
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var errors = [];
+  if (!name) {
+      errors.push("Name is required");
+  }
+  if (!email) {
+      errors.push("Email is required");
+  }
+  if (errors.length > 0) {
+      alert(errors.join("\n")); // display errors
+  } else {
+      form.submit(); // submit form if no errors
+  }
+});
+
+//end function for forms before any submission
+
+//===================================
+
+//end all functions here
